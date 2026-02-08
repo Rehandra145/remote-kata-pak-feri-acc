@@ -1,0 +1,982 @@
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x42074df6
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce3808,len:0x4bc
+load:0x403c9700,len:0xbd8
+load:0x403cc700,len:0x2a0c
+entry 0x403c98d0
+[1;31mE (151) esp_core_dump_flash: Incorrect size of core dump image: 756400355[0m
+=====================================
+  ESP-NOW REMOTE TRANSMITTER
+  2 Joystick Controller
+=====================================
+
+>>> KALIBRASI: Jangan sentuh joystick...
+>>> KALIBRASI SELESAI!
+  Joy1 Center: X=4093, Y=2
+  Joy2 Center: X=1091, Y=1006
+
+MAC Address Transmitter: 10:20:BA:4C:63:88
+ESP-NOW berhasil diinisialisasi
+Peer receiver berhasil ditambahkan
+Remote siap!
+-------------------------------------
+T:-255 S:255 AX:32 AY:0 B1:0 B2:0 M:0 -> OK
+T:203 S:-208 AX:66 AY:111 B1:0 B2:0 M:0 -> OK
+T:-255 S:255 AX:0 AY:0 B1:0 B2:0 M:0 -> OK
+T:255 S:-255 AX:194 AY:252 B1:0 B2:0 M:0 -> OK
+T:-255 S:255 AX:-255 AY:-255 B1:0 B2:0 M:0 -> OK
+T:74 S:-97 AX:161 AY:160 B1:0 B2:0 M:0 -> OK
+T:-255 S:255 AX:-255 AY:-255 B1:0 B2:0 M:0 -> OK
+T:56 S:-66 AX:111 AY:106 B1:0 B2:0 M:0 -> OK
+T:-255 S:255 AX:-255 AY:-255 B1:0 B2:0 M:0 -> OK
+T:-255 S:0 AX:80 AY:70 B1:0 B2:0 M:0 -> OK
+T:-255 S:255 AX:-157 AY:-103 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:-255 S:255 AX:-64 AY:0 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiv
+T:254 S:-255 AX:110 AY:189 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:0 S:0 AX:32 AY:35 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:248 S:-255 AX:248 AY:247 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:-255 S:255 AX:-255 AY:-255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:91 S:-112 AX:187 AY:173 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:-255 S:255 AX:-255 AY:-255 B1:0 B2:0 M:0 -> OK
+T:65 S:-87 AX:145 AY:136 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:-255 S:255 AX:-255 AY:-255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiv
+T:-255 S:255 AX:91 AY:80 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:255 S:-255 AX:103 AY:170 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:-255 S:255 AX:-33 AY:0 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:255 S:-255 AX:255 AY:255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:-255 S:255 AX:-255 AY:-255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:144 S:-158 AX:222 AY:206 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:-255 S:255 AX:-255 AY:-255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:116 S:-121 AX:157 AY:144 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:-255 S:255 AX:-255 AY:-255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:49 S:-62 AX:110 AY:108 B1:0 B2:0 M:0 -> OK
+!!!T:-255 S:255 AX:-163 AY:-121 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiv
+T:-255 S:255 AX:-110 AY:-48 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:255 S:-255 AX:207 AY:235 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:33 S:-39 AX:0 AY:34 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiv
+T:255 S:-255 AX:255 AY:255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:-255 S:255 AX:-255 AY:-255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:100 S:-121 AX:176 AY:160 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiv
+T:-255 S:255 AX:-255 AY:-255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:84 S:-97 AX:124 AY:122 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:-255 S:255 AX:-255 AY:-255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:-255 S:255 AX:81 AY:79 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:255 S:-255 AX:90 AY:142 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:-255 S:255 AX:-30 AY:0 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:255 S:-255 AX:255 AY:255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:-255 S:255 AX:-255 AY:-255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:155 S:-159 AX:211 AY:191 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:-255 S:255 AX:-255 AY:-255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:111 S:-123 AX:139 AY:130 B1:0 B2:0 M:0 -> OK
+T:-255 S:255 AX:-255 AY:-255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:69 S:-62 AX:97 AY:97 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:-255 S:255 AX:-152 AY:-119 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:-255 S:255 AX:-78 AY:0 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:255 S:-255 AX:255 AY:255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:202 S:-173 AX:108 AY:115 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:237 S:-206 AX:105 AY:89 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:142 S:-148 AX:64 AY:45 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:255 S:-243 AX:193 AY:130 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:-255 S:255 AX:-255 AY:-255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:151 S:-228 AX:195 AY:192 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:-255 S:255 AX:-255 AY:-255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:-255 S:255 AX:58 AY:-101 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:255 S:-255 AX:255 AY:255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:93 S:-87 AX:57 AY:71 B1:0 B2:0 M:0 -> OK
+T:255 S:-255 AX:255 AY:255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:178 S:0 AX:94 AY:111 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver
+T:206 S:-195 AX:235 AY:212 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:90 S:255 AX:-229 AY:-255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:222 S:-157 AX:175 AY:155 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:94 S:-52 AX:38 AY:0 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiv
+T:178 S:-108 AX:142 AY:79 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:125 S:-36 AX:77 AY:76 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:183 S:-115 AX:109 AY:50 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:146 S:-75 AX:124 AY:251 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:189 S:-126 AX:96 AY:65 B1:0 B2:0 M:0 -> OK
+!!! T:156 S:-84 AX:123 AY:207 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:-255 S:255 AX:-255 AY:-255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:165 S:-126 AX:97 AY:70 B1:0 B2:0 M:0 -> OK
+!!! KT:0 S:255 AX:-212 AY:-155 B1:0 B2:0 M:0 -> OK
+T:166 S:-96 AX:96 AY:53 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:104 S:-63 AX:54 AY:38 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:169 S:-78 AX:77 AY:39 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:139 S:-167 AX:88 AY:191 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:174 S:-73 AX:103 AY:135 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:154 S:-244 AX:115 AY:164 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:-255 S:255 AX:-255 AY:-255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke 
+T:142 S:-90 AX:104 AY:147 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiv
+T:-255 S:255 AX:-255 AY:-255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:190 S:-75 AX:128 AY:160 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:-255 S:255 AX:-255 AY:-255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:228 S:-186 AX:126 AY:154 B1:0 B2:0 M:0 -> OK
+T:0 S:255 AX:-160 AY:-131 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:76 S:-46 AX:-105 AY:-112 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:147 S:-85 AX:138 AY:176 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiv
+T:93 S:0 AX:0 AY:44 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiv
+T:255 S:-196 AX:253 AY:245 B1:0 B2:0 M:0 -> OK
+!!! KT:-255 S:255 AX:-255 AY:-255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:238 S:-205 AX:194 AY:196 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:-255 S:255 AX:-255 AY:-255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver
+T:231 S:-201 AX:167 AY:185 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:-255 S:255 AX:-255 AY:-255 B1:0 B2:0 M:0 -> OK
+T:201 S:-195 AX:82 AY:100 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:92 S:-40 AX:55 AY:88 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:70 S:0 AX:-169 AY:-39 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiv
+T:243 S:-167 AX:255 AY:255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver te
+T:-255 S:255 AX:-255 AY:-255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:243 S:-206 AX:217 AY:208 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:-255 S:255 AX:-255 AY:-255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver
+T:235 S:-205 AX:178 AY:193 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:-255 S:255 AX:-255 AY:-255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:229 S:-194 AX:148 AY:176 B1:0 B2:0 M:0 -> OK
+!!! T:0 S:255 AX:-151 AY:-111 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:73 S:-51 AX:-161 AY:-116 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:150 S:-89 AX:143 AY:179 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver
+T:93 S:0 AX:30 AY:49 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:255 S:-196 AX:254 AY:247 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:-255 S:255 AX:-255 AY:-255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:237 S:-198 AX:202 AY:197 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:-255 S:255 AX:-255 AY:-255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:231 S:-196 AX:178 AY:193 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:-255 S:255 AX:-255 AY:-255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:217 S:-200 AX:132 AY:141 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:92 S:-40 AX:52 AY:89 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:66 S:0 AX:-93 AY:-60 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:251 S:-177 AX:255 AY:255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:-255 S:255 AX:-255 AY:-255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver
+T:244 S:-220 AX:229 AY:218 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiv
+T:-255 S:255 AX:-255 AY:-255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:235 S:-227 AX:208 AY:211 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:-255 S:255 AX:-255 AY:-255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:229 S:-220 AX:185 AY:203 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:0 S:255 AX:-155 AY:-111 B1:0 B2:0 M:0 -> OK
+!!! T:125 S:-137 AX:33 AY:66 B1:0 B2:0 M:0 -> OK
+!!! Kone
+T:171 S:-109 AX:174 AY:208 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:121 S:-110 AX:34 AY:103 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:255 S:-222 AX:255 AY:253 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:-255 S:255 AX:-255 AY:-255 B1:0 B2:0 M:0 -> OK
+T:238 S:-216 AX:212 AY:210 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:-255 S:255 AX:-255 AY:-255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:232 S:-202 AX:188 AY:205 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:-255 S:255 AX:-255 AY:-255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:216 S:-197 AX:137 AY:155 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:89 S:-33 AX:50 AY:82 B1:0 B2:0 M:0 -> OK
+!!! T:96 S:-61 AX:0 AY:40 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:214 S:-138 AX:232 AY:255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:-255 S:255 AX:-255 AY:-255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:235 S:-171 AX:221 AY:217 B1:0 B2:0 M:0 -> OK
+
+T:-255 S:255 AX:-255 AY:-255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:228 S:-168 AX:201 AY:210 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:-255 S:255 AX:-255 AY:-255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:222 S:-159 AX:182 AY:210 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:0 S:255 AX:-128 AY:-92 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:114 S:-76 AX:0 AY:67 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:132 S:-66 AX:114 AY:156 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:110 S:-36 AX:56 AY:98 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:226 S:-149 AX:234 AY:244 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:-255 S:255 AX:-255 AY:-255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:220 S:-154 AX:207 AY:217 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:-255 S:255 AX:-255 AY:-255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:216 S:-151 AX:194 AY:217 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:-255 S:255 AX:-255 AY:-255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:216 S:-158 AX:184 AY:203 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:90 S:-30 AX:49 AY:80 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:127 S:-73 AX:73 AY:117 B1:0 B2:0 M:0 -> OK
+!!! KoneksT:184 S:-107 AX:190 AY:230 B1:0 B2:0 M:0 -> OK
+!!! Koneksus !!!
+T:-255 S:255 AX:-255 AY:-255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:209 S:-139 AX:205 AY:220 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:-255 S:255 AX:-255 AY:-255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:215 S:-150 AX:202 AY:225 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:-255 S:255 AX:-255 AY:-255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:200 S:-137 AX:177 AY:221 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:0 S:255 AX:-122 AY:-70 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:139 S:-92 AX:77 AY:126 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:118 S:-49 AX:98 AY:139 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:160 S:-105 AX:119 AY:186 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:183 S:-114 AX:186 AY:226 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:-255 S:255 AX:-255 AY:-255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:-255 S:255 AX:-168 AY:-247 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:-255 S:255 AX:-210 AY:-237 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:177 S:-108 AX:161 AY:214 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:-255 S:255 AX:-77 AY:-251 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:212 S:-153 AX:193 AY:217 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:92 S:0 AX:107 AY:255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:154 S:-101 AX:94 AY:0 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:181 S:-105 AX:215 AY:255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:-255 S:255 AX:-255 AY:-255 B1:0 B2:0 M:0 -> OK
+ receiver terputus !!!
+T:205 S:-132 AX:201 AY:83 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:-255 S:255 AX:-255 AY:-255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:210 S:-144 AX:184 AY:57 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:-255 S:255 AX:-255 AY:-255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:208 S:-138 AX:163 AY:0 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:43 S:255 AX:57 AY:0 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:161 S:-103 AX:92 AY:0 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:121 S:-57 AX:143 AY:255 B1:0 B2:0 M:0 -> OK
+T:170 S:-116 AX:115 AY:33 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke eiver terputus !!!
+T:208 S:-130 AX:233 AY:255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:-255 S:255 AX:-255 AY:-255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:210 S:-136 AX:193 AY:45 B1:0 B2:0 M:0 -> OK
+receiver terputus !!!
+T:-255 S:255 AX:-255 AY:-255 B1:0 B2:0 M:0 -> OK
+!!T:216 S:-151 AX:181 AY:30 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:-255 S:255 AX:-110 AY:-255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:212 S:-145 AX:162 AY:-84 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:95 S:0 AX:116 AY:255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:163 S:-111 AX:101 AY:0 B1:0 B2:0 M:0 -> OK
+!!! Koneks receiver terputus !!!
+T:186 S:-109 AX:225 AY:255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:-255 S:255 AX:-255 AY:-255 B1:0 B2:0 M:0 -> OK
+T:207 S:-132 AX:197 AY:95 B1:0 B2:0 M:0 -> OK
+ ke receiver terputus !!!
+T:-255 S:255 AX:-255 AY:-255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:175 S:-103 AX:124 AY:-73 B1:0 B2:0 M:0 -> OK
+T:70 S:255 AX:71 AY:-202 B1:0 B2:0 M:0 -> OK
+si ke receiver terputus !!!
+T:102 S:0 AX:0 AY:-255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:64 S:255 AX:0 AY:0 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:176 S:-113 AX:103 AY:-42 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:125 S:-57 AX:84 AY:255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:157 S:-95 AX:100 AY:32 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:201 S:-123 AX:208 AY:255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:-255 S:255 AX:-255 AY:-255 B1:0 B2:0 M:0 -> OK
+!!! Konek
+T:201 S:-126 AX:160 AY:53 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:-255 S:255 AX:-255 AY:-255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:166 S:-95 AX:103 AY:-182 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:0 S:255 AX:-192 AY:-255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:210 S:-141 AX:151 AY:-73 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:106 S:0 AX:91 AY:252 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:209 S:-152 AX:145 AY:0 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:153 S:-78 AX:140 AY:227 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:-255 S:255 AX:-255 AY:-255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:205 S:-129 AX:186 AY:90 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:-255 S:255 AX:-255 AY:-255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:188 S:-119 AX:127 AY:51 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:-255 S:255 AX:-255 AY:-255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:185 S:-118 AX:131 AY:0 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:90 S:0 AX:43 AY:56 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:217 S:-161 AX:0 AY:0 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:145 S:-73 AX:255 AY:255 B1:0 B2:0 M:0 -> OK
+er terputus !!!
+T:215 S:-152 AX:0 AY:36 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:249 S:-178 AX:255 AY:234 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiv
+T:-255 S:255 AX:-255 AY:-255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:235 S:-167 AX:61 AY:56 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:-255 S:255 AX:-255 AY:-255 B1:0 B2:0 M:0 -> OK
+T:186 S:-113 AX:130 AY:0 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:0 S:255 AX:-235 AY:-255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:225 S:-169 AX:-69 AY:-61 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiv
+T:128 S:-45 AX:255 AY:224 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:213 S:-198 AX:0 AY:0 B1:0 B2:0 M:0 -> OK
+!!! T:237 S:-151 AX:255 AY:255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiv
+T:-255 S:255 AX:-255 AY:-255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:244 S:-228 AX:85 AY:90 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiv
+T:-255 S:255 AX:-255 AY:-255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:228 S:-157 AX:36 AY:0 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke er terputus !!!
+T:-255 S:255 AX:-255 AY:-255 B1:0 B2:0 M:0 -> OK
+!!!T:227 S:-162 AX:0 AY:0 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:80 S:255 AX:0 AY:0 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:209 S:-206 AX:0 AY:0 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:143 S:-60 AX:255 AY:255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:222 S:-190 AX:45 AY:43 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke  !!!
+T:255 S:-246 AX:249 AY:207 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:-255 S:255 AX:-255 AY:-255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:239 S:-237 AX:0 AY:46 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:-255 S:255 AX:-255 AY:-255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:167 S:-89 AX:-253 AY:-232 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiv
+T:0 S:255 AX:-255 AY:-254 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:170 S:-93 AX:-255 AY:-255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:138 S:-60 AX:0 AY:50 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiv
+T:172 S:-101 AX:-218 AY:-166 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:147 S:-70 AX:59 AY:80 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:-255 S:255 AX:-255 AY:-255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:149 S:-69 AX:-255 AY:-252 B1:0 B2:0 M:0 -> OK
+!!! Koneksterputus !!!
+T:-255 S:255 AX:-255 AY:-255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke 
+T:165 S:-89 AX:-233 AY:-129 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:96 S:255 AX:-255 AY:-255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:176 S:-99 AX:-255 AY:-216 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:118 S:0 AX:-57 AY:35 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:172 S:-97 AX:-218 AY:-237 B1:0 B2:0 M:0 -> OK
+iver terputus !!!
+T:147 S:-71 AX:0 AY:42 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:185 S:-111 AX:-165 AY:-80 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:152 S:-69 AX:-93 AY:-59 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:-255 S:255 AX:-255 AY:-255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiv
+T:158 S:-77 AX:-211 AY:-74 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:40 S:255 AX:-255 AY:-255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke ceiver terputus !!!
+T:167 S:-90 AX:-231 AY:-255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:104 S:0 AX:-250 AY:-138 B1:0 B2:0 M:0 -> OK
+!!! T:175 S:-100 AX:-255 AY:-255 B1:0 B2:0 M:0 -> OK
+e receiver terputus !!!
+T:139 S:-65 AX:0 AY:32 B1:0 B2:0 M:0 -> OK
+T:180 S:-110 AX:-247 AY:-138 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:153 S:-74 AX:0 AY:0 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:-255 S:255 AX:-255 AY:-255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiv
+T:147 S:-69 AX:-159 AY:-75 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiv
+T:-255 S:255 AX:-255 AY:-255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:157 S:-82 AX:-169 AY:-109 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiv
+T:-255 S:255 AX:-255 AY:-255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:167 S:-93 AX:-179 AY:-161 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:93 S:0 AX:53 AY:107 B1:0 B2:0 M:0 -> OK
+!!T:174 S:-101 AX:-192 AY:-186 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:126 S:-48 AX:95 AY:140 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:182 S:-108 AX:-191 AY:-172 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:141 S:-65 AX:-69 AY:0 B1:0 B2:0 M:0 -> OK
+!!! T:-255 S:255 AX:-255 AY:-255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:153 S:-79 AX:-117 AY:-75 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:-255 S:255 AX:-255 AY:-255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:163 S:-86 AX:-158 AY:-173 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:56 S:255 AX:-255 AY:-255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:168 S:-93 AX:-214 AY:-148 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:114 S:-37 AX:60 AY:103 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:177 S:-106 AX:-152 AY:-104 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:136 S:-56 AX:80 AY:108 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:-255 S:255 AX:-255 AY:-255 B1:0 B2:0 M:0 -> OK
+T:148 S:-70 AX:-116 AY:-40 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:-255 S:255 AX:-255 AY:-255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:158 S:-84 AX:-108 AY:-111 B1:0 B2:0 M:0 -> OK
+T:-255 S:255 AX:-255 AY:-255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke 
+T:168 S:-93 AX:-216 AY:-182 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:100 S:0 AX:68 AY:65 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:167 S:-96 AX:-214 AY:-234 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:130 S:-53 AX:114 AY:156 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:182 S:-111 AX:-255 AY:-255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:149 S:-64 AX:-78 AY:0 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:-255 S:255 AX:-255 AY:-255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:156 S:-79 AX:-173 AY:-46 B1:0 B2:0 M:0 -> OK
+T:-255 S:255 AX:-255 AY:-255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:166 S:-91 AX:-178 AY:-122 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:89 S:255 AX:-209 AY:-109 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:167 S:-95 AX:-203 AY:-222 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+:121 S:-43 AX:64 AY:103 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiv
+T:180 S:-105 AX:-175 AY:-152 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:139 S:-67 AX:60 AY:89 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke 
+T:-255 S:255 AX:-255 AY:-255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:152 S:-75 AX:-153 AY:-105 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiv
+T:-255 S:255 AX:-255 AY:-255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiv
+T:163 S:-85 AX:-159 AY:-135 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:61 S:255 AX:-255 AY:-255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:171 S:-94 AX:-255 AY:-221 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:111 S:0 AX:45 AY:82 B1:0 B2:0 M:0 -> OK
+T:168 S:-93 AX:-216 AY:-230 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:140 S:-52 AX:98 AY:152 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:163 S:-101 AX:-255 AY:-255 B1:0 B2:0 M:0 -> OK
+!!! T:150 S:-66 AX:-97 AY:-52 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiv
+T:-255 S:255 AX:-255 AY:-255 B1:0 B2:0 M:0 -> OK
+T:160 S:-80 AX:-122 AY:-102 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:0 S:255 AX:-255 AY:-255 B1:0 B2:0 M:0 -> OK
+T:167 S:-93 AX:-215 AY:-151 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:89 S:255 AX:-212 AY:-138 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:168 S:-96 AX:-240 AY:-223 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:125 S:-44 AX:75 AY:113 B1:0 B2:0 M:0 -> OK
+T:180 S:-107 AX:-188 AY:-116 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:148 S:-67 AX:46 AY:75 B1:0 B2:0 M:0 -> OK
+T:-255 S:255 AX:-255 AY:-255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:152 S:-77 AX:-104 AY:-79 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:-255 S:255 AX:-255 AY:-255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:160 S:-85 AX:-144 AY:-72 B1:0 B2:0 M:0 -> OK
+T:0 S:255 AX:-255 AY:-255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:169 S:-95 AX:-231 AY:-217 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:108 S:0 AX:56 AY:86 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:177 S:-104 AX:-175 AY:-198 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:134 S:-57 AX:118 AY:167 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:0 S:-32 AX:-255 AY:-255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:145 S:-67 AX:-97 AY:-52 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:-255 S:255 AX:-255 AY:-255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:156 S:-82 AX:-163 AY:-49 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:-255 S:255 AX:-255 AY:-255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:166 S:-94 AX:-179 AY:-132 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:88 S:255 AX:-172 AY:-63 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:175 S:-102 AX:-232 AY:-177 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:130 S:-47 AX:74 AY:112 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:179 S:-67 AX:-190 AY:-144 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:150 S:-151 AX:33 AY:38 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:-255 S:255 AX:-255 AY:-255 B1:0 B2:0 M:0 -> OK
+!T:152 S:-111 AX:-146 AY:-131 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:-255 S:255 AX:-255 AY:-255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:157 S:-83 AX:-168 AY:-111 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:37 S:255 AX:-255 AY:-255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:164 S:-66 AX:-255 AY:-251 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:127 S:-106 AX:53 AY:84 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:181 S:-110 AX:-243 AY:-182 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:153 S:-75 AX:54 AY:70 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:-255 S:255 AX:-255 AY:-255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:160 S:-79 AX:-219 AY:-244 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:0 S:255 AX:-255 AY:-255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:169 S:-94 AX:-255 AY:-246 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:100 S:0 AX:-255 AY:-230 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:177 S:-100 AX:-255 AY:-216 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:128 S:-39 AX:-55 AY:37 B1:0 B2:0 M:0 -> OK
+T:184 S:-111 AX:-255 AY:-250 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:147 S:-70 AX:46 AY:63 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:191 S:-119 AX:-224 AY:-200 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:157 S:-78 AX:-169 AY:-153 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:-255 S:255 AX:-255 AY:-255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:152 S:-79 AX:-129 AY:-75 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:-255 S:255 AX:-255 AY:-255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:162 S:-86 AX:-166 AY:-112 B1:0 B2:0 M:0 -> OK
+oneksi ke receiver terputus !!!
+T:50 S:255 AX:-253 AY:-205 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:170 S:-95 AX:-255 AY:-255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:114 S:-39 AX:74 AY:112 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:179 S:-107 AX:-189 AY:-73 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:137 S:-58 AX:108 AY:132 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiv
+T:-255 S:255 AX:-255 AY:-255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:148 S:-72 AX:-98 AY:0 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:-255 S:255 AX:-255 AY:-255 B1:0 B2:0 M:0 -> OK
+T:158 S:-85 AX:-113 AY:-37 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:-255 S:255 AX:-255 AY:-255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:168 S:-95 AX:-161 AY:-139 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiv
+T:134 S:-49 AX:74 AY:69 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver
+T:185 S:-116 AX:-231 AY:-166 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:149 S:-75 AX:46 AY:74 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:191 S:-119 AX:-255 AY:-255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:157 S:-78 AX:-194 AY:-153 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:-255 S:255 AX:-255 AY:-255 B1:0 B2:0 M:0 -> OK
+T:168 S:-96 AX:-164 AY:-137 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver
+T:89 S:0 AX:-227 AY:-196 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver
+T:176 S:-103 AX:-221 AY:-169 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:124 S:-38 AX:-104 AY:-60 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:183 S:-109 AX:-194 AY:-160 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terpu
+T:144 S:-71 AX:0 AY:56 B1:0 B2:0 M:0 -> OK
+!!! KoneksT:189 S:-122 AX:-215 AY:-165 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:156 S:-80 AX:0 AY:0 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:-255 S:255 AX:-255 AY:-255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:163 S:-86 AX:-186 AY:-123 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver
+T:56 S:255 AX:-255 AY:-248 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:173 S:-102 AX:-203 AY:-161 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver
+T:112 S:0 AX:-152 AY:-109 B1:0 B2:0 M:0 -> OK
+T:180 S:-105 AX:-219 AY:-185 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:135 S:-52 AX:0 AY:46 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiv
+T:187 S:-118 AX:-228 AY:-192 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:152 S:-79 AX:42 AY:65 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:192 S:-121 AX:-255 AY:-255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:160 S:-81 AX:-213 AY:-145 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:-255 S:255 AX:-255 AY:-255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:170 S:-99 AX:-180 AY:-120 B1:0 B2:0 M:0 -> OK
+T:98 S:0 AX:-253 AY:-145 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiv
+T:177 S:-104 AX:-203 AY:-161 B1:0 B2:0 M:0 -> OK
+T:127 S:-41 AX:-118 AY:-54 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiv
+T:184 S:-109 AX:-223 AY:-133 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:147 S:-74 AX:0 AY:62 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:191 S:-123 AX:-160 AY:-104 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:157 S:-82 AX:0 AY:0 B1:0 B2:0 M:0 -> OK
+T:-255 S:255 AX:-255 AY:-255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:166 S:-91 AX:-196 AY:-144 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:73 S:0 AX:-255 AY:-191 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:174 S:-103 AX:-206 AY:-148 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:117 S:-31 AX:-155 AY:-58 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke 
+T:181 S:-107 AX:-220 AY:-194 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke 
+T:140 S:-68 AX:0 AY:48 B1:0 B2:0 M:0 -> OK
+!!T:188 S:-121 AX:-161 AY:-152 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:154 S:-82 AX:39 AY:60 B1:0 B2:0 M:0 -> OK
+T:183 S:-120 AX:-255 AY:-255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:161 S:-84 AX:-173 AY:-147 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiv
+T:0 S:255 AX:-255 AY:-255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:171 S:-101 AX:-163 AY:-177 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:104 S:0 AX:-195 AY:-149 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:178 S:-106 AX:-183 AY:-149 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:129 S:-43 AX:-101 AY:0 B1:0 B2:0 M:0 -> OK
+!!! KT:185 S:-117 AX:-179 AY:-135 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:149 S:-78 AX:51 AY:66 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:192 S:-124 AX:-156 AY:-112 B1:0 B2:0 M:0 -> OK
+T:159 S:-83 AX:-60 AY:-39 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:-255 S:255 AX:-255 AY:-255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:167 S:-97 AX:-175 AY:-106 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:82 S:0 AX:-186 AY:-127 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:176 S:-104 AX:-178 AY:-137 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:120 S:-35 AX:-133 AY:-62 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:181 S:-107 AX:-255 AY:-163 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:142 S:-70 AX:0 AY:47 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver
+T:189 S:-123 AX:-164 AY:-109 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver
+T:155 S:-83 AX:33 AY:50 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:148 S:-97 AX:-255 AY:-255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:163 S:-85 AX:-171 AY:-139 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:37 S:255 AX:-255 AY:-255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:172 S:-103 AX:-156 AY:-125 B1:0 B2:0 M:0 -> OK
+T:108 S:0 AX:-216 AY:-109 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:179 S:-106 AX:-184 AY:-153 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke reputus !!!
+T:133 S:-48 AX:50 AY:87 B1:0 B2:0 M:0 -> OK
+!!! T:186 S:-118 AX:-202 AY:-121 B1:0 B2:0 M:0 -> OK
+T:151 S:-80 AX:52 AY:78 B1:0 B2:0 M:0 -> OK
+tus !!!
+T:192 S:-125 AX:-145 AY:-113 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:159 S:-82 AX:-109 AY:-65 B1:0 B2:0 M:0 -> OK
+!!! T:-255 S:255 AX:-255 AY:-255 B1:0 B2:0 M:0 -> OK
+ terputus !!!
+T:169 S:-99 AX:-150 AY:-72 B1:0 B2:0 M:0 -> OK
+!!! T:91 S:0 AX:-193 AY:-154 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:176 S:-105 AX:-173 AY:-121 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:123 S:-38 AX:-99 AY:-51 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:183 S:-110 AX:-180 AY:-88 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:144 S:-73 AX:34 AY:57 B1:0 B2:0 M:0 -> OK
+r terputus !!!
+T:190 S:-124 AX:-168 AY:-100 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke 
+T:156 S:-83 AX:0 AY:41 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:112 S:-62 AX:-255 AY:-255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:164 S:-88 AX:-150 AY:-115 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiv
+T:53 S:255 AX:-255 AY:-216 B1:0 B2:0 M:0 -> OK
+T:173 S:-105 AX:-127 AY:-121 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:113 S:-30 AX:-209 AY:-68 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiv
+T:180 S:-107 AX:-210 AY:-133 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:136 S:-54 AX:0 AY:50 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:187 S:-120 AX:-154 AY:-117 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke 
+T:153 S:-82 AX:63 AY:88 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:192 S:-125 AX:-242 AY:-229 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:160 S:-83 AX:-137 AY:-65 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:-255 S:255 AX:-255 AY:-255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:170 S:-100 AX:-107 AY:-100 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:97 S:0 AX:-186 AY:-112 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiv
+T:178 S:-106 AX:-133 AY:-103 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:126 S:-41 AX:-81 AY:0 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:184 S:-110 AX:-159 AY:-100 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke r
+T:146 S:-74 AX:51 AY:76 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:191 S:-125 AX:-139 AY:-84 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:157 S:-83 AX:0 AY:41 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:30 S:255 AX:-255 AY:-255 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:165 S:-87 AX:-130 AY:-108 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:66 S:0 AX:-247 AY:-225 B1:0 B2:0 M:0 -> OK
+!!! T:174 S:-105 AX:-149 AY:-124 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:115 S:0 AX:-126 AY:-44 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:181 S:-107 AX:-189 AY:-144 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:139 S:-56 AX:61 AY:85 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:187 S:-121 AX:-143 AY:-131 B1:0 B2:0 M:0 -> OK
+!!! Koneksi ke receiver terputus !!!
+T:152 S:-77 AX:187 AY:208 B1:0 B2:0 M:0 -> OK
+!!! K
