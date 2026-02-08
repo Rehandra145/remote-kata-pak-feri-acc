@@ -1,0 +1,528 @@
+[0;32mI (99) esp_image: segment 0: paddr=00010020 vaddr=3c07002t: Min chip rev:   ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0xa (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40048839
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce3818,len:0x1758
+load:0x403c9700,len:0x4
+load:0x403c9704,len:0xc00
+load:0x403cc700,len:0x2e20
+entry 0x403c9908
+[0;32mI (26) boot: ESP-IDF v5.1.6-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Jan 27 2026 21:48:17[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v0.2[0m
+[0;32mI (34) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (39) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (44) boot.esp32s3: SPI Flash Size : 8MB[0m
+[0;32mI (48) boot: Enabling RNG early entropy source...[0m
+[0;32mI (54) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (65) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (72) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (79) boot:  2 factory          factory app      00 00 00010000 00300000[0m
+[0;32mI (87) boot:  3 model            Unknown data     01 82 00310000 004f0000[0m
+[0;32mI (94) boot: End of partition table[0m
+[0;32mI (99) esp_image: segment 0: paddr=00010020 vaddr=3c070020 size=1d62ch (120364) map[0m
+[0;32mI (129) esp_image: segment 1: paddr=0002d654 vaddr=3fc95b00 size=029c4h ( 10692) load[0m
+[0;32mI (131) esp_image: segment 2: paddr=00030020 vaddr=42000020 size=65688h (415368) map[0m
+[0;32mI (209) esp_image: segment 3: paddr=000956b0 vaddr=3fc984c4 size=0272ch ( 10028) load[0m
+[0;32mI (211) esp_image: segment 4: paddr=00097de4 vaddr=40374000 size=11ae8h ( 72424) load[0m
+[0;32mI (238) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (239) boot: Disabling RNG early entropy source...[0m
+[0;32mI (250) cpu_start: Multicore app[0m
+[0;32mI (251) octal_psram: vendor id    : 0x0d (AP)[0m
+[0;32mI (251) octal_psram: dev id       : 0x02 (generation 3)[0m
+[0;32mI (254) octal_psram: density      : 0x03 (64 Mbit)[0m
+[0;32mI (259) octal_psram: good-die     : 0x01 (Pass)[0m
+[0;32mI (264) octal_psram: Latency      : 0x01 (Fixed)[0m
+[0;32mI (270) octal_psram: VCC          : 0x01 (3V)[0m
+[0;32mI (275) octal_psram: SRF          : 0x01 (Fast Refresh)[0m
+[0;32mI (280) octal_psram: BurstType    : 0x01 (Hybrid Wrap)[0m
+[0;32mI (286) octal_psram: BurstLen     : 0x01 (32 Byte)[0m
+[0;32mI (292) octal_psram: Readlatency  : 0x02 (10 cycles@Fixed)[0m
+[0;32mI (298) octal_psram: DriveStrength: 0x00 (1/1)[0m
+[0;32mI (304) MSPI Timing: PSRAM timing tuning index: 5[0m
+[0;32mI (308) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (313) esp_psram: Speed: 80MHz[0m
+[0;32mI (317) cpu_start: Pro cpu up.[0m
+[0;32mI (321) cpu_start: Starting app cpu, entry point is 0x4037567c[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (648) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (658) cpu_start: Pro cpu start user code[0m
+[0;32mI (658) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (658) cpu_start: Application information:[0m
+[0;32mI (661) cpu_start: Project name:     kata_pak_feri_acc[0m
+[0;32mI (667) cpu_start: App version:      1[0m
+[0;32mI (671) cpu_start: Compile time:     Jan 27 2026 21:47:11[0m
+[0;32mI (677) cpu_start: ELF file SHA256:  577a130fe955170a...[0m
+[0;32mI (683) cpu_start: ESP-IDF:          v5.1.6-dirty[0m
+[0;32mI (688) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (693) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (698) cpu_start: Chip rev:         v0.2[0m
+[0;32mI (703) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (710) heap_init: At 3FC9BE18 len 0004D8F8 (310 KiB): DRAM[0m
+[0;32mI (716) heap_init: At 3FCE9710 len 00005724 (21 KiB): STACK/DRAM[0m
+[0;32mI (723) heap_init: At 600FE010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (729) esp_psram: Adding pool of 8192K of PSRAM memory to heap allocator[0m
+[0;32mI (737) spi_flash: detected chip: generic[0m
+[0;32mI (741) spi_flash: flash io: dio[0m
+[0;33mW (745) spi_flash: Detected size(16384k) larger than the size in the binary image header(8192k). Using the size in the binary image header.[0m
+[0;33mW (758) i2s(legacy): legacy i2s driver is deprecated, please migrate to use driver/i2s_std.h, driver/i2s_pdm.h or driver/i2s_tdm.h[0m
+[0;32mI (771) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (778) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (785) app_start: Starting scheduler on CPU0[0m
+[0;32mI (790) app_start: Starting scheduler on CPU1[0m
+[0;32mI (790) main_task: Started on CPU0[0m
+[0;32mI (800) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations[0m
+[0;32mI (810) main_task: Calling app_main()[0m
+[0;32mI (810) MAIN: ========================================[0m
+[0;32mI (820) MAIN:  kata_pak_feri_acc v1.0.0[0m
+[0;32mI (820) MAIN: ========================================[0m
+[0;32mI (830) MAIN: Platform: ESP32-S3[0m
+[0;32mI (830) MAIN: Framework: ESP-IDF + ESP-SR[0m
+[0;32mI (840) MAIN: Output: OLED SSD1306 0.96"[0m
+[0;32mI (840) MAIN: Mode: Offline, Real-time[0m
+[0;32mI (850) MAIN: [0m
+[0;32mI (850) MAIN: Commands:[0m
+[0;32mI (850) MAIN:   [Wake Word] -> FORWARD | BACKWARD | LEFT | RIGHT | STOP[0m
+[0;32mI (860) MAIN: [0m
+[0;32mI (860) MAIN: OLED Pins: SDA=GPIO8, SCL=GPIO9[0m
+[0;32mI (870) MAIN: ========================================[0m
+[0;32mI (870) MAIN: Initializing NVS...[0m
+[0;32mI (880) MAIN: Initializing hardware...[0m
+[0;32mI (880) gpio: GPIO[48]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (890) OLED: Initializing OLED display...[0m
+[0;31mE (900) OLED: Failed to send init cmd 0: ESP_FAIL[0m
+[0;31mE (900) OLED: Failed to init SSD1306: ESP_FAIL[0m
+[0;31mE (910) MAIN: OLED init failed: ESP_FAIL[0m
+[0;32mI (910) MAIN: Initializing software...[0m
+[0;32mI (910) EVT_QUEUE: Event queue initialized (length=16)[0m
+[0;32mI (920) FAILSAFE: Initializing fail-safe subsystem...[0m
+[0;32mI (930) FAILSAFE: Fail-safe state reset[0m
+[0;32mI (930) FAILSAFE: Fail-safe initialized[0m
+[0;32mI (930) STATE_MACHINE: Initializing state machine...[0m
+[0;32mI (940) FAILSAFE: Output DISABLED[0m
+[0;32mI (940) STATE_MACHINE: State machine initialized - starting in IDLE state[0m
+[0;32mI (950) MAIN: Initializing audio/speech recognition...[0m
+[0;32mI (960) AUDIO: Initializing I2S microphone (Legacy API) 32-bit...[0m
+[0;32mI (970) AUDIO: I2S initialized (Legacy): 16kHz, 32-bit[0m
+[0;32mI (970) AUDIO: Initializing ESP-SR...[0m
+[0;32mI (970) MODEL_LOADER: The storage free size is 24000 KB[0m
+[0;32mI (980) MODEL_LOADER: The partition size is 5056 KB[0m
+[0;32mI (990) MODEL_LOADER: Successfully load srmodels[0m
+[0;32mI (990) AUDIO: WakeNet model: wn9_hiesp[0m
+[0;32mI (1000) AUDIO: MultiNet model: mn5q8_en[0m
+[0;32mI (1000) AUDIO: AFE Config: SE=On, VAD=On, WakeNet=On. Model: wn9_hiesp[0m
+[0;32mI (1010) AFE_SR: afe interface for speech recognition[0m
+[0;32mI (1010) AFE_SR: AFE version: SR_V220727[0m
+[0;32mI (1020) AFE_SR: Initial auido front-end, total channel: 1, mic num: 1, ref num: 0[0m
+[0;32mI (1030) AFE_SR: aec_init: 0, se_init: 1, vad_init: 1
+[0m
+[0;32mI (1030) AFE_SR: wakenet_init: 1
+[0m
+MC Quantized wakenet9: wakeNet9_v1h24_Hi,ESP_3_0.63_0.635, tigger:v3, mode:2, p:0, (Nov  5 2024 16:02:49)
+[0;32mI (1180) AFE_SR: wake num: 2, mode: 0, (Nov  5 2024 16:02:49)
+[0m
+Quantized8 Multinet5: MN5Q8_v2_english_8_0.9_0.90, beam search:v2, (Nov  5 2024 16:02:48)
+[0;32mI (1410) AUDIO: Configuring voice commands...[0m
+[0;32mI (1410) AUDIO: ESP-SR initialized with 5 commands[0m
+[0;32mI (1410) AUDIO: Audio subsystem initialized successfully[0m
+[0;32mI (1420) MAIN: Initializing hardware watchdog (2000 ms timeout)...[0m
+[0;32mI (1430) MAIN: Creating tasks...[0m
+[0;32mI (1430) OLED: OLED display task started[0m
+[0;32mI (1440) STATE_MACHINE: State machine task started on core 0[0m
+[0;32mI (1440) AUDIO: Audio processing task started - spawning feed and detect tasks[0m
+[0;32mI (1440) MAIN: Watchdog feeder task started on core 0[0m
+[0;33mW (1450) AUDIO: === CHUNK SIZES ===[0m
+[0;32mI (1440) MAIN: Status LED task started on core 0[0m
+[0;33mW (1460) AUDIO: AFE feed: 160 samples (10.0ms)[0m
+[0;32mI (1440) MAIN: ========================================[0m
+[0;33mW (1470) AUDIO: AFE fetch: 512 samples (32.0ms)[0m
+[0;32mI (1480) MAIN:  All tasks started. System ready.[0m
+[0;33mW (1480) AUDIO: MultiNet: 512 samples[0m
+[0;32mI (1490) MAIN:  Say wake word to start...[0m
+[0;32mI (1490) AUDIO: Feed task started on core 1[0m
+[0;32mI (1500) AUDIO: Feed task: chunk size = 160 samples (10.0ms)[0m
+
+***ERROR*** A stack overflow in task audio_feed has been detected.
+
+
+Backtrace: 0x40375c62:0x3fcb7630 0x4037d6f9:0x3fcb7650 0x4038005a:0x3fcb7670 0x4037edf3:0x3fcb76f0 0x40380168:0x3fcb7710 0x4038015e:0x4192e8c0 |<-CORRUPTED
+
+
+
+
+ELF file SHA256: 577a130fe955170a
+
+Rebooting...
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x3 (RTC_SW_SYS_RST),boot:0xa (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40380442
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce3818,len:0x1758
+load:0x403c9700,len:0x4
+load:0x403c9704,len:0xc00
+load:0x403cc700,len:0x2e20
+entry 0x403c9908
+[0;32mI (26) boot: ESP-IDF v5.1.6-dirty 2nd stage bootloader[0m
+[0;32mI (26) boot: compile time Jan 27 2026 21:48:17[0m
+[0;32mI (26) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v0.2[0m
+[0;32mI (34) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (38) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32s3: SPI Flash Size : 8MB[0m
+[0;32mI (48) boot: Enabling RNG early entropy source...[0m
+[0;32mI (53) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (64) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (71) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (79) boot:  2 factory          factory app      00 00 00010000 00300000[0m
+[0;32mI (86) boot:  3 model            Unknown data     01 82 00310000 004f0000[0m
+[0;32mI (94) boot: End of partition table[0m
+[0;32mI (98) esp_image: segment 0: paddr=00010020 vaddr=3c070020 size=1d62ch (120364) map[0m
+[0;32mI (128) esp_image: segment 1: paddr=0002d654 vaddr=3fc95b00 size=029c4h ( 10692) load[0m
+[0;32mI (131) esp_image: segment 2: paddr=00030020 vaddr=42000020 size=65688h (415368) map[0m
+[0;32mI (208) esp_image: segment 3: paddr=000956b0 vaddr=3fc984c4 size=0272ch ( 10028) load[0m
+[0;32mI (211) esp_image: segment 4: paddr=00097de4 vaddr=40374000 size=11ae8h ( 72424) load[0m
+[0;32mI (238) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (238) boot: Disabling RNG early entropy source...[0m
+[0;32mI (249) cpu_start: Multicore app[0m
+[0;32mI (250) octal_psram: vendor id    : 0x0d (AP)[0m
+[0;32mI (250) octal_psram: dev id       : 0x02 (generation 3)[0m
+[0;32mI (253) octal_psram: density      : 0x03 (64 Mbit)[0m
+[0;32mI (258) octal_psram: good-die     : 0x01 (Pass)[0m
+[0;32mI (264) octal_psram: Latency      : 0x01 (Fixed)[0m
+[0;32mI (269) octal_psram: VCC          : 0x01 (3V)[0m
+[0;32mI (274) octal_psram: SRF          : 0x01 (Fast Refresh)[0m
+[0;32mI (280) octal_psram: BurstType    : 0x01 (Hybrid Wrap)[0m
+[0;32mI (286) octal_psram: BurstLen     : 0x01 (32 Byte)[0m
+[0;32mI (291) octal_psram: Readlatency  : 0x02 (10 cycles@Fixed)[0m
+[0;32mI (297) octal_psram: DriveStrength: 0x00 (1/1)[0m
+[0;32mI (303) MSPI Timing: PSRAM timing tuning index: 5[0m
+[0;32mI (308) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (313) esp_psram: Speed: 80MHz[0m
+[0;32mI (316) cpu_start: Pro cpu up.[0m
+[0;32mI (320) cpu_start: Starting app cpu, entry point is 0x4037567c[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (648) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (657) cpu_start: Pro cpu start user code[0m
+[0;32mI (657) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (657) cpu_start: Application information:[0m
+[0;32mI (660) cpu_start: Project name:     kata_pak_feri_acc[0m
+[0;32mI (666) cpu_start: App version:      1[0m
+[0;32mI (670) cpu_start: Compile time:     Jan 27 2026 21:47:11[0m
+[0;32mI (677) cpu_start: ELF file SHA256:  577a130fe955170a...[0m
+[0;32mI (683) cpu_start: ESP-IDF:          v5.1.6-dirty[0m
+[0;32mI (688) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (693) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (697) cpu_start: Chip rev:         v0.2[0m
+[0;32mI (702) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (709) heap_init: At 3FC9BE18 len 0004D8F8 (310 KiB): DRAM[0m
+[0;32mI (716) heap_init: At 3FCE9710 len 00005724 (21 KiB): STACK/DRAM[0m
+[0;32mI (722) heap_init: At 600FE010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (729) esp_psram: Adding pool of 8192K of PSRAM memory to heap allocator[0m
+[0;32mI (737) spi_flash: detected chip: generic[0m
+[0;32mI (741) spi_flash: flash io: dio[0m
+[0;33mW (745) spi_flash: Detected size(16384k) larger than the size in the binary image header(8192k). Using the size in the binary image header.[0m
+[0;33mW (758) i2s(legacy): legacy i2s driver is deprecated, please migrate to use driver/i2s_std.h, driver/i2s_pdm.h or driver/i2s_tdm.h[0m
+[0;32mI (770) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (777) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (784) app_start: Starting scheduler on CPU0[0m
+[0;32mI (789) app_start: Starting scheduler on CPU1[0m
+[0;32mI (789) main_task: Started on CPU0[0m
+[0;32mI (799) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations[0m
+[0;32mI (809) main_task: Calling app_main()[0m
+[0;32mI (809) MAIN: ========================================[0m
+[0;32mI (819) MAIN:  kata_pak_feri_acc v1.0.0[0m
+[0;32mI (819) MAIN: ========================================[0m
+[0;32mI (829) MAIN: Platform: ESP32-S3[0m
+[0;32mI (829) MAIN: Framework: ESP-IDF + ESP-SR[0m
+[0;32mI (839) MAIN: Output: OLED SSD1306 0.96"[0m
+[0;32mI (839) MAIN: Mode: Offline, Real-time[0m
+[0;32mI (849) MAIN: [0m
+[0;32mI (849) MAIN: Commands:[0m
+[0;32mI (849) MAIN:   [Wake Word] -> FORWARD | BACKWARD | LEFT | RIGHT | STOP[0m
+[0;32mI (859) MAIN: [0m
+[0;32mI (859) MAIN: OLED Pins: SDA=GPIO8, SCL=GPIO9[0m
+[0;32mI (869) MAIN: ========================================[0m
+[0;32mI (869) MAIN: Initializing NVS...[0m
+[0;32mI (879) MAIN: Initializing hardware...[0m
+[0;32mI (879) gpio: GPIO[48]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (889) OLED: Initializing OLED display...[0m
+[0;31mE (899) OLED: Failed to send init cmd 0: ESP_FAIL[0m
+[0;31mE (899) OLED: Failed to init SSD1306: ESP_FAIL[0m
+[0;31mE (909) MAIN: OLED init failed: ESP_FAIL[0m
+[0;32mI (909) MAIN: Initializing software...[0m
+[0;32mI (909) EVT_QUEUE: Event queue initialized (length=16)[0m
+[0;32mI (919) FAILSAFE: Initializing fail-safe subsystem...[0m
+[0;32mI (929) FAILSAFE: Fail-safe state reset[0m
+[0;32mI (929) FAILSAFE: Fail-safe initialized[0m
+[0;32mI (929) STATE_MACHINE: Initializing state machine...[0m
+[0;32mI (939) FAILSAFE: Output DISABLED[0m
+[0;32mI (939) STATE_MACHINE: State machine initialized - starting in IDLE state[0m
+[0;32mI (949) MAIN: Initializing audio/speech recognition...[0m
+[0;32mI (959) AUDIO: Initializing I2S microphone (Legacy API) 32-bit...[0m
+[0;32mI (969) AUDIO: I2S initialized (Legacy): 16kHz, 32-bit[0m
+[0;32mI (969) AUDIO: Initializing ESP-SR...[0m
+[0;32mI (969) MODEL_LOADER: The storage free size is 24000 KB[0m
+[0;32mI (979) MODEL_LOADER: The partition size is 5056 KB[0m
+[0;32mI (989) MODEL_LOADER: Successfully load srmodels[0m
+[0;32mI (989) AUDIO: WakeNet model: wn9_hiesp[0m
+[0;32mI (999) AUDIO: MultiNet model: mn5q8_en[0m
+[0;32mI (999) AUDIO: AFE Config: SE=On, VAD=On, WakeNet=On. Model: wn9_hiesp[0m
+[0;32mI (1009) AFE_SR: afe interface for speech recognition[0m
+[0;32mI (1009) AFE_SR: AFE version: SR_V220727[0m
+[0;32mI (1019) AFE_SR: Initial auido front-end, total channel: 1, mic num: 1, ref num: 0[0m
+[0;32mI (1029) AFE_SR: aec_init: 0, se_init: 1, vad_init: 1
+[0m
+[0;32mI (1029) AFE_SR: wakenet_init: 1
+[0m
+MC Quantized wakenet9: wakeNet9_v1h24_Hi,ESP_3_0.63_0.635, tigger:v3, mode:2, p:0, (Nov  5 2024 16:02:49)
+[0;32mI (1179) AFE_SR: wake num: 2, mode: 0, (Nov  5 2024 16:02:49)
+[0m
+Quantized8 Multinet5: MN5Q8_v2_english_8_0.9_0.90, beam search:v2, (Nov  5 2024 16:02:48)
+[0;32mI (1409) AUDIO: Configuring voice commands...[0m
+[0;32mI (1409) AUDIO: ESP-SR initialized with 5 commands[0m
+[0;32mI (1409) AUDIO: Audio subsystem initialized successfully[0m
+[0;32mI (1419) MAIN: Initializing hardware watchdog (2000 ms timeout)...[0m
+[0;32mI (1429) MAIN: Creating tasks...[0m
+[0;32mI (1429) OLED: OLED display task started[0m
+[0;32mI (1439) STATE_MACHINE: State machine task started on core 0[0m
+[0;32mI (1439) AUDIO: Audio processing task started - spawning feed and detect tasks[0m
+[0;32mI (1439) MAIN: Watchdog feeder task started on core 0[0m
+[0;33mW (1449) AUDIO: === CHUNK SIZES ===[0m
+[0;32mI (1439) MAIN: Status LED task started on core 0[0m
+[0;33mW (1459) AUDIO: AFE feed: 160 samples (10.0ms)[0m
+[0;32mI (1439) MAIN: ========================================[0m
+[0;33mW (1469) AUDIO: AFE fetch: 512 samples (32.0ms)[0m
+[0;32mI (1479) MAIN:  All tasks started. System ready.[0m
+[0;33mW (1479) AUDIO: MultiNet: 512 samples[0m
+[0;32mI (1489) MAIN:  Say wake word to start...[0m
+[0;32mI (1489) AUDIO: Feed task started on core 1[0m
+[0;32mI (1499) AUDIO: Feed task: chunk size = 160 samples (10.0ms)[0m
+
+***ERROR*** A stack overflow in task audio_feed has been detected.
+
+
+Backtrace: 0x40375c62:0x3fcb7630 0x4037d6f9:0x3fcb7650 0x4038005a:0x3fcb7670 0x4037edf3:0x3fcb76f0 0x40380168:0x3fcb7710 0x4038015e:0xc2b70bb4 |<-CORRUPTED
+
+
+
+
+ELF file SHA256: 577a130fe955170a
+
+Rebooting...
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x3 (RTC_SW_SYS_RST),boot:0xa (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40380445
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce3818,len:0x1758
+load:0x403c9700,len:0x4
+load:0x403c9704,len:0xc00
+load:0x403cc700,len:0x2e20
+entry 0x403c9908
+[0;32mI (26) boot: ESP-IDF v5.1.6-dirty 2nd stage bootloader[0m
+[0;32mI (26) boot: compile time Jan 27 2026 21:48:17[0m
+[0;32mI (26) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v0.2[0m
+[0;32mI (34) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (38) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32s3: SPI Flash Size : 8MB[0m
+[0;32mI (48) boot: Enabling RNG early entropy source...[0m
+[0;32mI (53) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (64) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (71) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (79) boot:  2 factory          factory app      00 00 00010000 00300000[0m
+[0;32mI (86) boot:  3 model            Unknown data     01 82 00310000 004f0000[0m
+[0;32mI (94) boot: End of partition table[0m
+[0;32mI (98) esp_image: segment 0: paddr=00010020 vaddr=3c070020 size=1d62ch (120364) map[0m
+[0;32mI (128) esp_image: segment 1: paddr=0002d654 vaddr=3fc95b00 size=029c4h ( 10692) load[0m
+[0;32mI (131) esp_image: segment 2: paddr=00030020 vaddr=42000020 size=65688h (415368) map[0m
+[0;32mI (208) esp_image: segment 3: paddr=000956b0 vaddr=3fc984c4 size=0272ch ( 10028) load[0m
+[0;32mI (211) esp_image: segment 4: paddr=00097de4 vaddr=40374000 size=11ae8h ( 72424) load[0m
+[0;32mI (238) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (238) boot: Disabling RNG early entropy source...[0m
+[0;32mI (249) cpu_start: Multicore app[0m
+[0;32mI (250) octal_psram: vendor id    : 0x0d (AP)[0m
+[0;32mI (250) octal_psram: dev id       : 0x02 (generation 3)[0m
+[0;32mI (253) octal_psram: density      : 0x03 (64 Mbit)[0m
+[0;32mI (258) octal_psram: good-die     : 0x01 (Pass)[0m
+[0;32mI (264) octal_psram: Latency      : 0x01 (Fixed)[0m
+[0;32mI (269) octal_psram: VCC          : 0x01 (3V)[0m
+[0;32mI (274) octal_psram: SRF          : 0x01 (Fast Refresh)[0m
+[0;32mI (280) octal_psram: BurstType    : 0x01 (Hybrid Wrap)[0m
+[0;32mI (286) octal_psram: BurstLen     : 0x01 (32 Byte)[0m
+[0;32mI (291) octal_psram: Readlatency  : 0x02 (10 cycles@Fixed)[0m
+[0;32mI (297) octal_psram: DriveStrength: 0x00 (1/1)[0m
+[0;32mI (303) MSPI Timing: PSRAM timing tuning index: 5[0m
+[0;32mI (308) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (313) esp_psram: Speed: 80MHz[0m
+[0;32mI (316) cpu_start: Pro cpu up.[0m
+[0;32mI (320) cpu_start: Starting app cpu, entry point is 0x4037567c[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (648) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (657) cpu_start: Pro cpu start user code[0m
+[0;32mI (657) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (657) cpu_start: Application information:[0m
+[0;32mI (660) cpu_start: Project name:     kata_pak_feri_acc[0m
+[0;32mI (666) cpu_start: App version:      1[0m
+[0;32mI (670) cpu_start: Compile time:     Jan 27 2026 21:47:11[0m
+[0;32mI (677) cpu_start: ELF file SHA256:  577a130fe955170a...[0m
+[0;32mI (683) cpu_start: ESP-IDF:          v5.1.6-dirty[0m
+[0;32mI (688) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (693) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (697) cpu_start: Chip rev:         v0.2[0m
+[0;32mI (702) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (709) heap_init: At 3FC9BE18 len 0004D8F8 (310 KiB): DRAM[0m
+[0;32mI (716) heap_init: At 3FCE9710 len 00005724 (21 KiB): STACK/DRAM[0m
+[0;32mI (722) heap_init: At 600FE010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (729) esp_psram: Adding pool of 8192K of PSRAM memory to heap allocator[0m
+[0;32mI (737) spi_flash: detected chip: generic[0m
+[0;32mI (741) spi_flash: flash io: dio[0m
+[0;33mW (745) spi_flash: Detected size(16384k) larger than the size in the binary image header(8192k). Using the size in the binary image header.[0m
+[0;33mW (758) i2s(legacy): legacy i2s driver is deprecated, please migrate to use driver/i2s_std.h, driver/i2s_pdm.h or driver/i2s_tdm.h[0m
+[0;32mI (770) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (777) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (784) app_start: Starting scheduler on CPU0[0m
+[0;32mI (789) app_start: Starting scheduler on CPU1[0m
+[0;32mI (789) main_task: Started on CPU0[0m
+[0;32mI (799) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations[0m
+[0;32mI (809) main_task: Calling app_main()[0m
+[0;32mI (809) MAIN: ========================================[0m
+[0;32mI (819) MAIN:  kata_pak_feri_acc v1.0.0[0m
+[0;32mI (819) MAIN: ========================================[0m
+[0;32mI (829) MAIN: Platform: ESP32-S3[0m
+[0;32mI (829) MAIN: Framework: ESP-IDF + ESP-SR[0m
+[0;32mI (839) MAIN: Output: OLED SSD1306 0.96"[0m
+[0;32mI (839) MAIN: Mode: Offline, Real-time[0m
+[0;32mI (849) MAIN: [0m
+[0;32mI (849) MAIN: Commands:[0m
+[0;32mI (849) MAIN:   [Wake Word] -> FORWARD | BACKWARD | LEFT | RIGHT | STOP[0m
+[0;32mI (859) MAIN: [0m
+[0;32mI (859) MAIN: OLED Pins: SDA=GPIO8, SCL=GPIO9[0m
+[0;32mI (869) MAIN: ========================================[0m
+[0;32mI (869) MAIN: Initializing NVS...[0m
+[0;32mI (879) MAIN: Initializing hardware...[0m
+[0;32mI (879) gpio: GPIO[48]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (889) OLED: Initializing OLED display...[0m
+[0;31mE (899) OLED: Failed to send init cmd 0: ESP_FAIL[0m
+[0;31mE (899) OLED: Failed to init SSD1306: ESP_FAIL[0m
+[0;31mE (909) MAIN: OLED init failed: ESP_FAIL[0m
+[0;32mI (909) MAIN: Initializing software...[0m
+[0;32mI (909) EVT_QUEUE: Event queue initialized (length=16)[0m
+[0;32mI (919) FAILSAFE: Initializing fail-safe subsystem...[0m
+[0;32mI (929) FAILSAFE: Fail-safe state reset[0m
+[0;32mI (929) FAILSAFE: Fail-safe initialized[0m
+[0;32mI (929) STATE_MACHINE: Initializing state machine...[0m
+[0;32mI (939) FAILSAFE: Output DISABLED[0m
+[0;32mI (939) STATE_MACHINE: State machine initialized - starting in IDLE state[0m
+[0;32mI (949) MAIN: Initializing audio/speech recognition...[0m
+[0;32mI (959) AUDIO: Initializing I2S microphone (Legacy API) 32-bit...[0m
+[0;32mI (969) AUDIO: I2S initialized (Legacy): 16kHz, 32-bit[0m
+[0;32mI (969) AUDIO: Initializing ESP-SR...[0m
+[0;32mI (969) MODEL_LOADER: The storage free size is 24000 KB[0m
+[0;32mI (979) MODEL_LOADER: The partition size is 5056 KB[0m
+[0;32mI (989) MODEL_LOADER: Successfully load srmodels[0m
+[0;32mI (989) AUDIO: WakeNet model: wn9_hiesp[0m
+[0;32mI (999) AUDIO: MultiNet model: mn5q8_en[0m
+[0;32mI (999) AUDIO: AFE Config: SE=On, VAD=On, WakeNet=On. Model: wn9_hiesp[0m
+[0;32mI (1009) AFE_SR: afe interface for speech recognition[0m
+[0;32mI (1009) AFE_SR: AFE version: SR_V220727[0m
+[0;32mI (1019) AFE_SR: Initial auido front-end, total channel: 1, mic num: 1, ref num: 0[0m
+[0;32mI (1029) AFE_SR: aec_init: 0, se_init: 1, vad_init: 1
+[0m
+[0;32mI (1029) AFE_SR: wakenet_init: 1
+[0m
+MC Quantized wakenet9: wakeNet9_v1h24_Hi,ESP_3_0.63_0.635, tigger:v3, mode:2, p:0, (Nov  5 2024 16:02:49)
+[0;32mI (1179) AFE_SR: wake num: 2, mode: 0, (Nov  5 2024 16:02:49)
+[0m
+Quantized8 Multinet5: MN5Q8_v2_english_8_0.9_0.90, beam search:v2, (Nov  5 2024 16:02:48)
+[0;32mI (1409) AUDIO: Configuring voice commands...[0m
+[0;32mI (1409) AUDIO: ESP-SR initialized with 5 commands[0m
+[0;32mI (1409) AUDIO: Audio subsystem initialized successfully[0m
+[0;32mI (1419) MAIN: Initializing hardware watchdog (2000 ms timeout)...[0m
+[0;32mI (1429) MAIN: Creating tasks...[0m
+[0;32mI (1429) OLED: OLED display task started[0m
+[0;32mI (1439) STATE_MACHINE: State machine task started on core 0[0m
+[0;32mI (1439) AUDIO: Audio processing task started - spawning feed and detect tasks[0m
+[0;32mI (1439) MAIN: Watchdog feeder task started on core 0[0m
+[0;33mW (1449) AUDIO: === CHUNK SIZES ===[0m
+[0;32mI (1439) MAIN: Status LED task started on core 0[0m
+[0;33mW (1459) AUDIO: AFE feed: 160 samples (10.0ms)[0m
+[0;32mI (1439) MAIN: ========================================[0m
+[0;33mW (1469) AUDIO: AFE fetch: 512 samples (32.0ms)[0m
+[0;32mI (1479) MAIN:  All tasks started. System ready.[0m
+[0;33mW (1479) AUDIO: MultiNet: 512 samples[0m
+[0;32mI (1489) MAIN:  Say wake word to start...[0m
+[0;32mI (1489) AUDIO: Feed task started on core 1[0m
+[0;32mI (1499) AUDIO: Feed task: chunk size = 160 samples (10.0ms)[0m
+
+***ERROR*** A stack overflow in task audio_feed has been detected.
+
+
+Backtrace: 0x40375c62:0x3fcb7680 0x4037d6f9:0x3fcb76a0 0x4038005a:0x3fcb76c0 0x4037edf3:0x3fcb7740 0x40380168:0x3fcb7760 0x4038015e:0x4373851b |<-CORRUPTED
+
+
+
+
+ELF file SHA256: 577a130fe955170a
+
+Rebooting...
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x3 (RTC_SW_SYS_RST),boot:0xa (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4038044d
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce3818,len:0x1758
+load:0x403c9700,len:0x4
+load:0x403c9704,len:0xc00
+load:0x403cc700,len:0x2e20
+entry 0x403c9908
+[0;32mI (26) boot: ESP-IDF v5.1.6-dirty 2nd stage bootloader[0m
+[0;32mI (26) boot: compile time Jan 27 2026 21:48:17[0m
+[0;32mI (26) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v0.2[0m
+[0;32mI (34) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (38) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32s3: SPI Flash Size : 8MB[0m
+[0;32mI (48) boot: Enabling RNG early entropy source...[0m
+[0;32mI (53) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (64) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (71) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (79) boot:  2 factory          factory app      00 00 00010000 00300000[0m
+[0;32mI (86) boot:  3 model            Unknown data     01 82 00310000 004f0000[0m
+[0;32mI (94) boot: End of partition table[0m
+[0;32mI (98) esp_image: segment 0: paddr=00010020 vaddr=3c070020 size=1d62ch (120364) map[0m
+[0;32mI (128) esp_image: segment 1: paddr=0002d654 vaddr=3fc95b00 size=029c4h ( 10692) load[0m
+[0;32mI (131) esp_image: segment 2: paddr=00030020 vaddr=42000020 size=65688h (415368) map[0m
+[0;32mI (208) esp_image: segment 3: paddr=000956b0 vaddr=3fc984c4 size=0272ch ( 10028) load[0m
+[0;32mI (211) esp_image: segment 4: paddr=00097de4 vaddr=40374000 size=11ae8h ( 72424) load[0m
+[0;32mI (238) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (238) boot: Disabling RNG early entropy source...[0m
+[0;32mI (249) cpu_start: Multicore app[0m
+[0;32mI (250) octal_psram: vendor id    : 0x0d (AP)[0m
+[0;32mI (250) octal_psram: dev id       : 0x02 (generation 3)[0m
+[0;32mI (253) octal_psram: density      : 0x03 (64 Mbit)[0m
+[0;32mI (258) octal_psram: good-die     : 0x01 (Pass)[0m
+[0;32mI (264) octal_psram: Latency      : 0x01 (Fixed)[0m
+[0;32mI (269) octal_psram: VCC          : 0x01 (3V)[0m
+[0;32mI (274) octal_psram: SRF          : 0x01 (Fast Refresh)[0m
+[0;32mI (280) octal_psram: BurstType    : 0x01 (Hybrid Wrap)[0m
+[0;32mI (286) octal_psram: BurstLen     : 0x01 (32 Byte)[0m
+[0;32mI (291) octal_psram: Readlatency  : 0x02 (10 cycles@Fixed)[0m
+[0;32mI (297) octal_psram: DriveStrength: 0x00 (1/1)[0m
+[0;32mI (303) MSPI Timing: PSRAM timing tuning index: 5[0m
+[0;32mI (308) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (313) esp_psram: Speed: 80MHz[0m
+[0;32mI (316) cpu_start: Pro cpu up.[0m
+[0;32mI (320) cpu_start: Starting app cpu, entry point is 0x4037567c[0m
+[0;32mI (0) cpu_start: App cpu up.[0m

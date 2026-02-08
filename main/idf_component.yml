@@ -1,0 +1,12 @@
+## IDF Component Manager Manifest File
+
+dependencies:
+  # ESP-SR speech recognition
+  espressif/esp-sr:
+    version: "^1.4.2"
+    
+  # ESP-ADF audio processing (optional, for advanced audio handling)
+  # espressif/esp-adf-libs: "^1.0.0"
+  
+  idf:
+    version: ">=5.0.0"

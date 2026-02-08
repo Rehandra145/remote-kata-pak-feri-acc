@@ -1,0 +1,271 @@
+[0;32mI (99) esp_image: segment 0: paddr=00010020 vaddr=3c0c002ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4200b341
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce3818,len:0x1758
+load:0x403c9700,len:0x4
+load:0x403c9704,len:0xc00
+load:0x403cc700,len:0x2e20
+entry 0x403c9908
+[0;32mI (26) boot: ESP-IDF v5.1.6-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Jan 27 2026 21:48:17[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v0.2[0m
+[0;32mI (34) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (39) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (44) boot.esp32s3: SPI Flash Size : 8MB[0m
+[0;32mI (48) boot: Enabling RNG early entropy source...[0m
+[0;32mI (54) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (65) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (72) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (79) boot:  2 factory          factory app      00 00 00010000 00300000[0m
+[0;32mI (87) boot:  3 model            Unknown data     01 82 00310000 004f0000[0m
+[0;32mI (94) boot: End of partition table[0m
+[0;32mI (99) esp_image: segment 0: paddr=00010020 vaddr=3c0c0020 size=b777ch (751484) map[0m
+[0;32mI (242) esp_image: segment 1: paddr=000c77a4 vaddr=3fc9c000 size=06e50h ( 28240) load[0m
+[0;32mI (248) esp_image: segment 2: paddr=000ce5fc vaddr=40374000 size=01a1ch (  6684) load[0m
+[0;32mI (250) esp_image: segment 3: paddr=000d0020 vaddr=42000020 size=bab24h (764708) map[0m
+[0;32mI (393) esp_image: segment 4: paddr=0018ab4c vaddr=40375a1c size=164ech ( 91372) load[0m
+[0;32mI (424) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (424) boot: Disabling RNG early entropy source...[0m
+[0;32mI (436) cpu_start: Multicore app[0m
+[0;32mI (437) octal_psram: vendor id    : 0x0d (AP)[0m
+[0;32mI (437) octal_psram: dev id       : 0x02 (generation 3)[0m
+[0;32mI (439) octal_psram: density      : 0x03 (64 Mbit)[0m
+[0;32mI (445) octal_psram: good-die     : 0x01 (Pass)[0m
+[0;32mI (450) octal_psram: Latency      : 0x01 (Fixed)[0m
+[0;32mI (455) octal_psram: VCC          : 0x01 (3V)[0m
+[0;32mI (460) octal_psram: SRF          : 0x01 (Fast Refresh)[0m
+[0;32mI (466) octal_psram: BurstType    : 0x01 (Hybrid Wrap)[0m
+[0;32mI (472) octal_psram: BurstLen     : 0x01 (32 Byte)[0m
+[0;32mI (478) octal_psram: Readlatency  : 0x02 (10 cycles@Fixed)[0m
+[0;32mI (484) octal_psram: DriveStrength: 0x00 (1/1)[0m
+[0;32mI (490) MSPI Timing: PSRAM timing tuning index: 5[0m
+[0;32mI (494) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (499) esp_psram: Speed: 80MHz[0m
+[0;32mI (503) cpu_start: Pro cpu up.[0m
+[0;32mI (506) cpu_start: Starting app cpu, entry point is 0x4037574c[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (834) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (843) cpu_start: Pro cpu start user code[0m
+[0;32mI (843) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (844) cpu_start: Application information:[0m
+[0;32mI (847) cpu_start: Project name:     kata_pak_feri_acc[0m
+[0;32mI (852) cpu_start: App version:      1[0m
+[0;32mI (857) cpu_start: Compile time:     Jan 27 2026 22:49:00[0m
+[0;32mI (863) cpu_start: ELF file SHA256:  c4a3fa2ace2cad90...[0m
+[0;32mI (869) cpu_start: ESP-IDF:          v5.1.6-dirty[0m
+[0;32mI (874) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (879) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (884) cpu_start: Chip rev:         v0.2[0m
+[0;32mI (889) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (896) heap_init: At 3FCA68F0 len 00042E20 (267 KiB): DRAM[0m
+[0;32mI (902) heap_init: At 3FCE9710 len 00005724 (21 KiB): STACK/DRAM[0m
+[0;32mI (909) heap_init: At 600FE010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (915) esp_psram: Adding pool of 8192K of PSRAM memory to heap allocator[0m
+[0;32mI (923) spi_flash: detected chip: generic[0m
+[0;32mI (927) spi_flash: flash io: dio[0m
+[0;33mW (931) spi_flash: Detected size(16384k) larger than the size in the binary image header(8192k). Using the size in the binary image header.[0m
+[0;33mW (944) i2s(legacy): legacy i2s driver is deprecated, please migrate to use driver/i2s_std.h, driver/i2s_pdm.h or driver/i2s_tdm.h[0m
+[0;32mI (957) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (963) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (971) app_start: Starting scheduler on CPU0[0m
+[0;32mI (975) app_start: Starting scheduler on CPU1[0m
+[0;32mI (975) main_task: Started on CPU0[0m
+[0;32mI (985) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations[0m
+[0;32mI (995) main_task: Calling app_main()[0m
+[0;32mI (995) MAIN: ========================================[0m
+[0;32mI (1005) MAIN:  kata_pak_feri_acc v1.0.0[0m
+[0;32mI (1005) MAIN: ========================================[0m
+[0;32mI (1015) MAIN: Platform: ESP32-S3[0m
+[0;32mI (1015) MAIN: Framework: ESP-IDF + ESP-SR[0m
+[0;32mI (1025) MAIN: Output: OLED SSD1306 0.96"[0m
+[0;32mI (1025) MAIN: Mode: Offline, Real-time[0m
+[0;32mI (1035) MAIN: [0m
+[0;32mI (1035) MAIN: Commands:[0m
+[0;32mI (1035) MAIN:   [Wake Word] -> FORWARD | BACKWARD | LEFT | RIGHT | STOP[0m
+[0;32mI (1045) MAIN: [0m
+[0;32mI (1045) MAIN: OLED Pins: SDA=GPIO8, SCL=GPIO9[0m
+[0;32mI (1055) MAIN: ========================================[0m
+[0;32mI (1055) MAIN: Initializing NVS...[0m
+[0;32mI (1065) MAIN: Initializing hardware...[0m
+[0;32mI (1065) gpio: GPIO[48]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (1075) OLED: Initializing OLED display...[0m
+[0;31mE (1085) OLED: Failed to send init cmd 0: ESP_FAIL[0m
+[0;31mE (1085) OLED: Failed to init SSD1306: ESP_FAIL[0m
+[0;31mE (1095) MAIN: OLED init failed: ESP_FAIL[0m
+[0;32mI (1095) MAIN: Initializing software...[0m
+[0;32mI (1105) EVT_QUEUE: Event queue initialized (length=16)[0m
+[0;32mI (1105) FAILSAFE: Initializing fail-safe subsystem...[0m
+[0;32mI (1115) FAILSAFE: Fail-safe state reset[0m
+[0;32mI (1115) FAILSAFE: Fail-safe initialized[0m
+[0;32mI (1125) STATE_MACHINE: Initializing state machine...[0m
+[0;32mI (1125) ESPNOW: Initializing ESP-NOW communication...[0m
+[0;32mI (1135) pp: pp rom version: e7ae62f[0m
+[0;32mI (1135) net80211: net80211 rom version: e7ae62f[0m
+[0;32mI (1155) wifi:wifi driver task: 3fcb6604, prio:23, stack:6656, core=0[0m
+[0;32mI (1155) wifi:wifi firmware version: 02461b5[0m
+[0;32mI (1155) wifi:wifi certification version: v7.0[0m
+[0;32mI (1155) wifi:config NVS flash: enabled[0m
+[0;32mI (1165) wifi:config nano formating: disabled[0m
+[0;32mI (1165) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (1165) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (1175) wifi:Init management short buffer num: 32[0m
+[0;32mI (1175) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (1185) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (1185) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (1195) wifi:Init static rx buffer num: 10[0m
+[0;32mI (1195) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (1195) wifi_init: rx ba win: 6[0m
+[0;32mI (1205) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1205) wifi_init: udp mbox: 6[0m
+[0;32mI (1215) wifi_init: tcp mbox: 6[0m
+[0;32mI (1215) wifi_init: tcp tx win: 5760[0m
+[0;32mI (1215) wifi_init: tcp rx win: 5760[0m
+[0;32mI (1225) wifi_init: tcp mss: 1440[0m
+[0;32mI (1225) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1235) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (1235) phy_init: phy_version 680,a6008b2,Jun  4 2024,16:41:10[0m
+[0;33mW (1245) phy_init: failed to load RF calibration data (0x1102), falling back to full calibration[0m
+[0;32mI (1285) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(2)[0m
+[0;32mI (1285) wifi:mode : sta (10:20:ba:4c:63:88)[0m
+[0;32mI (1285) wifi:enable tsf[0m
+[1;31mE (1285) wifi:failed to post WiFi event=2 ret=259[0m
+[0;32mI (1295) ESPNOW: espnow [version: 1.0] init[0m
+[0;32mI (1295) ESPNOW: ESP-NOW initialized[0m
+[0;32mI (1295) ESPNOW: Receiver MAC: FC:01:2C:D1:76:54[0m
+[0;32mI (1305) FAILSAFE: Output DISABLED[0m
+[0;32mI (1305) STATE_MACHINE: State machine initialized - starting in IDLE state[0m
+[0;32mI (1315) MAIN: Initializing audio/speech recognition...[0m
+[0;32mI (1325) AUDIO: Initializing I2S microphone (Legacy API) 32-bit...[0m
+[0;32mI (1325) AUDIO: I2S initialized (Legacy): 16kHz, 32-bit[0m
+[0;32mI (1335) AUDIO: Initializing ESP-SR...[0m
+[0;32mI (1335) MODEL_LOADER: The storage free size is 23040 KB[0m
+[0;32mI (1345) MODEL_LOADER: The partition size is 5056 KB[0m
+[0;32mI (1355) MODEL_LOADER: Successfully load srmodels[0m
+[0;32mI (1355) AUDIO: WakeNet model: wn9_hiesp[0m
+[0;32mI (1365) AUDIO: MultiNet model: mn7_en[0m
+[0;32mI (1365) AUDIO: AFE Config: SE=On, VAD=On, WakeNet=On. Model: wn9_hiesp[0m
+[0;32mI (1375) AFE_SR: afe interface for speech recognition[0m
+[0;32mI (1375) AFE_SR: AFE version: SR_V220727[0m
+[0;32mI (1385) AFE_SR: Initial auido front-end, total channel: 1, mic num: 1, ref num: 0[0m
+[0;32mI (1395) AFE_SR: aec_init: 0, se_init: 1, vad_init: 1
+[0m
+[0;32mI (1395) AFE_SR: wakenet_init: 1
+[0m
+MC Quantized wakenet9: wakeNet9_v1h24_Hi,ESP_3_0.63_0.635, tigger:v3, mode:2, p:0, (Nov  5 2024 16:02:49)
+[0;32mI (1545) AFE_SR: wake num: 2, mode: 0, (Nov  5 2024 16:02:49)
+[0m
+Build fst from commands.
+Quantized MultiNet7:rnnt_ctc_2.0, name:mn7_en, (Nov  5 2024 16:02:48)
+Quantized MultiNet7 search method: 2, time out:10.0 s
+[0;32mI (2035) AUDIO: Configuring voice commands...[0m
+Build fst from commands.
+[0;32mI (2065) AUDIO: [0m
+[0;32mI (2065) AUDIO: === REGISTERED COMMANDS ===[0m
+[0;32mI (2065) AUDIO:   "FORWARD"[0m
+[0;32mI (2065) AUDIO:   "BACKWARD"[0m
+[0;32mI (2075) AUDIO:   "LEFT"[0m
+[0;32mI (2075) AUDIO:   "RIGHT"[0m
+[0;32mI (2075) AUDIO:   "STOP"[0m
+[0;32mI (2085) AUDIO: ===========================[0m
+[0;32mI (2085) AUDIO: [0m
+[0;32mI (2085) AUDIO: ESP-SR initialized with 5 commands[0m
+[0;32mI (2095) AUDIO: Audio subsystem initialized successfully[0m
+[0;32mI (2105) MAIN: Initializing hardware watchdog (2000 ms timeout)...[0m
+[0;32mI (2105) MAIN: Creating tasks...[0m
+[0;32mI (2115) OLED: OLED display task started[0m
+[0;32mI (2115) STATE_MACHINE: State machine task started on core 0[0m
+[0;32mI (2125) AUDIO: Audio processing task started - spawning feed and detect tasks[0m
+[0;32mI (2125) MAIN: Watchdog feeder task started on core 0[0m
+[0;33mW (2135) AUDIO: === CHUNK SIZES ===[0m
+[0;32mI (2125) MAIN: Status LED task started on core 0[0m
+[0;33mW (2135) AUDIO: AFE feed: 160 samples (10.0ms)[0m
+[0;32mI (2125) MAIN: ========================================[0m
+[0;33mW (2155) AUDIO: AFE fetch: 512 samples (32.0ms)[0m
+[0;32mI (2155) MAIN:  All tasks started. System ready.[0m
+[0;33mW (2165) AUDIO: MultiNet: 512 samples[0m
+[0;32mI (2165) MAIN:  Say wake word to start...[0m
+[0;32mI (2175) AUDIO: Feed task started on core 1[0m
+[0;32mI (2185) AUDIO: Feed task: chunk size = 160 samples (10.0ms)[0m
+[0;32mI (2175) AUDIO: Audio tasks created - feed and detect running[0m
+[0;32mI (2175) AUDIO: Detect task started on core 1[0m
+[0;32mI (2175) MAIN: ========================================[0m
+[0;32mI (2715) AUDIO: Detect task: fetch chunk size = 512 samples[0m
+[0;32mI (2725) AUDIO: Detect[1]: Out=110, Wake=0, VAD=0, ret=0[0m
+[0;32mI (2735) AUDIO: Detect[2]: Out=199, Wake=0, VAD=0, ret=0[0m
+[0;32mI (2735) AUDIO: Detect[3]: Out=137, Wake=0, VAD=0, ret=0[0m
+[0;32mI (2745) AUDIO: Detect[4]: Out=127, Wake=0, VAD=0, ret=0[0m
+[0;32mI (2755) AUDIO: Detect[5]: Out=89, Wake=0, VAD=0, ret=0[0m
+[0;32mI (2755) AUDIO: Detect[6]: Out=119, Wake=0, VAD=0, ret=0[0m
+[0;32mI (2765) AUDIO: Detect[7]: Out=103, Wake=0, VAD=0, ret=0[0m
+[0;32mI (2775) AUDIO: Detect[8]: Out=94, Wake=0, VAD=0, ret=0[0m
+[0;32mI (2775) AUDIO: Detect[9]: Out=82, Wake=0, VAD=0, ret=0[0m
+[0;32mI (2785) AUDIO: Detect[10]: Out=62, Wake=0, VAD=0, ret=0[0m
+[0;32mI (2795) AUDIO: Detect[11]: Out=91, Wake=0, VAD=0, ret=0[0m
+[0;32mI (2795) AUDIO: Detect[12]: Out=94, Wake=0, VAD=0, ret=0[0m
+[0;32mI (2805) AUDIO: Detect[13]: Out=98, Wake=0, VAD=0, ret=0[0m
+[0;32mI (2815) AUDIO: Detect[14]: Out=109, Wake=0, VAD=0, ret=0[0m
+[0;32mI (2825) AUDIO: Detect[15]: Out=129, Wake=0, VAD=0, ret=0[0m
+[0;32mI (2835) AUDIO: Detect[16]: Out=119, Wake=0, VAD=0, ret=0[0m
+[0;32mI (2835) AUDIO: Detect[17]: Out=115, Wake=0, VAD=0, ret=0[0m
+[0;32mI (2845) AUDIO: Detect[18]: Out=84, Wake=0, VAD=0, ret=0[0m
+[0;32mI (2845) AUDIO: Detect[19]: Out=123, Wake=0, VAD=0, ret=0[0m
+[0;32mI (2855) AUDIO: Detect[20]: Out=96, Wake=0, VAD=0, ret=0[0m
+[0;32mI (2865) AUDIO: Detect[21]: Out=90, Wake=0, VAD=0, ret=0[0m
+[0;32mI (2875) AUDIO: Detect[22]: Out=88, Wake=0, VAD=0, ret=0[0m
+[0;32mI (2875) AUDIO: Detect[23]: Out=113, Wake=0, VAD=0, ret=0[0m
+[0;32mI (2885) AUDIO: Detect[24]: Out=88, Wake=0, VAD=0, ret=0[0m
+[0;32mI (2895) AUDIO: Detect[25]: Out=114, Wake=0, VAD=0, ret=0[0m
+[0;32mI (2925) AUDIO: Detect[26]: Out=88, Wake=0, VAD=0, ret=0[0m
+[0;32mI (2955) AUDIO: Detect[27]: Out=73, Wake=0, VAD=0, ret=0[0m
+[0;32mI (2985) AUDIO: Detect[28]: Out=55, Wake=0, VAD=0, ret=0[0m
+[0;32mI (3015) AUDIO: Detect[29]: Out=110, Wake=0, VAD=0, ret=0[0m
+[0;32mI (3035) AUDIO: Detect[30]: Out=115, Wake=0, VAD=0, ret=0[0m
+[0;32mI (3075) AUDIO: Feed[100]: samples=160, max_amp=88[0m
+[0;32mI (4065) AUDIO: Feed[200]: samples=160, max_amp=69[0m
+[0;32mI (5075) AUDIO: Feed[300]: samples=160, max_amp=184[0m
+[0;32mI (6065) AUDIO: Feed[400]: samples=160, max_amp=652[0m
+[0;32mI (7075) AUDIO: Feed[500]: samples=160, max_amp=70[0m
+[0;32mI (8065) AUDIO: Feed[600]: samples=160, max_amp=73[0m
+[0;32mI (8475) AUDIO: Detect[200]: Out=100, Wake=0, VAD=0, ret=0[0m
+[0;32mI (9075) AUDIO: Feed[700]: samples=160, max_amp=7198[0m
+[0;32mI (9675) AUDIO: [0m
+[0;32mI (9675) AUDIO: ========================================[0m
+[0;32mI (9675) AUDIO: >>> WAKE WORD DETECTED! <<<[0m
+[0;32mI (9675) AUDIO: ========================================[0m
+[0;32mI (9685) AUDIO: Say one of these commands:[0m
+[0;32mI (9685) AUDIO:   - "FORWARD"[0m
+[0;32mI (9695) AUDIO:   - "BACKWARD"[0m
+[0;32mI (9695) AUDIO:   - "LEFT"[0m
+[0;32mI (9695) AUDIO:   - "RIGHT"[0m
+[0;32mI (9705) AUDIO:   - "STOP"[0m
+[0;32mI (9705) AUDIO: Listening for 10 seconds...[0m
+[0;32mI (9705) AUDIO: ========================================[0m
+[0;32mI (9715) AUDIO: [0m
+[0;32mI (9715) AUDIO: WakeNet disabled for command listening[0m
+[0;32mI (9725) STATE_MACHINE: Event: WAKEWORD_DETECTED | State: IDLE[0m
+[0;32mI (9735) STATE_MACHINE: Transition: IDLE -> LISTENING[0m
+[0;32mI (10065) AUDIO: Feed[800]: samples=160, max_amp=598[0m
+[0;32mI (10085) AUDIO: [LISTENING] MultiNet processing... (250)[0m
+[0;32mI (10235) STATE_MACHINE: Entry LISTENING: Waiting for voice command[0m
+[0;32mI (11075) AUDIO: Feed[900]: samples=160, max_amp=16502[0m
+[0;32mI (11685) AUDIO: [LISTENING] MultiNet processing... (300)[0m
+[0;32mI (11795) AUDIO: [0m
+[0;32mI (11795) AUDIO: ****************************************[0m
+[0;32mI (11795) AUDIO: *** COMMAND DETECTED: STOP ***[0m
+[0;32mI (11795) AUDIO: *** ID=5, Confidence=25% ***[0m
+[0;32mI (11795) AUDIO: ****************************************[0m
+[0;32mI (11805) AUDIO: [0m
+[0;32mI (11805) EVT_QUEUE: Posted voice event: VOICE_STOP (conf=0.00, id=-1)[0m
+[0;32mI (11805) STATE_MACHINE: Event: VOICE_STOP | State: LISTENING[0m
+[0;32mI (11815) AUDIO: WakeNet re-enabled after command[0m
+[0;32mI (11825) STATE_MACHINE: Transition: LISTENING -> STOPPED[0m
+[0;32mI (11835) FAILSAFE: Output DISABLED[0m
+[0;32mI (11835) ESPNOW: Sending: STOP (speed=200)[0m
+[0;33mW (11855) ESPNOW: TX Failed[0m
+[0;32mI (12065) AUDIO: Feed[1000]: samples=160, max_amp=52[0m
+[0;32

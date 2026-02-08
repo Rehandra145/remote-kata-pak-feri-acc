@@ -1,0 +1,10 @@
+# Voice RC System Command Vocabulary
+# Format: command_id,command_grapheme
+# For MultiNet6: Use uppercase graphemes
+# Command IDs must start from 1 (0 is reserved)
+
+1,FORWARD
+2,BACKWARD
+3,LEFT
+4,RIGHT
+5,STOP

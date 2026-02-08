@@ -232,7 +232,7 @@ kata_pak_feri_acc/
 
 | Wake Word | Commands |
 |-----------|----------|
-| "Hi ESP"  | FORWARD, BACKWARD, LEFT, RIGHT, STOP |
+| "Hi ESP" atau "Alexa" | FORWARD, BACKWARD, LEFT, RIGHT, STOP |
 
 ---
 

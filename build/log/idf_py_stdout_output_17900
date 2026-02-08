@@ -1,0 +1,1146 @@
+[0;32mI (321) esp_image: segment 3: paddr=0012d5a8 vaddr=3fc982ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4037a4ba
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce3818,len:0x1758
+load:0x403c9700,len:0x4
+load:0x403c9704,len:0xc00
+load:0x403cc700,len:0x2e20
+entry 0x403c9908
+[0;32mI (26) boot: ESP-IDF v5.1.6-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Jan 27 2026 21:48:17[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v0.2[0m
+[0;32mI (34) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (39) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (44) boot.esp32s3: SPI Flash Size : 8MB[0m
+[0;32mI (48) boot: Enabling RNG early entropy source...[0m
+[0;32mI (54) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (65) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (72) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (79) boot:  2 factory          factory app      00 00 00010000 00300000[0m
+[0;32mI (87) boot:  3 model            Unknown data     01 82 00310000 004f0000[0m
+[0;32mI (94) boot: End of partition table[0m
+[0;32mI (99) esp_image: segment 0: paddr=00010020 vaddr=3c070020 size=ad82ch (710700) map[0m
+[0;32mI (234) esp_image: segment 1: paddr=000bd854 vaddr=3fc95b00 size=027c4h ( 10180) load[0m
+[0;32mI (237) esp_image: segment 2: paddr=000c0020 vaddr=42000020 size=6d580h (447872) map[0m
+[0;32mI (321) esp_image: segment 3: paddr=0012d5a8 vaddr=3fc982c4 size=0292ch ( 10540) load[0m
+[0;32mI (323) esp_image: segment 4: paddr=0012fedc vaddr=40374000 size=11ae8h ( 72424) load[0m
+[0;32mI (350) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (350) boot: Disabling RNG early entropy source...[0m
+[0;32mI (362) cpu_start: Multicore app[0m
+[0;32mI (362) octal_psram: vendor id    : 0x0d (AP)[0m
+[0;32mI (363) octal_psram: dev id       : 0x02 (generation 3)[0m
+[0;32mI (365) octal_psram: density      : 0x03 (64 Mbit)[0m
+[0;32mI (371) octal_psram: good-die     : 0x01 (Pass)[0m
+[0;32mI (376) octal_psram: Latency      : 0x01 (Fixed)[0m
+[0;32mI (381) octal_psram: VCC          : 0x01 (3V)[0m
+[0;32mI (386) octal_psram: SRF          : 0x01 (Fast Refresh)[0m
+[0;32mI (392) octal_psram: BurstType    : 0x01 (Hybrid Wrap)[0m
+[0;32mI (398) octal_psram: BurstLen     : 0x01 (32 Byte)[0m
+[0;32mI (403) octal_psram: Readlatency  : 0x02 (10 cycles@Fixed)[0m
+[0;32mI (410) octal_psram: DriveStrength: 0x00 (1/1)[0m
+[0;32mI (415) MSPI Timing: PSRAM timing tuning index: 5[0m
+[0;32mI (420) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (425) esp_psram: Speed: 80MHz[0m
+[0;32mI (429) cpu_start: Pro cpu up.[0m
+[0;32mI (432) cpu_start: Starting app cpu, entry point is 0x4037567c[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (760) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (769) cpu_start: Pro cpu start user code[0m
+[0;32mI (769) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (770) cpu_start: Application information:[0m
+[0;32mI (772) cpu_start: Project name:     kata_pak_feri_acc[0m
+[0;32mI (778) cpu_start: App version:      1[0m
+[0;32mI (783) cpu_start: Compile time:     Jan 27 2026 22:49:00[0m
+[0;32mI (789) cpu_start: ELF file SHA256:  fcf7882bc891686b...[0m
+[0;32mI (795) cpu_start: ESP-IDF:          v5.1.6-dirty[0m
+[0;32mI (800) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (805) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (810) cpu_start: Chip rev:         v0.2[0m
+[0;32mI (814) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (822) heap_init: At 3FC9BE70 len 0004D8A0 (310 KiB): DRAM[0m
+[0;32mI (828) heap_init: At 3FCE9710 len 00005724 (21 KiB): STACK/DRAM[0m
+[0;32mI (834) heap_init: At 600FE010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (841) esp_psram: Adding pool of 8192K of PSRAM memory to heap allocator[0m
+[0;32mI (849) spi_flash: detected chip: generic[0m
+[0;32mI (853) spi_flash: flash io: dio[0m
+[0;33mW (857) spi_flash: Detected size(16384k) larger than the size in the binary image header(8192k). Using the size in the binary image header.[0m
+[0;33mW (870) i2s(legacy): legacy i2s driver is deprecated, please migrate to use driver/i2s_std.h, driver/i2s_pdm.h or driver/i2s_tdm.h[0m
+[0;32mI (882) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (889) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (897) app_start: Starting scheduler on CPU0[0m
+[0;32mI (901) app_start: Starting scheduler on CPU1[0m
+[0;32mI (901) main_task: Started on CPU0[0m
+[0;32mI (911) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations[0m
+[0;32mI (921) main_task: Calling app_main()[0m
+[0;32mI (921) MAIN: ========================================[0m
+[0;32mI (931) MAIN:  kata_pak_feri_acc v1.0.0[0m
+[0;32mI (931) MAIN: ========================================[0m
+[0;32mI (941) MAIN: Platform: ESP32-S3[0m
+[0;32mI (941) MAIN: Framework: ESP-IDF + ESP-SR[0m
+[0;32mI (951) MAIN: Output: OLED SSD1306 0.96"[0m
+[0;32mI (951) MAIN: Mode: Offline, Real-time[0m
+[0;32mI (961) MAIN: [0m
+[0;32mI (961) MAIN: Commands:[0m
+[0;32mI (961) MAIN:   [Wake Word] -> FORWARD | BACKWARD | LEFT | RIGHT | STOP[0m
+[0;32mI (971) MAIN: [0m
+[0;32mI (971) MAIN: OLED Pins: SDA=GPIO8, SCL=GPIO9[0m
+[0;32mI (981) MAIN: ========================================[0m
+[0;32mI (981) MAIN: Initializing NVS...[0m
+[0;32mI (991) MAIN: Initializing hardware...[0m
+[0;32mI (991) gpio: GPIO[48]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (1001) OLED: Initializing OLED display...[0m
+[0;31mE (1011) OLED: Failed to send init cmd 0: ESP_FAIL[0m
+[0;31mE (1011) OLED: Failed to init SSD1306: ESP_FAIL[0m
+[0;31mE (1021) MAIN: OLED init failed: ESP_FAIL[0m
+[0;32mI (1021) MAIN: Initializing software...[0m
+[0;32mI (1021) EVT_QUEUE: Event queue initialized (length=16)[0m
+[0;32mI (1031) FAILSAFE: Initializing fail-safe subsystem...[0m
+[0;32mI (1041) FAILSAFE: Fail-safe state reset[0m
+[0;32mI (1041) FAILSAFE: Fail-safe initialized[0m
+[0;32mI (1051) STATE_MACHINE: Initializing state machine...[0m
+[0;32mI (1051) FAILSAFE: Output DISABLED[0m
+[0;32mI (1061) STATE_MACHINE: State machine initialized - starting in IDLE state[0m
+[0;32mI (1061) MAIN: Initializing audio/speech recognition...[0m
+[0;32mI (1071) AUDIO: Initializing I2S microphone (Legacy API) 32-bit...[0m
+[0;32mI (1081) AUDIO: I2S initialized (Legacy): 16kHz, 32-bit[0m
+[0;32mI (1081) AUDIO: Initializing ESP-SR...[0m
+[0;32mI (1091) MODEL_LOADER: The storage free size is 23424 KB[0m
+[0;32mI (1091) MODEL_LOADER: The partition size is 5056 KB[0m
+[0;32mI (1101) MODEL_LOADER: Successfully load srmodels[0m
+[0;32mI (1101) AUDIO: WakeNet model: wn9_hiesp[0m
+[0;32mI (1111) AUDIO: MultiNet model: mn7_en[0m
+[0;32mI (1111) AUDIO: AFE Config: SE=On, VAD=On, WakeNet=On. Model: wn9_hiesp[0m
+[0;32mI (1121) AFE_SR: afe interface for speech recognition[0m
+[0;32mI (1121) AFE_SR: AFE version: SR_V220727[0m
+[0;32mI (1131) AFE_SR: Initial auido front-end, total channel: 1, mic num: 1, ref num: 0[0m
+[0;32mI (1141) AFE_SR: aec_init: 0, se_init: 1, vad_init: 1
+[0m
+[0;32mI (1141) AFE_SR: wakenet_init: 1
+[0m
+MC Quantized wakenet9: wakeNet9_v1h24_Hi,ESP_3_0.63_0.635, tigger:v3, mode:2, p:0, (Nov  5 2024 16:02:49)
+[0;32mI (1291) AFE_SR: wake num: 2, mode: 0, (Nov  5 2024 16:02:49)
+[0m
+Build fst from commands.
+Quantized MultiNet7:rnnt_ctc_2.0, name:mn7_en, (Nov  5 2024 16:02:48)
+Quantized MultiNet7 search method: 2, time out:10.0 s
+[0;32mI (1781) AUDIO: Configuring voice commands...[0m
+Build fst from commands.
+[0;32mI (1811) AUDIO: [0m
+[0;32mI (1811) AUDIO: === REGISTERED COMMANDS ===[0m
+[0;32mI (1811) AUDIO:   "FORWARD"[0m
+[0;32mI (1811) AUDIO:   "BACKWARD"[0m
+[0;32mI (1821) AUDIO:   "LEFT"[0m
+[0;32mI (1821) AUDIO:   "RIGHT"[0m
+[0;32mI (1821) AUDIO:   "STOP"[0m
+[0;32mI (1831) AUDIO: ===========================[0m
+[0;32mI (1831) AUDIO: [0m
+[0;32mI (1831) AUDIO: ESP-SR initialized with 5 commands[0m
+[0;32mI (1841) AUDIO: Audio subsystem initialized successfully[0m
+[0;32mI (1851) MAIN: Initializing hardware watchdog (2000 ms timeout)...[0m
+[0;32mI (1851) MAIN: Creating tasks...[0m
+[0;32mI (1861) OLED: OLED display task started[0m
+[0;32mI (1861) STATE_MACHINE: State machine task started on core 0[0m
+[0;32mI (1871) AUDIO: Audio processing task started - spawning feed and detect tasks[0m
+[0;32mI (1871) MAIN: Watchdog feeder task started on core 0[0m
+[0;33mW (1881) AUDIO: === CHUNK SIZES ===[0m
+[0;32mI (1871) MAIN: Status LED task started on core 0[0m
+[0;33mW (1891) AUDIO: AFE feed: 160 samples (10.0ms)[0m
+[0;32mI (1871) MAIN: ========================================[0m
+[0;33mW (1901) AUDIO: AFE fetch: 512 samples (32.0ms)[0m
+[0;32mI (1901) MAIN:  All tasks started. System ready.[0m
+[0;33mW (1911) AUDIO: MultiNet: 512 samples[0m
+[0;32mI (1911) MAIN:  Say wake word to start...[0m
+[0;32mI (1921) AUDIO: Feed task started on core 1[0m
+[0;32mI (1931) AUDIO: Feed task: chunk size = 160 samples (10.0ms)[0m
+[0;32mI (1921) AUDIO: Audio tasks created - feed and detect running[0m
+[0;32mI (1921) AUDIO: Detect task started on core 1[0m
+[0;32mI (1921) MAIN: ========================================[0m
+[0;32mI (2461) AUDIO: Detect task: fetch chunk size = 512 samples[0m
+[0;32mI (2461) AUDIO: Detect[1]: Out=63, Wake=0, VAD=0, ret=0[0m
+[0;32mI (2471) AUDIO: Detect[2]: Out=37, Wake=0, VAD=0, ret=0[0m
+[0;32mI (2481) AUDIO: Detect[3]: Out=44, Wake=0, VAD=0, ret=0[0m
+[0;32mI (2481) AUDIO: Detect[4]: Out=34, Wake=0, VAD=0, ret=0[0m
+[0;32mI (2491) AUDIO: Detect[5]: Out=33, Wake=0, VAD=0, ret=0[0m
+[0;32mI (2501) AUDIO: Detect[6]: Out=34, Wake=0, VAD=0, ret=0[0m
+[0;32mI (2511) AUDIO: Detect[7]: Out=104, Wake=0, VAD=0, ret=0[0m
+[0;32mI (2511) AUDIO: Detect[8]: Out=63, Wake=0, VAD=0, ret=0[0m
+[0;32mI (2521) AUDIO: Detect[9]: Out=64, Wake=0, VAD=0, ret=0[0m
+[0;32mI (2531) AUDIO: Detect[10]: Out=54, Wake=0, VAD=0, ret=0[0m
+[0;32mI (2531) AUDIO: Detect[11]: Out=43, Wake=0, VAD=0, ret=0[0m
+[0;32mI (2541) AUDIO: Detect[12]: Out=46, Wake=0, VAD=0, ret=0[0m
+[0;32mI (2551) AUDIO: Detect[13]: Out=35, Wake=0, VAD=0, ret=0[0m
+[0;32mI (2561) AUDIO: Detect[14]: Out=35, Wake=0, VAD=0, ret=0[0m
+[0;32mI (2561) AUDIO: Detect[15]: Out=60, Wake=0, VAD=0, ret=0[0m
+[0;32mI (2571) AUDIO: Detect[16]: Out=45, Wake=0, VAD=0, ret=0[0m
+[0;32mI (2581) AUDIO: Detect[17]: Out=81, Wake=0, VAD=0, ret=0[0m
+[0;32mI (2581) AUDIO: Detect[18]: Out=58, Wake=0, VAD=0, ret=0[0m
+[0;32mI (2591) AUDIO: Detect[19]: Out=79, Wake=0, VAD=0, ret=0[0m
+[0;32mI (2601) AUDIO: Detect[20]: Out=82, Wake=0, VAD=0, ret=0[0m
+[0;32mI (2601) AUDIO: Detect[21]: Out=73, Wake=0, VAD=0, ret=0[0m
+[0;32mI (2611) AUDIO: Detect[22]: Out=94, Wake=0, VAD=0, ret=0[0m
+[0;32mI (2621) AUDIO: Detect[23]: Out=99, Wake=0, VAD=0, ret=0[0m
+[0;32mI (2621) AUDIO: Detect[24]: Out=87, Wake=0, VAD=0, ret=0[0m
+[0;32mI (2631) AUDIO: Detect[25]: Out=120, Wake=0, VAD=0, ret=0[0m
+[0;32mI (2671) AUDIO: Detect[26]: Out=87, Wake=0, VAD=0, ret=0[0m
+[0;32mI (2701) AUDIO: Detect[27]: Out=111, Wake=0, VAD=0, ret=0[0m
+[0;32mI (2731) AUDIO: Detect[28]: Out=92, Wake=0, VAD=0, ret=0[0m
+[0;32mI (2761) AUDIO: Detect[29]: Out=72, Wake=0, VAD=0, ret=0[0m
+[0;32mI (2781) AUDIO: Detect[30]: Out=109, Wake=0, VAD=0, ret=0[0m
+[0;32mI (2821) AUDIO: Feed[100]: samples=160, max_amp=71[0m
+[0;32mI (3821) AUDIO: Feed[200]: samples=160, max_amp=216[0m
+[0;32mI (4821) AUDIO: Feed[300]: samples=160, max_amp=160[0m
+[0;32mI (5821) AUDIO: Feed[400]: samples=160, max_amp=245[0m
+[0;32mI (6821) AUDIO: Feed[500]: samples=160, max_amp=126[0m
+[0;32mI (7821) AUDIO: Feed[600]: samples=160, max_amp=256[0m
+[0;32mI (8221) AUDIO: Detect[200]: Out=297, Wake=0, VAD=0, ret=0[0m
+[0;32mI (8821) AUDIO: Feed[700]: samples=160, max_amp=206[0m
+[0;32mI (9801) AUDIO: [0m
+[0;32mI (9801) AUDIO: ========================================[0m
+[0;32mI (9801) AUDIO: >>> WAKE WORD DETECTED! <<<[0m
+[0;32mI (9811) AUDIO: ========================================[0m
+[0;32mI (9811) AUDIO: Say one of these commands:[0m
+[0;32mI (9821) AUDIO: Feed[800]: samples=160, max_amp=247[0m
+[0;32mI (9821) AUDIO:   - "FORWARD"[0m
+[0;32mI (9831) AUDIO:   - "BACKWARD"[0m
+[0;32mI (9831) AUDIO:   - "LEFT"[0m
+[0;32mI (9831) AUDIO:   - "RIGHT"[0m
+[0;32mI (9841) AUDIO:   - "STOP"[0m
+[0;32mI (9841) AUDIO: Listening for 10 seconds...[0m
+[0;32mI (9851) AUDIO: ========================================[0m
+[0;32mI (9851) AUDIO: [0m
+[0;32mI (9851) AUDIO: WakeNet disabled for command listening[0m
+[0;32mI (9861) STATE_MACHINE: Event: WAKEWORD_DETECTED | State: IDLE[0m
+[0;32mI (9871) STATE_MACHINE: Transition: IDLE -> LISTENING[0m
+[0;32mI (9871) AUDIO: [LISTENING] MultiNet processing... (250)[0m
+[0;32mI (9871) STATE_MACHINE: Entry LISTENING: Waiting for voice command[0m
+[0;32mI (10821) AUDIO: Feed[900]: samples=160, max_amp=233[0m
+[0;32mI (11441) AUDIO: [LISTENING] MultiNet processing... (300)[0m
+[0;32mI (11821) AUDIO: Feed[1000]: samples=160, max_amp=117[0m
+[0;32mI (11961) MAIN: Health: State=LISTENING, Queue=0[0m
+[0;32mI (12821) AUDIO: Feed[1100]: samples=160, max_amp=54[0m
+[0;32mI (13041) AUDIO: [LISTENING] MultiNet processing... (350)[0m
+[0;32mI (13821) AUDIO: Feed[1200]: samples=160, max_amp=77[0m
+[0;32mI (14621) AUDIO: Detect[400]: Out=96, Wake=0, VAD=0, ret=0[0m
+[0;32mI (14641) AUDIO: [LISTENING] MultiNet processing... (400)[0m
+[0;32mI (14821) AUDIO: Feed[1300]: samples=160, max_amp=35[0m
+[0;32mI (15821) AUDIO: Feed[1400]: samples=160, max_amp=12690[0m
+[0;32mI (16241) AUDIO: [LISTENING] MultiNet processing... (450)[0m
+[0;32mI (16821) AUDIO: Feed[1500]: samples=160, max_amp=1044[0m
+[0;32mI (17821) AUDIO: Feed[1600]: samples=160, max_amp=8346[0m
+[0;32mI (17841) AUDIO: [LISTENING] MultiNet processing... (500)[0m
+[0;32mI (18821) AUDIO: Feed[1700]: samples=160, max_amp=1243[0m
+[0;32mI (19441) AUDIO: [LISTENING] MultiNet processing... (550)[0m
+[0;32mI (19821) AUDIO: Feed[1800]: samples=160, max_amp=165[0m
+[0;32mI (20221) AUDIO: [0m
+[0;32mI (20221) AUDIO: --- Command timeout - listening for wake word again ---[0m
+[0;32mI (20221) AUDIO: [0m
+[0;32mI (20221) AUDIO: WakeNet re-enabled[0m
+[0;32mI (20821) AUDIO: Feed[1900]: samples=160, max_amp=3047[0m
+[0;32mI (21021) AUDIO: Detect[600]: Out=1579, Wake=0, VAD=1, ret=0[0m
+[0;32mI (21821) AUDIO: Feed[2000]: samples=160, max_amp=3089[0m
+[0;32mI (21821) AUDIO: [0m
+[0;32mI (21821) AUDIO: ========================================[0m
+[0;32mI (21821) AUDIO: >>> WAKE WORD DETECTED! <<<[0m
+[0;32mI (21831) AUDIO: ========================================[0m
+[0;32mI (21831) AUDIO: Say one of these commands:[0m
+[0;32mI (21841) AUDIO:   - "FORWARD"[0m
+[0;32mI (21841) AUDIO:   - "BACKWARD"[0m
+[0;32mI (21841) AUDIO:   - "LEFT"[0m
+[0;32mI (21851) AUDIO:   - "RIGHT"[0m
+[0;32mI (21851) AUDIO:   - "STOP"[0m
+[0;32mI (21851) AUDIO: Listening for 10 seconds...[0m
+[0;32mI (21861) AUDIO: ========================================[0m
+[0;32mI (21871) AUDIO: [0m
+[0;32mI (21871) AUDIO: WakeNet disabled for command listening[0m
+[0;32mI (21871) STATE_MACHINE: Event: WAKEWORD_DETECTED | State: LISTENING[0m
+[0;32mI (21961) MAIN: Health: State=LISTENING, Queue=0[0m
+[0;32mI (22621) AUDIO: [LISTENING] MultiNet processing... (650)[0m
+[0;32mI (22821) AUDIO: Feed[2100]: samples=160, max_amp=21[0m
+[0;32mI (23821) AUDIO: Feed[2200]: samples=160, max_amp=19[0m
+[0;32mI (24221) AUDIO: [LISTENING] MultiNet processing... (700)[0m
+[0;32mI (24821) AUDIO: Feed[2300]: samples=160, max_amp=13[0m
+[0;32mI (25821) AUDIO: Feed[2400]: samples=160, max_amp=1109[0m
+[0;32mI (25831) AUDIO: [LISTENING] MultiNet processing... (750)[0m
+[0;32mI (26511) AUDIO: [0m
+[0;32mI (26511) AUDIO: ****************************************[0m
+[0;32mI (26511) AUDIO: *** COMMAND DETECTED: FORWARD ***[0m
+[0;32mI (26521) AUDIO: *** ID=1, Confidence=39% ***[0m
+[0;32mI (26521) AUDIO: ****************************************[0m
+[0;32mI (26531) AUDIO: [0m
+[0;32mI (26531) EVT_QUEUE: Posted voice event: VOICE_FORWARD (conf=0.00, id=-1)[0m
+[0;32mI (26531) STATE_MACHINE: Event: VOICE_FORWARD | State: LISTENING[0m
+[0;32mI (26541) AUDIO: WakeNet re-enabled after command[0m
+[0;32mI (26541) STATE_MACHINE: Transition: LISTENING -> MOVING_FWD[0m
+[0;32mI (26561) FAILSAFE: Output ENABLED[0m
+[0;32mI (26821) AUDIO: Feed[2500]: samples=160, max_amp=22[0m
+[0;32mI (27421) AUDIO: Detect[800]: Out=2611, Wake=0, VAD=1, ret=0[0m
+[0;32mI (27821) AUDIO: Feed[2600]: samples=160, max_amp=270[0m
+[0;32mI (28821) AUDIO: Feed[2700]: samples=160, max_amp=185[0m
+[0;32mI (29821) AUDIO: Feed[2800]: samples=160, max_amp=123[0m
+[0;32mI (30821) AUDIO: Feed[2900]: samples=160, max_amp=20[0m
+[0;32mI (31821) AUDIO: Feed[3000]: samples=160, max_amp=270[0m
+[0;32mI (31961) MAIN: Health: State=MOVING_FWD, Queue=0[0m
+[0;32mI (32821) AUDIO: Feed[3100]: samples=160, max_amp=163[0m
+[0;32mI (33821) AUDIO: Feed[3200]: samples=160, max_amp=39[0m
+[0;32mI (33821) AUDIO: Detect[1000]: Out=46, Wake=0, VAD=0, ret=0[0m
+[0;32mI (34821) AUDIO: Feed[3300]: samples=160, max_amp=212[0m
+[0;32mI (35821) AUDIO: Feed[3400]: samples=160, max_amp=46[0m
+[0;32mI (36821) AUDIO: Feed[3500]: samples=160, max_amp=50[0m
+[0;32mI (37821) AUDIO: Feed[3600]: samples=160, max_amp=178[0m
+[0;32mI (38821) AUDIO: Feed[3700]: samples=160, max_amp=187[0m
+[0;32mI (39821) AUDIO: Feed[3800]: samples=160, max_amp=183[0m
+[0;32mI (40221) AUDIO: Detect[1200]: Out=64, Wake=0, VAD=0, ret=0[0m
+[0;32mI (40821) AUDIO: Feed[3900]: samples=160, max_amp=33[0m
+[0;32mI (41821) AUDIO: Feed[4000]: samples=160, max_amp=35[0m
+[0;32mI (41961) MAIN: Health: State=MOVING_FWD, Queue=0[0m
+[0;32mI (42821) AUDIO: Feed[4100]: samples=160, max_amp=1409[0m
+[0;32mI (43821) AUDIO: Feed[4200]: samples=160, max_amp=33[0m
+[0;32mI (44821) AUDIO: Feed[4300]: samples=160, max_amp=30[0m
+[0;32mI (45821) AUDIO: Feed[4400]: samples=160, max_amp=58[0m
+[0;32mI (46091) AUDIO: [0m
+[0;32mI (46091) AUDIO: ========================================[0m
+[0;32mI (46091) AUDIO: >>> WAKE WORD DETECTED! <<<[0m
+[0;32mI (46101) AUDIO: ========================================[0m
+[0;32mI (46101) AUDIO: Say one of these commands:[0m
+[0;32mI (46111) AUDIO:   - "FORWARD"[0m
+[0;32mI (46111) AUDIO:   - "BACKWARD"[0m
+[0;32mI (46111) AUDIO:   - "LEFT"[0m
+[0;32mI (46121) AUDIO:   - "RIGHT"[0m
+[0;32mI (46121) AUDIO:   - "STOP"[0m
+[0;32mI (46121) AUDIO: Listening for 10 seconds...[0m
+[0;32mI (46131) AUDIO: ========================================[0m
+[0;32mI (46141) AUDIO: [0m
+[0;32mI (46141) AUDIO: WakeNet disabled for command listening[0m
+[0;32mI (46141) STATE_MACHINE: Event: WAKEWORD_DETECTED | State: MOVING_FWD[0m
+[0;32mI (46621) AUDIO: Detect[1400]: Out=28, Wake=0, VAD=0, ret=0[0m
+[0;32mI (46621) AUDIO: [LISTENING] MultiNet processing... (1400)[0m
+[0;32mI (46821) AUDIO: Feed[4500]: samples=160, max_amp=40[0m
+[0;32mI (47821) AUDIO: Feed[4600]: samples=160, max_amp=30[0m
+[0;32mI (47861) AUDIO: [0m
+[0;32mI (47861) AUDIO: ****************************************[0m
+[0;32mI (47861) AUDIO: *** COMMAND DETECTED: LEFT ***[0m
+[0;32mI (47861) AUDIO: *** ID=3, Confidence=14% ***[0m
+[0;32mI (47861) AUDIO: ****************************************[0m
+[0;32mI (47871) AUDIO: [0m
+[0;32mI (47871) EVT_QUEUE: Posted voice event: VOICE_LEFT (conf=0.00, id=-1)[0m
+[0;32mI (47871) STATE_MACHINE: Event: VOICE_LEFT | State: MOVING_FWD[0m
+[0;32mI (47881) AUDIO: WakeNet re-enabled after command[0m
+[0;32mI (47891) STATE_MACHINE: Transition: MOVING_FWD -> TURNING_LEFT[0m
+[0;32mI (47901) FAILSAFE: Output ENABLED[0m
+[0;32mI (48821) AUDIO: Feed[4700]: samples=160, max_amp=23[0m
+[0;32mI (49821) AUDIO: Feed[4800]: samples=160, max_amp=259[0m
+[0;32mI (50821) AUDIO: Feed[4900]: samples=160, max_amp=152[0m
+[0;32mI (51821) AUDIO: Feed[5000]: samples=160, max_amp=69[0m
+[0;32mI (51961) MAIN: Health: State=TURNING_LEFT, Queue=0[0m
+[0;32mI (52821) AUDIO: Feed[5100]: samples=160, max_amp=647[0m
+[0;32mI (53021) AUDIO: Detect[1600]: Out=2217, Wake=0, VAD=1, ret=0[0m
+[0;32mI (53821) AUDIO: Feed[5200]: samples=160, max_amp=30[0m
+[0;32mI (54821) AUDIO: Feed[5300]: samples=160, max_amp=25[0m
+[0;32mI (55821) AUDIO: Feed[5400]: samples=160, max_amp=1035[0m
+[0;32mI (56381) AUDIO: [0m
+[0;32mI (56381) AUDIO: ========================================[0m
+[0;32mI (56381) AUDIO: >>> WAKE WORD DETECTED! <<<[0m
+[0;32mI (56381) AUDIO: ========================================[0m
+[0;32mI (56391) AUDIO: Say one of these commands:[0m
+[0;32mI (56391) AUDIO:   - "FORWARD"[0m
+[0;32mI (56401) AUDIO:   - "BACKWARD"[0m
+[0;32mI (56401) AUDIO:   - "LEFT"[0m
+[0;32mI (56411) AUDIO:   - "RIGHT"[0m
+[0;32mI (56411) AUDIO:   - "STOP"[0m
+[0;32mI (56411) AUDIO: Listening for 10 seconds...[0m
+[0;32mI (56421) AUDIO: ========================================[0m
+[0;32mI (56421) AUDIO: [0m
+[0;32mI (56431) AUDIO: WakeNet disabled for command listening[0m
+[0;32mI (56431) STATE_MACHINE: Event: WAKEWORD_DETECTED | State: TURNING_LEFT[0m
+[0;32mI (56821) AUDIO: Feed[5500]: samples=160, max_amp=34[0m
+[0;32mI (57821) AUDIO: Feed[5600]: samples=160, max_amp=48[0m
+[0;32mI (57821) AUDIO: [LISTENING] MultiNet processing... (1750)[0m
+[0;32mI (58261) AUDIO: [0m
+[0;32mI (58261) AUDIO: ****************************************[0m
+[0;32mI (58261) AUDIO: *** COMMAND DETECTED: STOP ***[0m
+[0;32mI (58261) AUDIO: *** ID=5, Confidence=18% ***[0m
+[0;32mI (58271) AUDIO: ****************************************[0m
+[0;32mI (58271) AUDIO: [0m
+[0;32mI (58271) EVT_QUEUE: Posted voice event: VOICE_STOP (conf=0.00, id=-1)[0m
+[0;32mI (58271) STATE_MACHINE: Event: VOICE_STOP | State: TURNING_LEFT[0m
+[0;32mI (58281) AUDIO: WakeNet re-enabled after command[0m
+[0;32mI (58291) STATE_MACHINE: Transition: TURNING_LEFT -> STOPPED[0m
+[0;32mI (58301) FAILSAFE: Output DISABLED[0m
+[0;32mI (58311) STATE_MACHINE: Entry STOPPED[0m
+[0;32mI (58821) AUDIO: Feed[5700]: samples=160, max_amp=31[0m
+[0;32mI (59421) AUDIO: Detect[1800]: Out=764, Wake=0, VAD=1, ret=0[0m
+[0;32mI (59821) AUDIO: Feed[5800]: samples=160, max_amp=432[0m
+[0;32mI (60821) AUDIO: Feed[5900]: samples=160, max_amp=81[0m
+[0;32mI (61821) AUDIO: Feed[6000]: samples=160, max_amp=151[0m
+[0;32mI (61961) MAIN: Health: State=STOPPED, Queue=0[0m
+[0;32mI (62821) AUDIO: Feed[6100]: samples=160, max_amp=32[0m
+[0;32mI (63821) AUDIO: Feed[6200]: samples=160, max_amp=71[0m
+[0;32mI (64821) AUDIO: Feed[6300]: samples=160, max_amp=49[0m
+[0;32mI (65821) AUDIO: Feed[6400]: samples=160, max_amp=67[0m
+[0;32mI (65821) AUDIO: Detect[2000]: Out=158, Wake=0, VAD=0, ret=0[0m
+[0;32mI (66821) AUDIO: Feed[6500]: samples=160, max_amp=170[0m
+[0;32mI (67821) AUDIO: Feed[6600]: samples=160, max_amp=22[0m
+[0;32mI (68821) AUDIO: Feed[6700]: samples=160, max_amp=116[0m
+[0;32mI (69821) AUDIO: Feed[6800]: samples=160, max_amp=38[0m
+[0;32mI (70821) AUDIO: Feed[6900]: samples=160, max_amp=99[0m
+[0;32mI (71821) AUDIO: Feed[7000]: samples=160, max_amp=79[0m
+[0;32mI (71961) MAIN: Health: State=STOPPED, Queue=0[0m
+[0;32mI (72221) AUDIO: Detect[2200]: Out=704, Wake=0, VAD=0, ret=0[0m
+[0;32mI (72821) AUDIO: Feed[7100]: samples=160, max_amp=80[0m
+[0;32mI (73821) AUDIO: Feed[7200]: samples=160, max_amp=82[0m
+[0;32mI (74821) AUDIO: Feed[7300]: samples=160, max_amp=27[0m
+[0;32mI (75821) AUDIO: Feed[7400]: samples=160, max_amp=88[0m
+[0;32mI (76821) AUDIO: Feed[7500]: samples=160, max_amp=31[0m
+[0;32mI (77821) AUDIO: Feed[7600]: samples=160, max_amp=75[0m
+[0;32mI (78621) AUDIO: Detect[2400]: Out=59, Wake=0, VAD=0, ret=0[0m
+[0;32mI (78821) AUDIO: Feed[7700]: samples=160, max_amp=128[0m
+[0;32mI (79821) AUDIO: Feed[7800]: samples=160, max_amp=74[0m
+[0;32mI (80821) AUDIO: Feed[7900]: samples=160, max_amp=54[0m
+[0;32mI (81821) AUDIO: Feed[8000]: samples=160, max_amp=32[0m
+[0;32mI (81961) MAIN: Health: State=STOPPED, Queue=0[0m
+[0;32mI (82821) AUDIO: Feed[8100]: samples=160, max_amp=32[0m
+[0;32mI (83821) AUDIO: Feed[8200]: samples=160, max_amp=148[0m
+[0;32mI (84821) AUDIO: Feed[8300]: samples=160, max_amp=60[0m
+[0;32mI (85021) AUDIO: Detect[2600]: Out=158, Wake=0, VAD=0, ret=0[0m
+[0;32mI (85821) AUDIO: Feed[8400]: samples=160, max_amp=36[0m
+[0;32mI (86821) AUDIO: Feed[8500]: samples=160, max_amp=77[0m
+[0;32mI (87821) AUDIO: Feed[8600]: samples=160, max_amp=45[0m
+[0;32mI (88821) AUDIO: Feed[8700]: samples=160, max_amp=193[0m
+[0;32mI (89821) AUDIO: Feed[8800]: samples=160, max_amp=35[0m
+[0;32mI (90821) AUDIO: Feed[8900]: samples=160, max_amp=39[0m
+[0;32mI (91421) AUDIO: Detect[2800]: Out=764, Wake=0, VAD=0, ret=0[0m
+[0;32mI (91821) AUDIO: Feed[9000]: samples=160, max_amp=76[0m
+[0;32mI (91961) MAIN: Health: State=STOPPED, Queue=0[0m
+[0;32mI (92821) AUDIO: Feed[9100]: samples=160, max_amp=111[0m
+[0;32mI (93821) AUDIO: Feed[9200]: samples=160, max_amp=147[0m
+[0;32mI (94821) AUDIO: Feed[9300]: samples=160, max_amp=31[0m
+[0;32mI (95821) AUDIO: Feed[9400]: samples=160, max_amp=30[0m
+[0;32mI (96821) AUDIO: Feed[9500]: samples=160, max_amp=65[0m
+[0;32mI (97821) AUDIO: Feed[9600]: samples=160, max_amp=41[0m
+[0;32mI (97821) AUDIO: Detect[3000]: Out=99, Wake=0, VAD=0, ret=0[0m
+[0;32mI (98821) AUDIO: Feed[9700]: samples=160, max_amp=36[0m
+[0;32mI (99821) AUDIO: Feed[9800]: samples=160, max_amp=46[0m
+[0;32mI (100821) AUDIO: Feed[9900]: samples=160, max_amp=60[0m
+[0;32mI (101821) AUDIO: Feed[10000]: samples=160, max_amp=52[0m
+[0;32mI (101961) MAIN: Health: State=STOPPED, Queue=0[0m
+[0;32mI (102821) AUDIO: Feed[10100]: samples=160, max_amp=83[0m
+[0;32mI (103821) AUDIO: Feed[10200]: samples=160, max_amp=29[0m
+[0;32mI (104221) AUDIO: Detect[3200]: Out=863, Wake=0, VAD=0, ret=0[0m
+[0;32mI (104821) AUDIO: Feed[10300]: samples=160, max_amp=62[0m
+[0;32mI (105821) AUDIO: Feed[10400]: samples=160, max_amp=72[0m
+[0;32mI (106821) AUDIO: Feed[10500]: samples=160, max_amp=141[0m
+[0;32mI (107821) AUDIO: Feed[10600]: samples=160, max_amp=102[0m
+[0;32mI (108821) AUDIO: Feed[10700]: samples=160, max_amp=138[0m
+[0;32mI (109821) AUDIO: Feed[10800]: samples=160, max_amp=49[0m
+[0;32mI (110621) AUDIO: Detect[3400]: Out=158, Wake=0, VAD=0, ret=0[0m
+[0;32mI (110821) AUDIO: Feed[10900]: samples=160, max_amp=37[0m
+[0;32mI (111821) AUDIO: Feed[11000]: samples=160, max_amp=29[0m
+[0;32mI (111961) MAIN: Health: State=STOPPED, Queue=0[0m
+[0;32mI (112821) AUDIO: Feed[11100]: samples=160, max_amp=185[0m
+[0;32mI (113821) AUDIO: Feed[11200]: samples=160, max_amp=21[0m
+[0;32mI (114821) AUDIO: Feed[11300]: samples=160, max_amp=55[0m
+[0;32mI (115821) AUDIO: Feed[11400]: samples=160, max_amp=40[0m
+[0;32mI (116821) AUDIO: Feed[11500]: samples=160, max_amp=62[0m
+[0;32mI (117021) AUDIO: Detect[3600]: Out=327, Wake=0, VAD=0, ret=0[0m
+[0;32mI (117821) AUDIO: Feed[11600]: samples=160, max_amp=79[0m
+[0;32mI (118821) AUDIO: Feed[11700]: samples=160, max_amp=28[0m
+[0;32mI (119821) AUDIO: Feed[11800]: samples=160, max_amp=113[0m
+[0;32mI (120821) AUDIO: Feed[11900]: samples=160, max_amp=80[0m
+[0;32mI (121821) AUDIO: Feed[12000]: samples=160, max_amp=31[0m
+[0;32mI (121961) MAIN: Health: State=STOPPED, Queue=0[0m
+[0;32mI (122821) AUDIO: Feed[12100]: samples=160, max_amp=160[0m
+[0;32mI (123421) AUDIO: Detect[3800]: Out=575, Wake=0, VAD=0, ret=0[0m
+[0;32mI (123821) AUDIO: Feed[12200]: samples=160, max_amp=40[0m
+[0;32mI (124821) AUDIO: Feed[12300]: samples=160, max_amp=63[0m
+[0;32mI (125821) AUDIO: Feed[12400]: samples=160, max_amp=72[0m
+[0;32mI (126821) AUDIO: Feed[12500]: samples=160, max_amp=23[0m
+[0;32mI (127821) AUDIO: Feed[12600]: samples=160, max_amp=24[0m
+[0;32mI (128821) AUDIO: Feed[12700]: samples=160, max_amp=48[0m
+[0;32mI (129821) AUDIO: Feed[12800]: samples=160, max_amp=333[0m
+[0;32mI (129821) AUDIO: Detect[4000]: Out=3534, Wake=0, VAD=1, ret=0[0m
+[0;32mI (130541) AUDIO: [0m
+[0;32mI (130541) AUDIO: ========================================[0m
+[0;32mI (130541) AUDIO: >>> WAKE WORD DETECTED! <<<[0m
+[0;32mI (130541) AUDIO: ========================================[0m
+[0;32mI (130551) AUDIO: Say one of these commands:[0m
+[0;32mI (130551) AUDIO:   - "FORWARD"[0m
+[0;32mI (130561) AUDIO:   - "BACKWARD"[0m
+[0;32mI (130561) AUDIO:   - "LEFT"[0m
+[0;32mI (130571) AUDIO:   - "RIGHT"[0m
+[0;32mI (130571) AUDIO:   - "STOP"[0m
+[0;32mI (130571) AUDIO: Listening for 10 seconds...[0m
+[0;32mI (130581) AUDIO: ========================================[0m
+[0;32mI (130581) AUDIO: [0m
+[0;32mI (130591) AUDIO: WakeNet disabled for command listening[0m
+[0;32mI (130591) STATE_MACHINE: Event: WAKEWORD_DETECTED | State: STOPPED[0m
+[0;32mI (130601) STATE_MACHINE: Transition: STOPPED -> LISTENING[0m
+[0;32mI (130611) STATE_MACHINE: Entry LISTENING: Waiting for voice command[0m
+[0;32mI (130821) AUDIO: Feed[12900]: samples=160, max_amp=499[0m
+[0;32mI (131421) AUDIO: [LISTENING] MultiNet processing... (4050)[0m
+[0;32mI (131821) AUDIO: Feed[13000]: samples=160, max_amp=20[0m
+[0;32mI (131961) MAIN: Health: State=LISTENING, Queue=0[0m
+[0;32mI (132821) AUDIO: Feed[13100]: samples=160, max_amp=110[0m
+[0;32mI (133031) AUDIO: [LISTENING] MultiNet processing... (4100)[0m
+[0;32mI (133821) AUDIO: Feed[13200]: samples=160, max_amp=28[0m
+[0;32mI (134621) AUDIO: [LISTENING] MultiNet processing... (4150)[0m
+[0;32mI (134821) AUDIO: Feed[13300]: samples=160, max_amp=243[0m
+[0;32mI (135821) AUDIO: Feed[13400]: samples=160, max_amp=147[0m
+[0;32mI (136221) AUDIO: Detect[4200]: Out=60, Wake=0, VAD=0, ret=0[0m
+[0;32mI (136221) AUDIO: [LISTENING] MultiNet processing... (4200)[0m
+[0;32mI (136821) AUDIO: Feed[13500]: samples=160, max_amp=34[0m
+[0;32mI (137821) AUDIO: Feed[13600]: samples=160, max_amp=147[0m
+[0;32mI (137831) AUDIO: [LISTENING] MultiNet processing... (4250)[0m
+[0;32mI (138821) AUDIO: Feed[13700]: samples=160, max_amp=23[0m
+[0;32mI (139421) AUDIO: [LISTENING] MultiNet processing... (4300)[0m
+[0;32mI (139821) AUDIO: Feed[13800]: samples=160, max_amp=96[0m
+[0;32mI (140821) AUDIO: Feed[13900]: samples=160, max_amp=55[0m
+[0;32mI (140961) AUDIO: [0m
+[0;32mI (140961) AUDIO: --- Command timeout - listening for wake word again ---[0m
+[0;32mI (140961) AUDIO: [0m
+[0;32mI (140961) AUDIO: WakeNet re-enabled[0m
+[0;32mI (141821) AUDIO: Feed[14000]: samples=160, max_amp=61[0m
+[0;32mI (141961) MAIN: Health: State=LISTENING, Queue=0[0m
+[0;32mI (142621) AUDIO: Detect[4400]: Out=100, Wake=0, VAD=0, ret=0[0m
+[0;32mI (142821) AUDIO: Feed[14100]: samples=160, max_amp=283[0m
+[0;32mI (143531) AUDIO: [0m
+[0;32mI (143531) AUDIO: ========================================[0m
+[0;32mI (143531) AUDIO: >>> WAKE WORD DETECTED! <<<[0m
+[0;32mI (143531) AUDIO: ========================================[0m
+[0;32mI (143541) AUDIO: Say one of these commands:[0m
+[0;32mI (143551) AUDIO:   - "FORWARD"[0m
+[0;32mI (143551) AUDIO:   - "BACKWARD"[0m
+[0;32mI (143551) AUDIO:   - "LEFT"[0m
+[0;32mI (143561) AUDIO:   - "RIGHT"[0m
+[0;32mI (143561) AUDIO:   - "STOP"[0m
+[0;32mI (143561) AUDIO: Listening for 10 seconds...[0m
+[0;32mI (143571) AUDIO: ========================================[0m
+[0;32mI (143581) AUDIO: [0m
+[0;32mI (143581) AUDIO: WakeNet disabled for command listening[0m
+[0;32mI (143581) STATE_MACHINE: Event: WAKEWORD_DETECTED | State: LISTENING[0m
+[0;32mI (143821) AUDIO: Feed[14200]: samples=160, max_amp=26[0m
+[0;32mI (144241) AUDIO: [LISTENING] MultiNet processing... (4450)[0m
+[0;32mI (144821) AUDIO: Feed[14300]: samples=160, max_amp=52[0m
+[0;32mI (145331) AUDIO: [0m
+[0;32mI (145331) AUDIO: ****************************************[0m
+[0;32mI (145331) AUDIO: *** COMMAND DETECTED: STOP ***[0m
+[0;32mI (145341) AUDIO: *** ID=5, Confidence=16% ***[0m
+[0;32mI (145341) AUDIO: ****************************************[0m
+[0;32mI (145341) AUDIO: [0m
+[0;32mI (145351) EVT_QUEUE: Posted voice event: VOICE_STOP (conf=0.00, id=-1)[0m
+[0;32mI (145351) STATE_MACHINE: Event: VOICE_STOP | State: LISTENING[0m
+[0;32mI (145351) AUDIO: WakeNet re-enabled after command[0m
+[0;32mI (145361) STATE_MACHINE: Transition: LISTENING -> STOPPED[0m
+[0;32mI (145371) FAILSAFE: Output DISABLED[0m
+[0;32mI (145381) STATE_MACHINE: Entry STOPPED[0m
+[0;32mI (145821) AUDIO: Feed[14400]: samples=160, max_amp=62[0m
+[0;32mI (146821) AUDIO: Feed[14500]: samples=160, max_amp=243[0m
+[0;32mI (147821) AUDIO: Feed[14600]: samples=160, max_amp=56[0m
+[0;32mI (148821) AUDIO: Feed[14700]: samples=160, max_amp=77[0m
+[0;32mI (149021) AUDIO: Detect[4600]: Out=8090, Wake=0, VAD=1, ret=0[0m
+[0;32mI (149821) AUDIO: Feed[14800]: samples=160, max_amp=53[0m
+[0;32mI (150821) AUDIO: Feed[14900]: samples=160, max_amp=31[0m
+[0;32mI (151821) AUDIO: Feed[15000]: samples=160, max_amp=3981[0m
+[0;32mI (151961) MAIN: Health: State=STOPPED, Queue=0[0m
+[0;32mI (152141) AUDIO: [0m
+[0;32mI (152141) AUDIO: ========================================[0m
+[0;32mI (152141) AUDIO: >>> WAKE WORD DETECTED! <<<[0m
+[0;32mI (152141) AUDIO: ========================================[0m
+[0;32mI (152151) AUDIO: Say one of these commands:[0m
+[0;32mI (152151) AUDIO:   - "FORWARD"[0m
+[0;32mI (152161) AUDIO:   - "BACKWARD"[0m
+[0;32mI (152161) AUDIO:   - "LEFT"[0m
+[0;32mI (152171) AUDIO:   - "RIGHT"[0m
+[0;32mI (152171) AUDIO:   - "STOP"[0m
+[0;32mI (152171) AUDIO: Listening for 10 seconds...[0m
+[0;32mI (152181) AUDIO: ========================================[0m
+[0;32mI (152181) AUDIO: [0m
+[0;32mI (152191) AUDIO: WakeNet disabled for command listening[0m
+[0;32mI (152191) STATE_MACHINE: Event: WAKEWORD_DETECTED | State: STOPPED[0m
+[0;32mI (152201) STATE_MACHINE: Transition: STOPPED -> LISTENING[0m
+[0;32mI (152211) STATE_MACHINE: Entry LISTENING: Waiting for voice command[0m
+[0;32mI (152221) AUDIO: [LISTENING] MultiNet processing... (4700)[0m
+[0;32mI (152821) AUDIO: Feed[15100]: samples=160, max_amp=28[0m
+[0;32mI (153821) AUDIO: Feed[15200]: samples=160, max_amp=19[0m
+[0;32mI (153831) AUDIO: [LISTENING] MultiNet processing... (4750)[0m
+[0;32mI (154821) AUDIO: Feed[15300]: samples=160, max_amp=24[0m
+[0;32mI (155421) AUDIO: Detect[4800]: Out=342, Wake=0, VAD=0, ret=0[0m
+[0;32mI (155431) AUDIO: [LISTENING] MultiNet processing... (4800)[0m
+[0;32mI (155821) AUDIO: Feed[15400]: samples=160, max_amp=96[0m
+[0;32mI (156821) AUDIO: [0m
+[0;32mI (156821) AUDIO: ****************************************[0m
+[0;32mI (156821) AUDIO: *** COMMAND DETECTED: STOP ***[0m
+[0;32mI (156821) AUDIO: Feed[15500]: samples=160, max_amp=22[0m
+[0;32mI (156831) AUDIO: *** ID=5, Confidence=29% ***[0m
+[0;32mI (156831) AUDIO: ****************************************[0m
+[0;32mI (156841) AUDIO: [0m
+[0;32mI (156841) EVT_QUEUE: Posted voice event: VOICE_STOP (conf=0.00, id=-1)[0m
+[0;32mI (156841) STATE_MACHINE: Event: VOICE_STOP | State: LISTENING[0m
+[0;32mI (156861) STATE_MACHINE: Transition: LISTENING -> STOPPED[0m
+[0;32mI (156851) AUDIO: WakeNet re-enabled after command[0m
+[0;32mI (156861) FAILSAFE: Output DISABLED[0m
+[0;32mI (156871) STATE_MACHINE: Entry STOPPED[0m
+[0;32mI (157821) AUDIO: Feed[15600]: samples=160, max_amp=29[0m
+[0;32mI (158821) AUDIO: Feed[15700]: samples=160, max_amp=33[0m
+[0;32mI (159821) AUDIO: Feed[15800]: samples=160, max_amp=86[0m
+[0;32mI (160821) AUDIO: Feed[15900]: samples=160, max_amp=26[0m
+[0;32mI (161821) AUDIO: Feed[16000]: samples=160, max_amp=19[0m
+[0;32mI (161821) AUDIO: Detect[5000]: Out=7, Wake=0, VAD=0, ret=0[0m
+[0;32mI (161961) MAIN: Health: State=STOPPED, Queue=0[0m
+[0;32mI (162821) AUDIO: Feed[16100]: samples=160, max_amp=104[0m
+[0;32mI (163821) AUDIO: Feed[16200]: samples=160, max_amp=19[0m
+[0;32mI (164821) AUDIO: Feed[16300]: samples=160, max_amp=46[0m
+[0;32mI (165821) AUDIO: Feed[16400]: samples=160, max_amp=23[0m
+[0;32mI (166821) AUDIO: Feed[16500]: samples=160, max_amp=90[0m
+[0;32mI (167821) AUDIO: Feed[16600]: samples=160, max_amp=321[0m
+[0;32mI (168221) AUDIO: Detect[5200]: Out=61, Wake=0, VAD=0, ret=0[0m
+[0;32mI (168821) AUDIO: Feed[16700]: samples=160, max_amp=32[0m
+[0;32mI (169821) AUDIO: Feed[16800]: samples=160, max_amp=393[0m
+[0;32mI (170821) AUDIO: Feed[16900]: samples=160, max_amp=354[0m
+[0;32mI (171821) AUDIO: Feed[17000]: samples=160, max_amp=214[0m
+[0;32mI (171961) MAIN: Health: State=STOPPED, Queue=0[0m
+[0;32mI (172821) AUDIO: Feed[17100]: samples=160, max_amp=94[0m
+[0;32mI (173821) AUDIO: Feed[17200]: samples=160, max_amp=47[0m
+[0;32mI (174621) AUDIO: Detect[5400]: Out=29, Wake=0, VAD=0, ret=0[0m
+[0;32mI (174821) AUDIO: Feed[17300]: samples=160, max_amp=71[0m
+[0;32mI (175821) AUDIO: Feed[17400]: samples=160, max_amp=32[0m
+[0;32mI (176821) AUDIO: Feed[17500]: samples=160, max_amp=100[0m
+[0;32mI (177821) AUDIO: Feed[17600]: samples=160, max_amp=25[0m
+[0;32mI (178821) AUDIO: Feed[17700]: samples=160, max_amp=32[0m
+[0;32mI (179821) AUDIO: Feed[17800]: samples=160, max_amp=110[0m
+[0;32mI (180821) AUDIO: Feed[17900]: samples=160, max_amp=76[0m
+[0;32mI (181021) AUDIO: Detect[5600]: Out=261, Wake=0, VAD=0, ret=0[0m
+[0;32mI (181821) AUDIO: Feed[18000]: samples=160, max_amp=63[0m
+[0;32mI (181961) MAIN: Health: State=STOPPED, Queue=0[0m
+[0;32mI (182821) AUDIO: Feed[18100]: samples=160, max_amp=101[0m
+[0;32mI (183821) AUDIO: Feed[18200]: samples=160, max_amp=156[0m
+[0;32mI (184821) AUDIO: Feed[18300]: samples=160, max_amp=23[0m
+[0;32mI (185821) AUDIO: Feed[18400]: samples=160, max_amp=106[0m
+[0;32mI (186821) AUDIO: Feed[18500]: samples=160, max_amp=32[0m
+[0;32mI (187421) AUDIO: Detect[5800]: Out=315, Wake=0, VAD=0, ret=0[0m
+[0;32mI (187821) AUDIO: Feed[18600]: samples=160, max_amp=41[0m
+[0;32mI (188821) AUDIO: Feed[18700]: samples=160, max_amp=259[0m
+[0;32mI (189821) AUDIO: Feed[18800]: samples=160, max_amp=23[0m
+[0;32mI (190821) AUDIO: Feed[18900]: samples=160, max_amp=191[0m
+[0;32mI (191821) AUDIO: Feed[19000]: samples=160, max_amp=25[0m
+[0;32mI (191961) MAIN: Health: State=STOPPED, Queue=0[0m
+[0;32mI (192821) AUDIO: Feed[19100]: samples=160, max_amp=140[0m
+[0;32mI (193821) AUDIO: Feed[19200]: samples=160, max_amp=132[0m
+[0;32mI (193821) AUDIO: Detect[6000]: Out=178, Wake=0, VAD=0, ret=0[0m
+[0;32mI (194821) AUDIO: Feed[19300]: samples=160, max_amp=36[0m
+[0;32mI (195821) AUDIO: Feed[19400]: samples=160, max_amp=46[0m
+[0;32mI (196821) AUDIO: Feed[19500]: samples=160, max_amp=34[0m
+[0;32mI (197821) AUDIO: Feed[19600]: samples=160, max_amp=113[0m
+[0;32mI (198821) AUDIO: Feed[19700]: samples=160, max_amp=115[0m
+[0;32mI (199821) AUDIO: Feed[19800]: samples=160, max_amp=100[0m
+[0;32mI (200221) AUDIO: Detect[6200]: Out=48, Wake=0, VAD=0, ret=0[0m
+[0;32mI (200821) AUDIO: Feed[19900]: samples=160, max_amp=38[0m
+[0;32mI (201821) AUDIO: Feed[20000]: samples=160, max_amp=39[0m
+[0;32mI (201961) MAIN: Health: State=STOPPED, Queue=0[0m
+[0;32mI (202821) AUDIO: Feed[20100]: samples=160, max_amp=249[0m
+[0;32mI (203821) AUDIO: Feed[20200]: samples=160, max_amp=152[0m
+[0;32mI (204821) AUDIO: Feed[20300]: samples=160, max_amp=38[0m
+[0;32mI (205821) AUDIO: Feed[20400]: samples=160, max_amp=70[0m
+[0;32mI (206621) AUDIO: Detect[6400]: Out=599, Wake=0, VAD=1, ret=0[0m
+[0;32mI (206821) AUDIO: Feed[20500]: samples=160, max_amp=230[0m
+[0;32mI (207821) AUDIO: Feed[20600]: samples=160, max_amp=77[0m
+[0;32mI (208821) AUDIO: Feed[20700]: samples=160, max_amp=55[0m
+[0;32mI (209821) AUDIO: Feed[20800]: samples=160, max_amp=68[0m
+[0;32mI (210821) AUDIO: Feed[20900]: samples=160, max_amp=30[0m
+[0;32mI (211821) AUDIO: Feed[21000]: samples=160, max_amp=19[0m
+[0;32mI (211961) MAIN: Health: State=STOPPED, Queue=0[0m
+[0;32mI (212821) AUDIO: Feed[21100]: samples=160, max_amp=67[0m
+[0;32mI (213021) AUDIO: Detect[6600]: Out=105, Wake=0, VAD=0, ret=0[0m
+[0;32mI (213821) AUDIO: Feed[21200]: samples=160, max_amp=62[0m
+[0;32mI (214821) AUDIO: Feed[21300]: samples=160, max_amp=27[0m
+[0;32mI (215821) AUDIO: Feed[21400]: samples=160, max_amp=63[0m
+[0;32mI (216821) AUDIO: Feed[21500]: samples=160, max_amp=53[0m
+[0;32mI (217821) AUDIO: Feed[21600]: samples=160, max_amp=71[0m
+[0;32mI (218821) AUDIO: Feed[21700]: samples=160, max_amp=61[0m
+[0;32mI (219421) AUDIO: Detect[6800]: Out=171, Wake=0, VAD=0, ret=0[0m
+[0;32mI (219821) AUDIO: Feed[21800]: samples=160, max_amp=32[0m
+[0;32mI (220821) AUDIO: Feed[21900]: samples=160, max_amp=21[0m
+[0;32mI (221821) AUDIO: Feed[22000]: samples=160, max_amp=57[0m
+[0;32mI (221961) MAIN: Health: State=STOPPED, Queue=0[0m
+[0;32mI (222821) AUDIO: Feed[22100]: samples=160, max_amp=117[0m
+[0;32mI (223821) AUDIO: Feed[22200]: samples=160, max_amp=55[0m
+[0;32mI (224821) AUDIO: Feed[22300]: samples=160, max_amp=61[0m
+[0;32mI (225821) AUDIO: Feed[22400]: samples=160, max_amp=34[0m
+[0;32mI (225821) AUDIO: Detect[7000]: Out=19, Wake=0, VAD=0, ret=0[0m
+[0;32mI (226821) AUDIO: Feed[22500]: samples=160, max_amp=77[0m
+[0;32mI (227821) AUDIO: Feed[22600]: samples=160, max_amp=78[0m
+[0;32mI (228821) AUDIO: Feed[22700]: samples=160, max_amp=47[0m
+[0;32mI (229821) AUDIO: Feed[22800]: samples=160, max_amp=17[0m
+[0;32mI (230821) AUDIO: Feed[22900]: samples=160, max_amp=25[0m
+[0;32mI (231821) AUDIO: Feed[23000]: samples=160, max_amp=44[0m
+[0;32mI (231961) MAIN: Health: State=STOPPED, Queue=0[0m
+[0;32mI (232221) AUDIO: Detect[7200]: Out=58, Wake=0, VAD=0, ret=0[0m
+[0;32mI (232821) AUDIO: Feed[23100]: samples=160, max_amp=51[0m
+[0;32mI (233821) AUDIO: Feed[23200]: samples=160, max_amp=29[0m
+[0;32mI (234821) AUDIO: Feed[23300]: samples=160, max_amp=28[0m
+[0;32mI (235821) AUDIO: Feed[23400]: samples=160, max_amp=80[0m
+[0;32mI (236821) AUDIO: Feed[23500]: samples=160, max_amp=74[0m
+[0;32mI (237821) AUDIO: Feed[23600]: samples=160, max_amp=39[0m
+[0;32mI (238621) AUDIO: Detect[7400]: Out=420, Wake=0, VAD=0, ret=0[0m
+[0;32mI (238821) AUDIO: Feed[23700]: samples=160, max_amp=31[0m
+[0;32mI (239821) AUDIO: Feed[23800]: samples=160, max_amp=32[0m
+[0;32mI (240821) AUDIO: Feed[23900]: samples=160, max_amp=28[0m
+[0;32mI (241821) AUDIO: Feed[24000]: samples=160, max_amp=18[0m
+[0;32mI (241961) MAIN: Health: State=STOPPED, Queue=0[0m
+[0;32mI (242821) AUDIO: Feed[24100]: samples=160, max_amp=78[0m
+[0;32mI (243821) AUDIO: Feed[24200]: samples=160, max_amp=40[0m
+[0;32mI (244821) AUDIO: Feed[24300]: samples=160, max_amp=18[0m
+[0;32mI (245021) AUDIO: Detect[7600]: Out=19, Wake=0, VAD=0, ret=0[0m
+[0;32mI (245821) AUDIO: Feed[24400]: samples=160, max_amp=50[0m
+[0;32mI (246821) AUDIO: Feed[24500]: samples=160, max_amp=54[0m
+[0;32mI (247821) AUDIO: Feed[24600]: samples=160, max_amp=38[0m
+[0;32mI (248821) AUDIO: Feed[24700]: samples=160, max_amp=25[0m
+[0;32mI (249821) AUDIO: Feed[24800]: samples=160, max_amp=44[0m
+[0;32mI (250821) AUDIO: Feed[24900]: samples=160, max_amp=47[0m
+[0;32mI (251421) AUDIO: Detect[7800]: Out=39, Wake=0, VAD=0, ret=0[0m
+[0;32mI (251821) AUDIO: Feed[25000]: samples=160, max_amp=116[0m
+[0;32mI (251961) MAIN: Health: State=STOPPED, Queue=0[0m
+[0;32mI (252821) AUDIO: Feed[25100]: samples=160, max_amp=35[0m
+[0;32mI (253821) AUDIO: Feed[25200]: samples=160, max_amp=79[0m
+[0;32mI (254821) AUDIO: Feed[25300]: samples=160, max_amp=45[0m
+[0;32mI (255821) AUDIO: Feed[25400]: samples=160, max_amp=60[0m
+[0;32mI (256821) AUDIO: Feed[25500]: samples=160, max_amp=27[0m
+[0;32mI (257821) AUDIO: Feed[25600]: samples=160, max_amp=67[0m
+[0;32mI (257821) AUDIO: Detect[8000]: Out=92, Wake=0, VAD=0, ret=0[0m
+[0;32mI (258821) AUDIO: Feed[25700]: samples=160, max_amp=27[0m
+[0;32mI (259821) AUDIO: Feed[25800]: samples=160, max_amp=88[0m
+[0;32mI (260821) AUDIO: Feed[25900]: samples=160, max_amp=79[0m
+[0;32mI (261821) AUDIO: Feed[26000]: samples=160, max_amp=93[0m
+[0;32mI (261961) MAIN: Health: State=STOPPED, Queue=0[0m
+[0;32mI (262821) AUDIO: Feed[26100]: samples=160, max_amp=22[0m
+[0;32mI (263821) AUDIO: Feed[26200]: samples=160, max_amp=44[0m
+[0;32mI (264221) AUDIO: Detect[8200]: Out=56, Wake=0, VAD=0, ret=0[0m
+[0;32mI (264821) AUDIO: Feed[26300]: samples=160, max_amp=102[0m
+[0;32mI (265821) AUDIO: Feed[26400]: samples=160, max_amp=16[0m
+[0;32mI (266821) AUDIO: Feed[26500]: samples=160, max_amp=56[0m
+[0;32mI (267821) AUDIO: Feed[26600]: samples=160, max_amp=34[0m
+[0;32mI (268821) AUDIO: Feed[26700]: samples=160, max_amp=71[0m
+[0;32mI (269821) AUDIO: Feed[26800]: samples=160, max_amp=19[0m
+[0;32mI (270621) AUDIO: Detect[8400]: Out=376, Wake=0, VAD=0, ret=0[0m
+[0;32mI (270821) AUDIO: Feed[26900]: samples=160, max_amp=40[0m
+[0;32mI (271821) AUDIO: Feed[27000]: samples=160, max_amp=94[0m
+[0;32mI (271961) MAIN: Health: State=STOPPED, Queue=0[0m
+[0;32mI (272821) AUDIO: Feed[27100]: samples=160, max_amp=67[0m
+[0;32mI (273821) AUDIO: Feed[27200]: samples=160, max_amp=25[0m
+[0;32mI (274821) AUDIO: Feed[27300]: samples=160, max_amp=41[0m
+[0;32mI (275821) AUDIO: Feed[27400]: samples=160, max_amp=27[0m
+[0;32mI (276821) AUDIO: Feed[27500]: samples=160, max_amp=35[0m
+[0;32mI (277021) AUDIO: Detect[8600]: Out=266, Wake=0, VAD=0, ret=0[0m
+[0;32mI (277821) AUDIO: Feed[27600]: samples=160, max_amp=28[0m
+[0;32mI (278821) AUDIO: Feed[27700]: samples=160, max_amp=171[0m
+[0;32mI (279821) AUDIO: Feed[27800]: samples=160, max_amp=43[0m
+[0;32mI (280821) AUDIO: Feed[27900]: samples=160, max_amp=30[0m
+[0;32mI (281821) AUDIO: Feed[28000]: samples=160, max_amp=124[0m
+[0;32mI (281961) MAIN: Health: State=STOPPED, Queue=0[0m
+[0;32mI (282821) AUDIO: Feed[28100]: samples=160, max_amp=24[0m
+[0;32mI (283421) AUDIO: Detect[8800]: Out=151, Wake=0, VAD=0, ret=0[0m
+[0;32mI (283821) AUDIO: Feed[28200]: samples=160, max_amp=33[0m
+[0;32mI (284821) AUDIO: Feed[28300]: samples=160, max_amp=21[0m
+[0;32mI (285821) AUDIO: Feed[28400]: samples=160, max_amp=36[0m
+[0;32mI (286821) AUDIO: Feed[28500]: samples=160, max_amp=117[0m
+[0;32mI (287821) AUDIO: Feed[28600]: samples=160, max_amp=35[0m
+[0;32mI (288821) AUDIO: Feed[28700]: samples=160, max_amp=82[0m
+[0;32mI (289821) AUDIO: Feed[28800]: samples=160, max_amp=53[0m
+[0;32mI (289821) AUDIO: Detect[9000]: Out=78, Wake=0, VAD=0, ret=0[0m
+[0;32mI (290821) AUDIO: Feed[28900]: samples=160, max_amp=38[0m
+[0;32mI (291821) AUDIO: Feed[29000]: samples=160, max_amp=18[0m
+[0;32mI (291961) MAIN: Health: State=STOPPED, Queue=0[0m
+[0;32mI (292821) AUDIO: Feed[29100]: samples=160, max_amp=26[0m
+[0;32mI (293821) AUDIO: Feed[29200]: samples=160, max_amp=35[0m
+[0;32mI (294821) AUDIO: Feed[29300]: samples=160, max_amp=79[0m
+[0;32mI (295821) AUDIO: Feed[29400]: samples=160, max_amp=35[0m
+[0;32mI (296221) AUDIO: Detect[9200]: Out=300, Wake=0, VAD=0, ret=0[0m
+[0;32mI (296821) AUDIO: Feed[29500]: samples=160, max_amp=76[0m
+[0;32mI (297821) AUDIO: Feed[29600]: samples=160, max_amp=100[0m
+[0;32mI (298821) AUDIO: Feed[29700]: samples=160, max_amp=27[0m
+[0;32mI (299821) AUDIO: Feed[29800]: samples=160, max_amp=91[0m
+[0;32mI (300821) AUDIO: Feed[29900]: samples=160, max_amp=99[0m
+[0;32mI (301821) AUDIO: Feed[30000]: samples=160, max_amp=31[0m
+[0;32mI (301961) MAIN: Health: State=STOPPED, Queue=0[0m
+[0;32mI (302621) AUDIO: Detect[9400]: Out=139, Wake=0, VAD=0, ret=0[0m
+[0;32mI (302821) AUDIO: Feed[30100]: samples=160, max_amp=98[0m
+[0;32mI (303821) AUDIO: Feed[30200]: samples=160, max_amp=45[0m
+[0;32mI (304821) AUDIO: Feed[30300]: samples=160, max_amp=91[0m
+[0;32mI (305821) AUDIO: Feed[30400]: samples=160, max_amp=65[0m
+[0;32mI (306821) AUDIO: Feed[30500]: samples=160, max_amp=76[0m
+[0;32mI (307821) AUDIO: Feed[30600]: samples=160, max_amp=29[0m
+[0;32mI (308821) AUDIO: Feed[30700]: samples=160, max_amp=24[0m
+[0;32mI (309021) AUDIO: Detect[9600]: Out=24, Wake=0, VAD=0, ret=0[0m
+[0;32mI (309821) AUDIO: Feed[30800]: samples=160, max_amp=214[0m
+[0;32mI (310821) AUDIO: Feed[30900]: samples=160, max_amp=77[0m
+[0;32mI (311821) AUDIO: Feed[31000]: samples=160, max_amp=20[0m
+[0;32mI (311961) MAIN: Health: State=STOPPED, Queue=0[0m
+[0;32mI (312821) AUDIO: Feed[31100]: samples=160, max_amp=84[0m
+[0;32mI (313821) AUDIO: Feed[31200]: samples=160, max_amp=51[0m
+[0;32mI (314821) AUDIO: Feed[31300]: samples=160, max_amp=58[0m
+[0;32mI (315421) AUDIO: Detect[9800]: Out=296, Wake=0, VAD=0, ret=0[0m
+[0;32mI (315821) AUDIO: Feed[31400]: samples=160, max_amp=263[0m
+[0;32mI (316821) AUDIO: Feed[31500]: samples=160, max_amp=47[0m
+[0;32mI (317821) AUDIO: Feed[31600]: samples=160, max_amp=50[0m
+[0;32mI (318821) AUDIO: Feed[31700]: samples=160, max_amp=34[0m
+[0;32mI (319821) AUDIO: Feed[31800]: samples=160, max_amp=43[0m
+[0;32mI (320821) AUDIO: Feed[31900]: samples=160, max_amp=38[0m
+[0;32mI (321821) AUDIO: Feed[32000]: samples=160, max_amp=111[0m
+[0;32mI (321821) AUDIO: Detect[10000]: Out=298, Wake=0, VAD=0, ret=0[0m
+[0;32mI (321961) MAIN: Health: State=STOPPED, Queue=0[0m
+[0;32mI (322821) AUDIO: Feed[32100]: samples=160, max_amp=50[0m
+[0;32mI (323821) AUDIO: Feed[32200]: samples=160, max_amp=38[0m
+[0;32mI (324821) AUDIO: Feed[32300]: samples=160, max_amp=112[0m
+[0;32mI (325821) AUDIO: Feed[32400]: samples=160, max_amp=28[0m
+[0;32mI (326821) AUDIO: Feed[32500]: samples=160, max_amp=84[0m
+[0;32mI (327821) AUDIO: Feed[32600]: samples=160, max_amp=41[0m
+[0;32mI (328221) AUDIO: Detect[10200]: Out=75, Wake=0, VAD=0, ret=0[0m
+[0;32mI (328821) AUDIO: Feed[32700]: samples=160, max_amp=43[0m
+[0;32mI (329821) AUDIO: Feed[32800]: samples=160, max_amp=79[0m
+[0;32mI (330821) AUDIO: Feed[32900]: samples=160, max_amp=70[0m
+[0;32mI (331821) AUDIO: Feed[33000]: samples=160, max_amp=73[0m
+[0;32mI (331961) MAIN: Health: State=STOPPED, Queue=0[0m
+[0;32mI (332821) AUDIO: Feed[33100]: samples=160, max_amp=34[0m
+[0;32mI (333821) AUDIO: Feed[33200]: samples=160, max_amp=175[0m
+[0;32mI (334621) AUDIO: Detect[10400]: Out=14, Wake=0, VAD=0, ret=0[0m
+[0;32mI (334821) AUDIO: Feed[33300]: samples=160, max_amp=61[0m
+[0;32mI (335821) AUDIO: Feed[33400]: samples=160, max_amp=132[0m
+[0;32mI (336821) AUDIO: Feed[33500]: samples=160, max_amp=27[0m
+[0;32mI (337821) AUDIO: Feed[33600]: samples=160, max_amp=31[0m
+[0;32mI (338821) AUDIO: Feed[33700]: samples=160, max_amp=66[0m
+[0;32mI (339821) AUDIO: Feed[33800]: samples=160, max_amp=34[0m
+[0;32mI (340821) AUDIO: Feed[33900]: samples=160, max_amp=26[0m
+[0;32mI (341021) AUDIO: Detect[10600]: Out=17, Wake=0, VAD=0, ret=0[0m
+[0;32mI (341821) AUDIO: Feed[34000]: samples=160, max_amp=34[0m
+[0;32mI (341961) MAIN: Health: State=STOPPED, Queue=0[0m
+[0;32mI (342821) AUDIO: Feed[34100]: samples=160, max_amp=22[0m
+[0;32mI (343821) AUDIO: Feed[34200]: samples=160, max_amp=25[0m
+[0;32mI (344821) AUDIO: Feed[34300]: samples=160, max_amp=34[0m
+[0;32mI (345821) AUDIO: Feed[34400]: samples=160, max_amp=59[0m
+[0;32mI (346821) AUDIO: Feed[34500]: samples=160, max_amp=31[0m
+[0;32mI (347421) AUDIO: Detect[10800]: Out=51, Wake=0, VAD=0, ret=0[0m
+[0;32mI (347821) AUDIO: Feed[34600]: samples=160, max_amp=87[0m
+[0;32mI (348821) AUDIO: Feed[34700]: samples=160, max_amp=44[0m
+[0;32mI (349821) AUDIO: Feed[34800]: samples=160, max_amp=27[0m
+[0;32mI (350821) AUDIO: Feed[34900]: samples=160, max_amp=30[0m
+[0;32mI (351821) AUDIO: Feed[35000]: samples=160, max_amp=23[0m
+[0;32mI (351961) MAIN: Health: State=STOPPED, Queue=0[0m
+[0;32mI (352821) AUDIO: Feed[35100]: samples=160, max_amp=34[0m
+[0;32mI (353821) AUDIO: Feed[35200]: samples=160, max_amp=28[0m
+[0;32mI (353821) AUDIO: Detect[11000]: Out=7, Wake=0, VAD=0, ret=0[0m
+[0;32mI (354821) AUDIO: Feed[35300]: samples=160, max_amp=127[0m
+[0;32mI (355821) AUDIO: Feed[35400]: samples=160, max_amp=32[0m
+[0;32mI (356821) AUDIO: Feed[35500]: samples=160, max_amp=21[0m
+[0;32mI (357821) AUDIO: Feed[35600]: samples=160, max_amp=37[0m
+[0;32mI (358821) AUDIO: Feed[35700]: samples=160, max_amp=39[0m
+[0;32mI (359821) AUDIO: Feed[35800]: samples=160, max_amp=233[0m
+[0;32mI (360221) AUDIO: Detect[11200]: Out=85, Wake=0, VAD=0, ret=0[0m
+[0;32mI (360821) AUDIO: Feed[35900]: samples=160, max_amp=102[0m
+[0;32mI (361821) AUDIO: Feed[36000]: samples=160, max_amp=39[0m
+[0;32mI (361961) MAIN: Health: State=STOPPED, Queue=0[0m
+[0;32mI (362821) AUDIO: Feed[36100]: samples=160, max_amp=78[0m
+[0;32mI (363821) AUDIO: Feed[36200]: samples=160, max_amp=22[0m
+[0;32mI (364821) AUDIO: Feed[36300]: samples=160, max_amp=22[0m
+[0;32mI (365821) AUDIO: Feed[36400]: samples=160, max_amp=55[0m
+[0;32mI (366621) AUDIO: Detect[11400]: Out=80, Wake=0, VAD=0, ret=0[0m
+[0;32mI (366821) AUDIO: Feed[36500]: samples=160, max_amp=32[0m
+[0;32mI (367821) AUDIO: Feed[36600]: samples=160, max_amp=102[0m
+[0;32mI (368821) AUDIO: Feed[36700]: samples=160, max_amp=33[0m
+[0;32mI (369821) AUDIO: Feed[36800]: samples=160, max_amp=63[0m
+[0;32mI (370821) AUDIO: Feed[36900]: samples=160, max_amp=126[0m
+[0;32mI (371821) AUDIO: Feed[37000]: samples=160, max_amp=104[0m
+[0;32mI (371961) MAIN: Health: State=STOPPED, Queue=0[0m
+[0;32mI (372821) AUDIO: Feed[37100]: samples=160, max_amp=20[0m
+[0;32mI (373021) AUDIO: Detect[11600]: Out=17, Wake=0, VAD=0, ret=0[0m
+[0;32mI (373821) AUDIO: Feed[37200]: samples=160, max_amp=200[0m
+[0;32mI (374821) AUDIO: Feed[37300]: samples=160, max_amp=64[0m
+[0;32mI (375821) AUDIO: Feed[37400]: samples=160, max_amp=77[0m
+[0;32mI (376821) AUDIO: Feed[37500]: samples=160, max_amp=46[0m
+[0;32mI (377821) AUDIO: Feed[37600]: samples=160, max_amp=892[0m
+[0;32mI (378821) AUDIO: Feed[37700]: samples=160, max_amp=309[0m
+[0;32mI (379421) AUDIO: Detect[11800]: Out=36, Wake=0, VAD=0, ret=0[0m
+[0;32mI (379821) AUDIO: Feed[37800]: samples=160, max_amp=202[0m
+[0;32mI (380821) AUDIO: Feed[37900]: samples=160, max_amp=81[0m
+[0;32mI (381821) AUDIO: Feed[38000]: samples=160, max_amp=189[0m
+[0;32mI (381961) MAIN: Health: State=STOPPED, Queue=0[0m
+[0;32mI (382821) AUDIO: Feed[38100]: samples=160, max_amp=50[0m
+[0;32mI (383821) AUDIO: Feed[38200]: samples=160, max_amp=16[0m
+[0;32mI (384821) AUDIO: Feed[38300]: samples=160, max_amp=33[0m
+[0;32mI (385821) AUDIO: Feed[38400]: samples=160, max_amp=25[0m
+[0;32mI (385821) AUDIO: Detect[12000]: Out=41, Wake=0, VAD=0, ret=0[0m
+[0;32mI (386821) AUDIO: Feed[38500]: samples=160, max_amp=159[0m
+[0;32mI (387821) AUDIO: Feed[38600]: samples=160, max_amp=29[0m
+[0;32mI (388821) AUDIO: Feed[38700]: samples=160, max_amp=24[0m
+[0;32mI (389821) AUDIO: Feed[38800]: samples=160, max_amp=29[0m
+[0;32mI (390821) AUDIO: Feed[38900]: samples=160, max_amp=41[0m
+[0;32mI (391821) AUDIO: Feed[39000]: samples=160, max_amp=15[0m
+[0;32mI (391961) MAIN: Health: State=STOPPED, Queue=0[0m
+[0;32mI (392221) AUDIO: Detect[12200]: Out=12, Wake=0, VAD=0, ret=0[0m
+[0;32mI (392821) AUDIO: Feed[39100]: samples=160, max_amp=34[0m
+[0;32mI (393821) AUDIO: Feed[39200]: samples=160, max_amp=46[0m
+[0;32mI (394821) AUDIO: Feed[39300]: samples=160, max_amp=23[0m
+[0;32mI (395821) AUDIO: Feed[39400]: samples=160, max_amp=97[0m
+[0;32mI (396821) AUDIO: Feed[39500]: samples=160, max_amp=36[0m
+[0;32mI (397821) AUDIO: Feed[39600]: samples=160, max_amp=26[0m
+[0;32mI (398621) AUDIO: Detect[12400]: Out=63, Wake=0, VAD=0, ret=0[0m
+[0;32mI (398821) AUDIO: Feed[39700]: samples=160, max_amp=45[0m
+[0;32mI (399821) AUDIO: Feed[39800]: samples=160, max_amp=23[0m
+[0;32mI (400821) AUDIO: Feed[39900]: samples=160, max_amp=28[0m
+[0;32mI (401821) AUDIO: Feed[40000]: samples=160, max_amp=29[0m
+[0;32mI (401961) MAIN: Health: State=STOPPED, Queue=0[0m
+[0;32mI (402821) AUDIO: Feed[40100]: samples=160, max_amp=65[0m
+[0;32mI (403821) AUDIO: Feed[40200]: samples=160, max_amp=107[0m
+[0;32mI (404821) AUDIO: Feed[40300]: samples=160, max_amp=34[0m
+[0;32mI (405021) AUDIO: Detect[12600]: Out=112, Wake=0, VAD=0, ret=0[0m
+[0;32mI (405821) AUDIO: Feed[40400]: samples=160, max_amp=41[0m
+[0;32mI (406821) AUDIO: Feed[40500]: samples=160, max_amp=165[0m
+[0;32mI (407821) AUDIO: Feed[40600]: samples=160, max_amp=107[0m
+[0;32mI (408821) AUDIO: Feed[40700]: samples=160, max_amp=63[0m
+[0;32mI (409821) AUDIO: Feed[40800]: samples=160, max_amp=82[0m
+[0;32mI (410821) AUDIO: Feed[40900]: samples=160, max_amp=45[0m
+[0;32mI (411421) AUDIO: Detect[12800]: Out=12, Wake=0, VAD=0, ret=0[0m
+[0;32mI (411821) AUDIO: Feed[41000]: samples=160, max_amp=53[0m
+[0;32mI (411961) MAIN: Health: State=STOPPED, Queue=0[0m
+[0;32mI (412821) AUDIO: Feed[41100]: samples=160, max_amp=77[0m
+[0;32mI (413821) AUDIO: Feed[41200]: samples=160, max_amp=27[0m
+[0;32mI (414821) AUDIO: Feed[41300]: samples=160, max_amp=73[0m
+[0;32mI (415821) AUDIO: Feed[41400]: samples=160, max_amp=112[0m
+[0;32mI (416821) AUDIO: Feed[41500]: samples=160, max_amp=81[0m
+[0;32mI (417821) AUDIO: Feed[41600]: samples=160, max_amp=76[0m
+[0;32mI (417821) AUDIO: Detect[13000]: Out=212, Wake=0, VAD=0, ret=0[0m
+[0;32mI (418821) AUDIO: Feed[41700]: samples=160, max_amp=50[0m
+[0;32mI (419821) AUDIO: Feed[41800]: samples=160, max_amp=21[0m
+[0;32mI (420821) AUDIO: Feed[41900]: samples=160, max_amp=43[0m
+[0;32mI (421821) AUDIO: Feed[42000]: samples=160, max_amp=51[0m
+[0;32mI (421961) MAIN: Health: State=STOPPED, Queue=0[0m
+[0;32mI (422821) AUDIO: Feed[42100]: samples=160, max_amp=25[0m
+[0;32mI (423821) AUDIO: Feed[42200]: samples=160, max_amp=35[0m
+[0;32mI (424221) AUDIO: Detect[13200]: Out=7, Wake=0, VAD=0, ret=0[0m
+[0;32mI (424821) AUDIO: Feed[42300]: samples=160, max_amp=31[0m
+[0;32mI (425821) AUDIO: Feed[42400]: samples=160, max_amp=27[0m
+[0;32mI (426821) AUDIO: Feed[42500]: samples=160, max_amp=569[0m
+[0;32mI (427821) AUDIO: Feed[42600]: samples=160, max_amp=163[0m
+[0;32mI (428821) AUDIO: Feed[42700]: samples=160, max_amp=48[0m
+[0;32mI (429821) AUDIO: Feed[42800]: samples=160, max_amp=94[0m
+[0;32mI (430621) AUDIO: Detect[13400]: Out=12, Wake=0, VAD=0, ret=0[0m
+[0;32mI (430821) AUDIO: Feed[42900]: samples=160, max_amp=25[0m
+[0;32mI (431821) AUDIO: Feed[43000]: samples=160, max_amp=188[0m
+[0;32mI (431961) MAIN: Health: State=STOPPED, Queue=0[0m
+[0;32mI (432821) AUDIO: Feed[43100]: samples=160, max_amp=29[0m
+[0;32mI (433821) AUDIO: Feed[43200]: samples=160, max_amp=118[0m
+[0;32mI (434821) AUDIO: Feed[43300]: samples=160, max_amp=46[0m
+[0;32mI (435821) AUDIO: Feed[43400]: samples=160, max_amp=79[0m
+[0;32mI (436821) AUDIO: Feed[43500]: samples=160, max_amp=34[0m
+[0;32mI (437021) AUDIO: Detect[13600]: Out=7, Wake=0, VAD=0, ret=0[0m
+[0;32mI (437821) AUDIO: Feed[43600]: samples=160, max_amp=31[0m
+[0;32mI (438821) AUDIO: Feed[43700]: samples=160, max_amp=83[0m
+[0;32mI (439821) AUDIO: Feed[43800]: samples=160, max_amp=52[0m
+[0;32mI (440821) AUDIO: Feed[43900]: samples=160, max_amp=154[0m
+[0;32mI (441821) AUDIO: Feed[44000]: samples=160, max_amp=137[0m
+[0;32mI (441961) MAIN: Health: State=STOPPED, Queue=0[0m
+[0;32mI (442821) AUDIO: Feed[44100]: samples=160, max_amp=30[0m
+[0;32mI (443421) AUDIO: Detect[13800]: Out=31, Wake=0, VAD=0, ret=0[0m
+[0;32mI (443821) AUDIO: Feed[44200]: samples=160, max_amp=27[0m
+[0;32mI (444821) AUDIO: Feed[44300]: samples=160, max_amp=59[0m
+[0;32mI (445821) AUDIO: Feed[44400]: samples=160, max_amp=28[0m
+[0;32mI (446821) AUDIO: Feed[44500]: samples=160, max_amp=61[0m
+[0;32mI (447821) AUDIO: Feed[44600]: samples=160, max_amp=126[0m
+[0;32mI (448821) AUDIO: Feed[44700]: samples=160, max_amp=39[0m
+[0;32mI (449821) AUDIO: Feed[44800]: samples=160, max_amp=31[0m
+[0;32mI (449821) AUDIO: Detect[14000]: Out=9, Wake=0, VAD=0, ret=0[0m
+[0;32mI (450821) AUDIO: Feed[44900]: samples=160, max_amp=30[0m
+[0;32mI (451821) AUDIO: Feed[45000]: samples=160, max_amp=40[0m
+[0;32mI (451961) MAIN: Health: State=STOPPED, Queue=0[0m
+[0;32mI (452821) AUDIO: Feed[45100]: samples=160, max_amp=56[0m
+[0;32mI (453821) AUDIO: Feed[45200]: samples=160, max_amp=50[0m
+[0;32mI (454821) AUDIO: Feed[45300]: samples=160, max_amp=65[0m
+[0;32mI (455821) AUDIO: Feed[45400]: samples=160, max_amp=77[0m
+[0;32mI (456221) AUDIO: Detect[14200]: Out=105, Wake=0, VAD=0, ret=0[0m
+[0;32mI (456821) AUDIO: Feed[45500]: samples=160, max_amp=28[0m
+[0;32mI (457821) AUDIO: Feed[45600]: samples=160, max_amp=80[0m
+[0;32mI (458821) AUDIO: Feed[45700]: samples=160, max_amp=28[0m
+[0;32mI (459821) AUDIO: Feed[45800]: samples=160, max_amp=101[0m
+[0;32mI (460821) AUDIO: Feed[45900]: samples=160, max_amp=32[0m
+[0;32mI (461821) AUDIO: Feed[46000]: samples=160, max_amp=26[0m
+[0;32mI (461961) MAIN: Health: State=STOPPED, Queue=0[0m
+[0;32mI (462621) AUDIO: Detect[14400]: Out=692, Wake=0, VAD=0, ret=0[0m
+[0;32mI (462821) AUDIO: Feed[46100]: samples=160, max_amp=72[0m
+[0;32mI (463821) AUDIO: Feed[46200]: samples=160, max_amp=97[0m
+[0;32mI (464821) AUDIO: Feed[46300]: samples=160, max_amp=67[0m
+[0;32mI (465821) AUDIO: Feed[46400]: samples=160, max_amp=47[0m
+[0;32mI (466821) AUDIO: Feed[46500]: samples=160, max_amp=28[0m
+[0;32mI (467821) AUDIO: Feed[46600]: samples=160, max_amp=54[0m
+[0;32mI (468821) AUDIO: Feed[46700]: samples=160, max_amp=52[0m
+[0;32mI (469021) AUDIO: Detect[14600]: Out=124, Wake=0, VAD=0, ret=0[0m
+[0;32mI (469821) AUDIO: Feed[46800]: samples=160, max_amp=69[0m
+[0;32mI (470821) AUDIO: Feed[46900]: samples=160, max_amp=31[0m
+[0;32mI (471821) AUDIO: Feed[47000]: samples=160, max_amp=137[0m
+[0;32mI (471961) MAIN: Health: State=STOPPED, Queue=0[0m
+[0;32mI (472821) AUDIO: Feed[47100]: samples=160, max_amp=109[0m
+[0;32mI (473821) AUDIO: Feed[47200]: samples=160, max_amp=35[0m
+[0;32mI (474821) AUDIO: Feed[47300]: samples=160, max_amp=138[0m
+[0;32mI (475421) AUDIO: Detect[14800]: Out=127, Wake=0, VAD=0, ret=0[0m
+[0;32mI (475821) AUDIO: Feed[47400]: samples=160, max_amp=36[0m
+[0;32mI (476821) AUDIO: Feed[47500]: samples=160, max_amp=24[0m
+[0;32mI (477821) AUDIO: Feed[47600]: samples=160, max_amp=161[0m
+[0;32mI (478821) AUDIO: Feed[47700]: samples=160, max_amp=83[0m
+[0;32mI (479821) AUDIO: Feed[47800]: samples=160, max_amp=89[0m
+[0;32mI (480821) AUDIO: Feed[47900]: samples=160, max_amp=21[0m
+[0;32mI (481821) AUDIO: Feed[48000]: samples=160, max_amp=82[0m
+[0;32mI (481821) AUDIO: Detect[15000]: Out=9, Wake=0, VAD=0, ret=0[0m
+[0;32mI (481961) MAIN: Health: State=STOPPED, Queue=0[0m
+[0;32mI (482821) AUDIO: Feed[48100]: samples=160, max_amp=108[0m
+[0;32mI (483821) AUDIO: Feed[48200]: samples=160, max_amp=40[0m
+[0;32mI (484821) AUDIO: Feed[48300]: samples=160, max_amp=33[0m
+[0;32mI (485821) AUDIO: Feed[48400]: samples=160, max_amp=148[0m
+[0;32mI (486821) AUDIO: Feed[48500]: samples=160, max_amp=45[0m
+[0;32mI (487821) AUDIO: Feed[48600]: samples=160, max_amp=19[0m
+[0;32mI (488221) AUDIO: Detect[15200]: Out=9, Wake=0, VAD=0, ret=0[0m
+[0;32mI (488821) AUDIO: Feed[48700]: samples=160, max_amp=18[0m
+[0;32mI (489821) AUDIO: Feed[48800]: samples=160, max_amp=30[0m
+[0;32mI (490821) AUDIO: Feed[48900]: samples=160, max_amp=49[0m
+[0;32mI (491821) AUDIO: Feed[49000]: samples=160, max_amp=62[0m
+[0;32mI (491961) MAIN: Health: State=STOPPED, Queue=0[0m
+[0;32mI (492821) AUDIO: Feed[49100]: samples=160, max_amp=51[0m
+[0;32mI (493821) AUDIO: Feed[49200]: samples=160, max_amp=30[0m
+[0;32mI (494621) AUDIO: Detect[15400]: Out=17, Wake=0, VAD=0, ret=0[0m
+[0;32mI (494821) AUDIO: Feed[49300]: samples=160, max_amp=29[0m
+[0;32mI (495821) AUDIO: Feed[49400]: samples=160, max_amp=82[0m
+[0;32mI (496821) AUDIO: Feed[49500]: samples=160, max_amp=23[0m
+[0;32mI (497821) AUDIO: Feed[49600]: samples=160, max_amp=28[0m
+[0;32mI (498821) AUDIO: Feed[49700]: samples=160, max_amp=232[0m
+[0;32mI (499821) AUDIO: Feed[49800]: samples=160, max_amp=185[0m
+[0;32mI (500821) AUDIO: Feed[49900]: samples=160, max_amp=28[0m
+[0;32mI (501021) AUDIO: Detect[15600]: Out=80, Wake=0, VAD=0, ret=0[0m
+[0;32mI (501821) AUDIO: Feed[50000]: samples=160, max_amp=217[0m
+[0;32mI (501961) MAIN: Health: State=STOPPED, Queue=0[0m
+[0;32mI (502821) AUDIO: Feed[50100]: samples=160, max_amp=31[0m
+[0;32mI (503821) AUDIO: Feed[50200]: samples=160, max_amp=22[0m
+[0;32mI (504821) AUDIO: Feed[50300]: samples=160, max_amp=138[0m
+[0;32mI (505821) AUDIO: Feed[50400]: samples=160, max_amp=44[0m
+[0;32mI (506821) AUDIO: Feed[50500]: samples=160, max_amp=182[0m
+[0;32mI (507421) AUDIO: Detect[15800]: Out=574, Wake=0, VAD=0, ret=0[0m
+[0;32mI (507821) AUDIO: Feed[50600]: samples=160, max_amp=124[0m
+[0;32mI (508821) AUDIO: Feed[50700]: samples=160, max_amp=193[0m
+[0;32mI (509821) AUDIO: Feed[50800]: samples=160, max_amp=60[0m
+[0;32mI (510821) AUDIO: Feed[50900]: samples=160, max_amp=72[0m
+[0;32mI (511821) AUDIO: Feed[51000]: samples=160, max_amp=83[0m
+[0;32mI (511961) MAIN: Health: State=STOPPED, Queue=0[0m
+[0;32mI (512821) AUDIO: Feed[51100]: samples=160, max_amp=32[0m
+[0;32mI (513821) AUDIO: Feed[51200]: samples=160, max_amp=133[0m
+[0;32mI (513821) AUDIO: Detect[16000]: Out=132, Wake=0, VAD=0, ret=0[0m
+[0;32mI (514821) AUDIO: Feed[51300]: samples=160, max_amp=94[0m
+[0;32mI (515821) AUDIO: Feed[51400]: samples=160, max_amp=226[0m
+[0;32mI (516821) AUDIO: Feed[51500]: samples=160, max_amp=33[0m
+[0;32mI (517821) AUDIO: Feed[51600]: samples=160, max_amp=36[0m
+[0;32mI (518821) AUDIO: Feed[51700]: samples=160, max_amp=28[0m
+[0;32mI (519821) AUDIO: Feed[51800]: samples=160, max_amp=31[0m
+[0;32mI (520221) AUDIO: Detect[16200]: Out=9833, Wake=0, VAD=1, ret=0[0m
+[0;32mI (520821) AUDIO: Feed[51900]: samples=160, max_amp=266[0m
+[0;32mI (521821) AUDIO: Feed[52000]: samples=160, max_amp=144[0m
+[0;32mI (521961) MAIN: Health: State=STOPPED, Queue=0[0m
+[0;32mI (522821) AUDIO: Feed[52100]: samples=160, max_amp=35[0m
+[0;32mI (523821) AUDIO: Feed[52200]: samples=160, max_amp=46[0m
+[0;32mI (524821) AUDIO: Feed[52300]: samples=160, max_amp=41[0m
+[0;32mI (525821) AUDIO: Feed[52400]: samples=160, max_amp=28[0m
+[0;32mI (526621) AUDIO: Detect[16400]: Out=9, Wake=0, VAD=0, ret=0[0m
+[0;32mI (526821) AUDIO: Feed[52500]: samples=160, max_amp=36[0m
+[0;32mI (527821) AUDIO: Feed[52600]: samples=160, max_amp=34[0m
+[0;32mI (528821) AUDIO: Feed[52700]: samples=160, max_amp=40[0m
+[0;32mI (529821) AUDIO: Feed[52800]: samples=160, max_amp=21[0m
+[0;32mI (530821) AUDIO: Feed[52900]: samples=160, max_amp=39[0m
+[0;32mI (531821) AUDIO: Feed[53000]: samples=160, max_amp=52[0m
+[0;32mI (531961) MAIN: Health: State=STOPPED, Queue=0[0m
+[0;32mI (532821) AUDIO: Feed[53100]: samples=160, max_amp=63[0m
+[0;32mI (533021) AUDIO: Detect[16600]: Out=26, Wake=0, VAD=0, ret=0[0m
+[0;32mI (533821) AUDIO: Feed[53200]: samples=160, max_amp=34[0m
+[0;32mI (534821) AUDIO: Feed[53300]: samples=160, max_amp=32[0m
+[0;32mI (535821) AUDIO: Feed[53400]: samples=160, max_amp=20[0m
+[0;32mI (536821) AUDIO: Feed[53500]: samples=160, max_amp=29[0m
+[0;32mI (537821) AUDIO: Feed[53600]: samples=160, max_amp=65[0m
+[0;32mI (538821) AUDIO: Feed[53700]: samples=160, max_amp=26[0m
+[0;32mI (539421) AUDIO: Detect[16800]: Out=95, Wake=0, VAD=0, ret=0[0m
+[0;32mI (539821) AUDIO: Feed[53800]: samples=160, max_amp=60[0m
+[0;32mI (540821) AUDIO: Feed[53900]: samples=160, max_amp=163[0m
+[0;32mI (541821) AUDIO: Feed[54000]: samples=160, max_amp=163[0m
+[0;32mI (541961) MAIN: Health: State=STOPPED, Queue=0[0m
+[0;32mI (542821) AUDIO: Feed[54100]: samples=160, max_amp=51[0m
+[0;32mI (543821) AUDIO: Feed[54200]: samples=160, max_amp=108[0m
+[0;32mI (544821) AUDIO: Feed[54300]: samples=160, max_amp=33[0m
+[0;32mI (545821) AUDIO: Feed[54400]: samples=160, max_amp=103[0m
+[0;32mI (545821) AUDIO: Detect[17000]: Out=171, Wake=0, VAD=0, ret=0[0m
+[0;32mI (546821) AUDIO: Feed[54500]: samples=160, max_amp=31[0m
+[0;32mI (547821) AUDIO: Feed[54600]: samples=160, max_amp=50[0m
+[0;32mI (548821) AUDIO: Feed[54700]: samples=160, max_amp=71[0m
+[0;32mI (549821) AUDIO: Feed[54800]: samples=160, max_amp=90[0m
+[0;32mI (550821) AUDIO: Feed[54900]: samples=160, max_amp=333[0m
+[0;32mI (551181) AUDIO: [0m
+[0;32mI (551181) AUDIO: ========================================[0m
+[0;32mI (551181) AUDIO: >>> WAKE WORD DETECTED! <<<[0m
+[0;32mI (551181) AUDIO: ========================================[0m
+[0;32mI (551191) AUDIO: Say one of these commands:[0m
+[0;32mI (551191) AUDIO:   - "FORWARD"[0m
+[0;32mI (551201) AUDIO:   - "BACKWARD"[0m
+[0;32mI (551201) AUDIO:   - "LEFT"[0m
+[0;32mI (551211) AUDIO:   - "RIGHT"[0m
+[0;32mI (551211) AUDIO:   - "STOP"[0m
+[0;32mI (551211) AUDIO: Listening for 10 seconds...[0m
+[0;32mI (551221) AUDIO: ========================================[0m
+[0;32mI (551221) AUDIO: [0m
+[0;32mI (551231) AUDIO: WakeNet disabled for command listening[0m
+[0;32mI (551231) STATE_MACHINE: Event: WAKEWORD_DETECTED | State: STOPPED[0m
+[0;32mI (551241) STATE_MACHINE: Transition: STOPPED -> LISTENING[0m
+[0;32mI (551251) STATE_MACHINE: Entry LISTENING: Waiting for voice command[0m
+[0;32mI (551821) AUDIO: Feed[55000]: samples=160, max_amp=76[0m
+[0;32mI (551961) MAIN: Health: State=LISTENING, Queue=0[0m
+[0;32mI (552221) AUDIO: Detect[17200]: Out=27, Wake=0, VAD=0, ret=0[0m
+[0;32mI (552231) AUDIO: [LISTENING] MultiNet processing... (17200)[0m
+[0;32mI (552821) AUDIO: Feed[55100]: samples=160, max_amp=52[0m
+[0;32mI (553821) AUDIO: Feed[55200]: samples=160, max_amp=24[0m
+[0;32mI (553831) AUDIO: [LISTENING] MultiNet processing... (17250)[0m
+[0;32mI (554301) AUDIO: [0m
+[0;32mI (554301) AUDIO: ****************************************[0m
+[0;32mI (554301) AUDIO: *** COMMAND DETECTED: LEFT ***[0m
+[0;32mI (554311) AUDIO: *** ID=3, Confidence=33% ***[0m
+[0;32mI (554311) AUDIO: ****************************************[0m
+[0;32mI (554321) AUDIO: [0m
+[0;32mI (554321) EVT_QUEUE: Posted voice event: VOICE_LEFT (conf=0.00, id=-1)[0m
+[0;32mI (554321) STATE_MACHINE: Event: VOICE_LEFT | State: LISTENING[0m
+[0;32mI (554331) AUDIO: WakeNet re-enabled after command[0m
+[0;32mI (554331) STATE_MACHINE: Transition: LISTENING -> TURNING_LEFT[0m
+[0;32mI (554351) FAILSAFE: Output ENABLED[0m
+[0;32mI (554821) AUDIO: Feed[55300]: samples=160, max_amp=41[0m
+[0;32mI (555821) AUDIO: Feed[55400]: samples=160, max_amp=30[0m
+[0;32mI (556821) AUDIO: Feed[55500]: samples=160, max_amp=55[0m
+[0;32mI (557821) AUDIO: Feed[55600]: samples=160, max_amp=137[0m
+[0;32mI (558621) AUDIO: Detect[17400]: Out=287, Wake=0, VAD=0, ret=0[0m
+[0;32mI (558821) AUDIO: Feed[55700]: samples=160, max_amp=282[0m
+[0;32mI (559821) AUDIO: Feed[55800]: samples=160, max_amp=30[0m
+[0;32mI (560821) AUDIO: Feed[55900]: samples=160, max_amp=81[0m
+[0;32mI (561821) AUDIO: Feed[56000]: samples=160, max_amp=157[0m
+[0;32mI (561961) MAIN: Health: State=TURNING_LEFT, Queue=0[0m
+[0;32mI (562821) AUDIO: Feed[56100]: samples=160, max_amp=19[0m
+[0;32mI (563821) AUDIO: Feed[56200]: samples=160, max_amp=26[0m
+[0;32mI (564821) AUDIO: Feed[56300]: samples=160, max_amp=280[0m
+[0;32mI (565021) AUDIO: Detect[17600]: Out=408, Wake=0, VAD=0, ret=0[0m
+[0;32mI (565821) AUDIO: Feed[56400]: samples=160, max_amp=26[0m
+[0;32mI (566821) AUDIO: Feed[56500]: samples=160, max_amp=27[0m
+[0;32mI (567821) AUDIO: Feed[56600]: samples=160, max_amp=229[0m
+[0;32mI (568821) AUDIO: Feed[56700]: samples=160, max_amp=20[0m
+[0;32mI (569821) AUDIO: Feed[56800]: samples=160, max_amp=34[0m
+[0;32mI (570821) AUDIO: Feed[56900]: samples=160, max_amp=121[0m
+[0;32mI (571421) AUDIO: Detect[17800]: Out=182, Wake=0, VAD=0, ret=0[0m
+[0;32mI (571821) AUDIO: Feed[57000]: samples=160, max_amp=75[0m
+[0;32mI (571961) MAIN: Health: State=TURNING_LEFT, Queue=0[0m
+[0;32mI (572821) AUDIO: Feed[57100]: samples=160, max_amp=84[0m
+[0;32mI (573821) AUDIO: Feed[57200]: samples=160, max_amp=34[0m
+[0;32mI (574821) AUDIO: Feed[57300]: samples=160, max_amp=161[0m
+[0;32mI (575821) AUDIO: Feed[57400]: samples=160, max_amp=46[0m
+[0;32mI (576821) AUDIO: Feed[57500]: samples=160, max_amp=31[0m
+[0;32mI (577821) AUDIO: Feed[57600]: samples=160, max_amp=38[0m
+[0;32mI (577821) AUDIO: Detect[18000]: Out=43, Wake=0, VAD=0, ret=0[0m
+[0;32mI (578821) AUDIO: Feed[57700]: samples=160, max_amp=45[0m
