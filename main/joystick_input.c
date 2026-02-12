@@ -2,11 +2,11 @@
  * @file joystick_input.c
  * @brief Analog joystick input handling with AUTO-CALIBRATION
  *
- * Mengikuti panduan kalibrasi yang sudah teruji:
- * - Auto-kalibrasi saat startup (20 sample, 50ms delay = 1 detik)
- * - Support INVERT axes untuk joystick yang terbalik
- * - mapWithCenter untuk akurasi mapping
- * - Deadzone untuk menghindari drift
+ * MODE CONTINUOUS: Joystick mengirim sinyal ESP-NOW TERUS-MENERUS
+ * setiap 50ms (20Hz), bukan hanya saat berubah arah.
+ * Ini memastikan receiver berhenti ketika transmitter mati.
+ *
+ * MODE VOICE tetap diskrit (event-based) via state_machine.
  */
 
 #include "joystick_input.h"
@@ -14,6 +14,7 @@
 #include "driver/gpio.h"
 #include "esp_adc/adc_oneshot.h"
 #include "esp_log.h"
+#include "espnow_comm.h"
 #include "event_queue.h"
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
@@ -27,10 +28,9 @@ static const char *TAG = "JOYSTICK";
 static adc_oneshot_unit_handle_t s_adc_handle = NULL;
 
 // ADC channels (ESP32-S3 GPIO to ADC channel mapping)
-// GPIO10 = ADC1_CH9, GPIO11 = ADC1_CH0
-// Cek dengan: idf.py menuconfig -> Component config -> ADC
+// GPIO10 = ADC1_CH9, GPIO3 = ADC1_CH2
 #define ADC_CHANNEL_X ADC_CHANNEL_9 // GPIO10 - Steering (kiri/kanan)
-#define ADC_CHANNEL_Y ADC_CHANNEL_2 // GPIO11 - Throttle (maju/mundur)
+#define ADC_CHANNEL_Y ADC_CHANNEL_2 // GPIO3  - Throttle (maju/mundur)
 
 // Threshold untuk deteksi arah (dari mapped value -255 to 255)
 #define JOY_DIRECTION_THRESHOLD 50
@@ -39,7 +39,7 @@ static adc_oneshot_unit_handle_t s_adc_handle = NULL;
 static int s_center_x = 2048;
 static int s_center_y = 2048;
 
-// Last direction for edge detection
+// Last direction for edge detection (LCD update only)
 static joystick_dir_t s_last_dir = JOY_DIR_CENTER;
 
 /**
@@ -53,9 +53,13 @@ static int16_t map_with_center(int value, int center) {
 
   if (value < center) {
     // Di bawah center -> nilai negatif
+    if (center == 0)
+      return 0;
     result = (value - center) * 255 / center;
   } else {
     // Di atas center -> nilai positif
+    if (center >= 4095)
+      return 0;
     result = (value - center) * 255 / (4095 - center);
   }
 
@@ -71,6 +75,25 @@ static int16_t map_with_center(int value, int center) {
     result = -255;
 
   return (int16_t)result;
+}
+
+/**
+ * @brief Convert joystick direction to ESP-NOW command
+ */
+static espnow_cmd_t dir_to_espnow_cmd(joystick_dir_t dir) {
+  switch (dir) {
+  case JOY_DIR_FORWARD:
+    return ESPNOW_CMD_FORWARD;
+  case JOY_DIR_BACKWARD:
+    return ESPNOW_CMD_BACKWARD;
+  case JOY_DIR_LEFT:
+    return ESPNOW_CMD_LEFT;
+  case JOY_DIR_RIGHT:
+    return ESPNOW_CMD_RIGHT;
+  case JOY_DIR_CENTER:
+  default:
+    return ESPNOW_CMD_STOP;
+  }
 }
 
 /**
@@ -96,7 +119,7 @@ static void calibrate_joystick(void) {
     adc_oneshot_read(s_adc_handle, ADC_CHANNEL_X, &raw_x);
     adc_oneshot_read(s_adc_handle, ADC_CHANNEL_Y, &raw_y);
 
-    // Apply invert BEFORE summing (seperti di reference code)
+    // Apply invert BEFORE summing
     sum_x += INVERT_JOY_X ? (4095 - raw_x) : raw_x;
     sum_y += INVERT_JOY_Y ? (4095 - raw_y) : raw_y;
 
@@ -185,13 +208,14 @@ joystick_dir_t joystick_get_direction(void) {
   int16_t throttle = map_with_center(joy_y, s_center_y); // maju/mundur
   int16_t steering = map_with_center(joy_x, s_center_x); // kiri/kanan
 
-  // DEBUG LOG SELALU ON untuk troubleshooting
+  // DEBUG LOG setiap 1 detik
   static int debug_counter = 0;
-  if (++debug_counter % 20 == 0) { // Setiap 1 detik (20Hz * 20 = 1s)
-    ESP_LOGI(
-        TAG,
-        "RAW: X=%d Y=%d | INV: X=%d Y=%d | MAP: T=%d S=%d | CEN: X=%d Y=%d",
-        raw_x, raw_y, joy_x, joy_y, throttle, steering, s_center_x, s_center_y);
+  if (++debug_counter % 20 == 0) {
+    ESP_LOGI(TAG,
+             "RAW: X=%d Y=%d | INV: X=%d Y=%d | MAP: T=%d S=%d | CEN: X=%d "
+             "Y=%d",
+             raw_x, raw_y, joy_x, joy_y, throttle, steering, s_center_x,
+             s_center_y);
   }
 
   // Prioritaskan axis yang lebih dominan
@@ -217,12 +241,18 @@ bool joystick_button_pressed(void) {
   return gpio_get_level(GPIO_JOY_SW) == 0;
 }
 
+/**
+ * @brief Joystick task - MODE CONTINUOUS
+ *
+ * Perbedaan dengan mode diskrit:
+ * - SELALU kirim ESP-NOW command setiap 50ms (20Hz), bukan hanya saat berubah
+ * - Ketika joystick di center → kirim STOP terus-menerus
+ * - Ketika transmitter mati → receiver tidak dapat sinyal → otomatis berhenti
+ * - LCD hanya update saat direction berubah (hemat I2C bandwidth)
+ */
 void joystick_task(void *param) {
-  ESP_LOGI(TAG, "Joystick task started on core %d", xPortGetCoreID());
-
-  const rc_event_type_t dir_events[] = {EVT_JOY_CENTER, EVT_JOY_FORWARD,
-                                        EVT_JOY_BACKWARD, EVT_JOY_LEFT,
-                                        EVT_JOY_RIGHT};
+  ESP_LOGI(TAG, "Joystick task started (CONTINUOUS MODE) on core %d",
+           xPortGetCoreID());
 
   const char *dir_names[] = {"CENTER", "FORWARD", "BACKWARD", "LEFT", "RIGHT"};
 
@@ -231,26 +261,33 @@ void joystick_task(void *param) {
     if (is_joystick_input_allowed()) {
       joystick_dir_t dir = joystick_get_direction();
 
-      // Send event on direction change
+      // === CONTINUOUS: Kirim ESP-NOW ASYNC (non-blocking!) ===
+      espnow_cmd_t cmd = dir_to_espnow_cmd(dir);
+      uint8_t speed = (dir == JOY_DIR_CENTER) ? 0 : 200;
+      espnow_send_command_async(cmd, speed);
+
+      // === LCD update hanya saat direction berubah (hemat) ===
       if (dir != s_last_dir) {
         ESP_LOGI(TAG, "Joystick: %s -> %s", dir_names[s_last_dir],
                  dir_names[dir]);
 
-        // Update LCD with direction
         if (dir != JOY_DIR_CENTER) {
           lcd_show_joystick(dir_names[dir]);
         } else {
           lcd_show_message("REMOTE MODE", "USE JOYSTICK");
         }
-
-        event_post_voice(dir_events[dir], 1.0f, 0);
         s_last_dir = dir;
       }
+
     } else {
       // Reset to center when not in Remote mode
-      s_last_dir = JOY_DIR_CENTER;
+      if (s_last_dir != JOY_DIR_CENTER) {
+        // Kirim STOP terakhir saat keluar Remote mode
+        espnow_send_command_async(ESPNOW_CMD_STOP, 0);
+        s_last_dir = JOY_DIR_CENTER;
+      }
     }
 
-    vTaskDelay(pdMS_TO_TICKS(50)); // Poll at 20Hz
+    vTaskDelay(pdMS_TO_TICKS(50)); // Kirim setiap 50ms = 20Hz
   }
 }

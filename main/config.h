@@ -73,8 +73,9 @@
 #define VOICE_RECOGNITION_LATENCY_MS 500 // Expected MultiNet processing time
 
 // Watchdog
-#define WATCHDOG_TIMEOUT_MS 2000      // Hardware watchdog timeout
-#define WATCHDOG_FEED_INTERVAL_MS 500 // Feed interval
+#define WATCHDOG_TIMEOUT_MS                                                    \
+  5000 // Hardware watchdog timeout (5s, relaxed for init)
+#define WATCHDOG_FEED_INTERVAL_MS 1000 // Feed interval
 
 // Event processing
 #define EVENT_QUEUE_WAIT_MS 50 // State machine poll interval

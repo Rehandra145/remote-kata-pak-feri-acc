@@ -259,7 +259,8 @@ void app_main(void) {
                           CORE_SAFETY_CRITICAL);
 
   // Joystick Task - Medium priority, Core 0
-  xTaskCreatePinnedToCore(joystick_task, "joystick_input", 2048, NULL,
+  // Stack 4096: needs more because it calls espnow_send_command_async directly
+  xTaskCreatePinnedToCore(joystick_task, "joystick_input", 4096, NULL,
                           PRIORITY_STATUS_LED + 1, &s_joystick_task_handle,
                           CORE_SAFETY_CRITICAL);
 

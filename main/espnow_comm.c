@@ -113,16 +113,10 @@ esp_err_t espnow_comm_init(void) {
     return ESP_ERR_NO_MEM;
   }
 
-  // Initialize NVS (required for WiFi)
-  esp_err_t ret = nvs_flash_init();
-  if (ret == ESP_ERR_NVS_NO_FREE_PAGES ||
-      ret == ESP_ERR_NVS_NEW_VERSION_FOUND) {
-    ESP_ERROR_CHECK(nvs_flash_erase());
-    ret = nvs_flash_init();
-  }
-  ESP_ERROR_CHECK(ret);
+  // NVS already initialized by main.c - skip here
 
   // Initialize WiFi in station mode (required for ESP-NOW)
+  esp_err_t ret;
   wifi_init_config_t cfg = WIFI_INIT_CONFIG_DEFAULT();
   ESP_ERROR_CHECK(esp_wifi_init(&cfg));
   ESP_ERROR_CHECK(esp_wifi_set_mode(WIFI_MODE_STA));
@@ -195,6 +189,29 @@ esp_err_t espnow_send_command(espnow_cmd_t cmd, uint8_t speed) {
   }
 
   return s_last_tx_success ? ESP_OK : ESP_FAIL;
+}
+
+/**
+ * @brief Send command TANPA blocking (fire-and-forget)
+ * Khusus untuk joystick continuous mode agar tidak trigger watchdog reset.
+ * Tidak menunggu callback, langsung return setelah esp_now_send.
+ */
+esp_err_t espnow_send_command_async(espnow_cmd_t cmd, uint8_t speed) {
+  if (!s_espnow_initialized) {
+    return ESP_ERR_INVALID_STATE;
+  }
+
+  // Build packet
+  espnow_packet_t packet = {.header = PACKET_HEADER,
+                            .msg_type = MSG_TYPE_COMMAND,
+                            .command = cmd,
+                            .speed = speed,
+                            .duration_ms = 0,
+                            .checksum = 0};
+  packet.checksum = calculate_checksum(&packet);
+
+  // Fire-and-forget: TIDAK nunggu semaphore
+  return esp_now_send(s_receiver_mac, (uint8_t *)&packet, sizeof(packet));
 }
 
 esp_err_t espnow_send_event(rc_event_type_t event_type) {

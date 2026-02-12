@@ -1,0 +1,307 @@
+[0;32mI (99) esp_image: segment 0: paddr=00010020 vaddr=3c0c002ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4200b530
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce3818,len:0x1758
+load:0x403c9700,len:0x4
+load:0x403c9704,len:0xc00
+load:0x403cc700,len:0x2e20
+entry 0x403c9908
+[0;32mI (26) boot: ESP-IDF v5.1.6-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Feb 12 2026 23:10:05[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v0.2[0m
+[0;32mI (34) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (39) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (44) boot.esp32s3: SPI Flash Size : 8MB[0m
+[0;32mI (48) boot: Enabling RNG early entropy source...[0m
+[0;32mI (54) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (65) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (72) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (79) boot:  2 factory          factory app      00 00 00010000 00300000[0m
+[0;32mI (87) boot:  3 model            Unknown data     01 82 00310000 004f0000[0m
+[0;32mI (94) boot: End of partition table[0m
+[0;32mI (99) esp_image: segment 0: paddr=00010020 vaddr=3c0c0020 size=b84e8h (754920) map[0m
+[0;32mI (242) esp_image: segment 1: paddr=000c8510 vaddr=3fc9c000 size=06ee0h ( 28384) load[0m
+[0;32mI (249) esp_image: segment 2: paddr=000cf3f8 vaddr=40374000 size=00c20h (  3104) load[0m
+[0;32mI (250) esp_image: segment 3: paddr=000d0020 vaddr=42000020 size=bd20ch (774668) map[0m
+[0;32mI (396) esp_image: segment 4: paddr=0018d234 vaddr=40374c20 size=17308h ( 94984) load[0m
+[0;32mI (417) esp_image: segment 5: paddr=001a4544 vaddr=600fe010 size=00004h (     4) load[0m
+[0;32mI (428) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (428) boot: Disabling RNG early entropy source...[0m
+[0;32mI (439) cpu_start: Multicore app[0m
+[0;32mI (440) octal_psram: vendor id    : 0x0d (AP)[0m
+[0;32mI (440) octal_psram: dev id       : 0x02 (generation 3)[0m
+[0;32mI (443) octal_psram: density      : 0x03 (64 Mbit)[0m
+[0;32mI (449) octal_psram: good-die     : 0x01 (Pass)[0m
+[0;32mI (454) octal_psram: Latency      : 0x01 (Fixed)[0m
+[0;32mI (459) octal_psram: VCC          : 0x01 (3V)[0m
+[0;32mI (464) octal_psram: SRF          : 0x01 (Fast Refresh)[0m
+[0;32mI (470) octal_psram: BurstType    : 0x01 (Hybrid Wrap)[0m
+[0;32mI (476) octal_psram: BurstLen     : 0x01 (32 Byte)[0m
+[0;32mI (481) octal_psram: Readlatency  : 0x02 (10 cycles@Fixed)[0m
+[0;32mI (487) octal_psram: DriveStrength: 0x00 (1/1)[0m
+[0;32mI (493) MSPI Timing: PSRAM timing tuning index: 5[0m
+[0;32mI (498) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (503) esp_psram: Speed: 80MHz[0m
+[0;32mI (507) cpu_start: Pro cpu up.[0m
+[0;32mI (510) cpu_start: Starting app cpu, entry point is 0x40375754[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (838) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (847) cpu_start: Pro cpu start user code[0m
+[0;32mI (847) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (847) cpu_start: Application information:[0m
+[0;32mI (850) cpu_start: Project name:     kata_pak_feri_acc[0m
+[0;32mI (856) cpu_start: App version:      f17aa2a-dirty[0m
+[0;32mI (862) cpu_start: Compile time:     Feb 12 2026 23:09:41[0m
+[0;32mI (868) cpu_start: ELF file SHA256:  7ca145a40fb75e96...[0m
+[0;32mI (874) cpu_start: ESP-IDF:          v5.1.6-dirty[0m
+[0;32mI (879) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (884) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (889) cpu_start: Chip rev:         v0.2[0m
+[0;32mI (893) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (901) heap_init: At 3FCA65F0 len 00043120 (268 KiB): DRAM[0m
+[0;32mI (907) heap_init: At 3FCE9710 len 00005724 (21 KiB): STACK/DRAM[0m
+[0;32mI (913) heap_init: At 600FE014 len 00001FD4 (7 KiB): RTCRAM[0m
+[0;32mI (920) esp_psram: Adding pool of 8192K of PSRAM memory to heap allocator[0m
+[0;32mI (928) spi_flash: detected chip: generic[0m
+[0;32mI (932) spi_flash: flash io: dio[0m
+[0;33mW (936) spi_flash: Detected size(16384k) larger than the size in the binary image header(8192k). Using the size in the binary image header.[0m
+[0;33mW (949) i2s(legacy): legacy i2s driver is deprecated, please migrate to use driver/i2s_std.h, driver/i2s_pdm.h or driver/i2s_tdm.h[0m
+[0;32mI (961) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (968) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (976) app_start: Starting scheduler on CPU0[0m
+[0;32mI (980) app_start: Starting scheduler on CPU1[0m
+[0;32mI (980) main_task: Started on CPU0[0m
+[0;32mI (990) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations[0m
+[0;32mI (1000) main_task: Calling app_main()[0m
+[0;32mI (1000) MAIN: ========================================[0m
+[0;32mI (1010) MAIN:  kata_pak_feri_acc v1.0.0[0m
+[0;32mI (1010) MAIN: ========================================[0m
+[0;32mI (1020) MAIN: Platform: ESP32-S3[0m
+[0;32mI (1020) MAIN: Framework: ESP-IDF + ESP-SR[0m
+[0;32mI (1030) MAIN: Display: LCD 16x2 I2C[0m
+[0;32mI (1030) MAIN: Input: Voice + Joystick + Buttons[0m
+[0;32mI (1040) MAIN: [0m
+[0;32mI (1040) MAIN: Modes:[0m
+[0;32mI (1040) MAIN:   [VOICE]  - Voice commands (wake word + command)[0m
+[0;32mI (1050) MAIN:   [REMOTE] - Joystick control[0m
+[0;32mI (1050) MAIN: [0m
+[0;32mI (1060) MAIN: LCD Pins: SDA=GPIO8, SCL=GPIO9[0m
+[0;32mI (1060) MAIN: Buttons: UP=GPIO4, DOWN=GPIO5, OK=GPIO6[0m
+[0;32mI (1070) MAIN: Joystick: X=GPIO10, Y=GPIO3, SW=GPIO7[0m
+[0;32mI (1070) MAIN: ========================================[0m
+[0;32mI (1080) MAIN: Initializing NVS...[0m
+[0;32mI (1090) MAIN: Initializing hardware...[0m
+[0;32mI (1090) gpio: GPIO[48]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (1100) LCD: Initializing LCD 16x2 I2C...[0m
+[0;31mE (1350) LCD: LCD not found at 0x27 or 0x3F[0m
+[0;31mE (1350) MAIN: LCD init failed: ESP_ERR_NOT_FOUND[0m
+[0;32mI (1350) BUTTON: Initializing buttons...[0m
+[0;32mI (1350) gpio: GPIO[4]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (1360) BUTTON: Button 0 configured on GPIO 4[0m
+[0;32mI (1360) gpio: GPIO[5]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (1370) BUTTON: Button 1 configured on GPIO 5[0m
+[0;32mI (1380) gpio: GPIO[6]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (1390) BUTTON: Button 2 configured on GPIO 6[0m
+[0;32mI (1390) BUTTON: Buttons initialized successfully[0m
+[0;32mI (1400) JOYSTICK: Initializing joystick...[0m
+[0;32mI (1400) gpio: GPIO[7]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (1410) JOYSTICK: =====================================[0m
+[0;32mI (1420) JOYSTICK: >>> KALIBRASI: Jangan sentuh joystick...[0m
+[0;32mI (1420) JOYSTICK: =====================================[0m
+[0;32mI (2930) JOYSTICK: >>> KALIBRASI SELESAI![0m
+[0;32mI (2930) JOYSTICK:   Center: X=1958, Y=2250[0m
+[0;32mI (2930) JOYSTICK:   Invert: X=false, Y=true[0m
+[0;32mI (2930) JOYSTICK: =====================================[0m
+[0;32mI (3430) JOYSTICK: Joystick initialized successfully[0m
+[0;32mI (3430) MAIN: Initializing software...[0m
+[0;32mI (3430) EVT_QUEUE: Event queue initialized (length=16)[0m
+[0;32mI (3430) FAILSAFE: Initializing fail-safe subsystem...[0m
+[0;32mI (3440) FAILSAFE: Fail-safe state reset[0m
+[0;32mI (3440) FAILSAFE: Fail-safe initialized[0m
+[0;32mI (3450) STATE_MACHINE: Initializing state machine...[0m
+[0;32mI (3450) ESPNOW: Initializing ESP-NOW communication...[0m
+[0;32mI (3460) pp: pp rom version: e7ae62f[0m
+[0;32mI (3460) net80211: net80211 rom version: e7ae62f[0m
+[0;32mI (3480) wifi:wifi driver task: 3fcb64fc, prio:23, stack:6656, core=0[0m
+[0;32mI (3480) wifi:wifi firmware version: 02461b5[0m
+[0;32mI (3480) wifi:wifi certification version: v7.0[0m
+[0;32mI (3480) wifi:config NVS flash: enabled[0m
+[0;32mI (3480) wifi:config nano formating: disabled[0m
+[0;32mI (3490) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (3490) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (3500) wifi:Init management short buffer num: 32[0m
+[0;32mI (3500) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (3510) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (3510) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (3510) wifi:Init static rx buffer num: 10[0m
+[0;32mI (3520) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (3520) wifi_init: rx ba win: 6[0m
+[0;32mI (3530) wifi_init: tcpip mbox: 32[0m
+[0;32mI (3530) wifi_init: udp mbox: 6[0m
+[0;32mI (3530) wifi_init: tcp mbox: 6[0m
+[0;32mI (3540) wifi_init: tcp tx win: 5760[0m
+[0;32mI (3540) wifi_init: tcp rx win: 5760[0m
+[0;32mI (3550) wifi_init: tcp mss: 1440[0m
+[0;32mI (3550) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (3550) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (3560) phy_init: phy_version 680,a6008b2,Jun  4 2024,16:41:10[0m
+[0;32mI (3600) wifi:mode : sta (10:20:ba:4c:63:88)[0m
+[0;32mI (3600) wifi:enable tsf[0m
+[1;31mE (3600) wifi:failed to post WiFi event=2 ret=259[0m
+[0;32mI (3600) ESPNOW: espnow [version: 1.0] init[0m
+[0;32mI (3600) ESPNOW: ESP-NOW initialized[0m
+[0;32mI (3610) ESPNOW: Receiver MAC: FC:01:2C:D1:76:54[0m
+[0;32mI (3610) FAILSAFE: Output DISABLED[0m
+[0;32mI (3620) STATE_MACHINE: State machine initialized - starting in MODE_SELECT state[0m
+[0;32mI (3630) MODE_MGR: Initializing mode manager...[0m
+[0;32mI (3630) MODE_MGR: Mode manager initialized - showing mode selection[0m
+[0;32mI (3640) MAIN: Initializing audio/speech recognition...[0m
+[0;32mI (3640) AUDIO: Initializing I2S microphone (Legacy API) 32-bit...[0m
+[0;32mI (3650) AUDIO: I2S initialized (Legacy): 16kHz, 32-bit[0m
+[0;32mI (3660) AUDIO: Initializing ESP-SR...[0m
+[0;32mI (3660) MODEL_LOADER: The storage free size is 23040 KB[0m
+[0;32mI (3670) MODEL_LOADER: The partition size is 5056 KB[0m
+[0;32mI (3670) MODEL_LOADER: Successfully load srmodels[0m
+[0;32mI (3680) AUDIO: WakeNet model: wn9_hiesp[0m
+[0;32mI (3680) AUDIO: MultiNet model: mn7_en[0m
+[0;32mI (3690) AUDIO: AFE Config: SE=On, VAD=On, WakeNet=On. Model: wn9_hiesp[0m
+[0;32mI (3690) AFE_SR: afe interface for speech recognition[0m
+[0;32mI (3700) AFE_SR: AFE version: SR_V220727[0m
+[0;32mI (3700) AFE_SR: Initial auido front-end, total channel: 1, mic num: 1, ref num: 0[0m
+[0;32mI (3710) AFE_SR: aec_init: 0, se_init: 1, vad_init: 1
+[0m
+[0;32mI (3720) AFE_SR: wakenet_init: 1
+[0m
+MC Quantized wakenet9: wakeNet9_v1h24_Hi,ESP_3_0.63_0.635, tigger:v3, mode:2, p:0, (Nov  5 2024 16:02:49)
+[0;32mI (3870) AFE_SR: wake num: 2, mode: 0, (Nov  5 2024 16:02:49)
+[0m
+Build fst from commands.
+Quantized MultiNet7:rnnt_ctc_2.0, name:mn7_en, (Nov  5 2024 16:02:48)
+Quantized MultiNet7 search method: 2, time out:10.0 s
+[0;32mI (4360) AUDIO: Configuring voice commands...[0m
+Build fst from commands.
+[0;32mI (4390) AUDIO: [0m
+[0;32mI (4390) AUDIO: === REGISTERED COMMANDS ===[0m
+[0;32mI (4390) AUDIO:   "FORWARD"[0m
+[0;32mI (4390) AUDIO:   "BACKWARD"[0m
+[0;32mI (4400) AUDIO:   "LEFT"[0m
+[0;32mI (4400) AUDIO:   "RIGHT"[0m
+[0;32mI (4400) AUDIO:   "STOP"[0m
+[0;32mI (4410) AUDIO: ===========================[0m
+[0;32mI (4410) AUDIO: [0m
+[0;32mI (4410) AUDIO: ESP-SR initialized with 5 commands[0m
+[0;32mI (4420) AUDIO: Audio subsystem initialized successfully[0m
+[0;32mI (4430) MAIN: Initializing hardware watchdog (5000 ms timeout)...[0m
+[0;32mI (4430) MAIN: Creating tasks...[0m
+[0;32mI (4440) LCD: LCD display task started on core 0[0m
+
+assert failed: xQueueReceive queue.c:1475 (( pxQueue ))
+
+
+Backtrace: 0x40375d3a:0x3fcbfa80 0x4037f781:0x3fcbfaa0 0x40386d95:0x3fcbfac0 0x4037fff3:0x3fcbfbe0 0x4200d5a9:0x3fcbfc20 0x40381e3d:0x3fcbfc70
+
+
+
+
+ELF file SHA256: 7ca145a40fb75e96
+
+Rebooting...
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x3 (RTC_SW_SYS_RST),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40375ba0
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce3818,len:0x1758
+load:0x403c9700,len:0x4
+load:0x403c9704,len:0xc00
+load:0x403cc700,len:0x2e20
+entry 0x403c9908
+[0;32mI (26) boot: ESP-IDF v5.1.6-dirty 2nd stage bootloader[0m
+[0;32mI (26) boot: compile time Feb 12 2026 23:10:05[0m
+[0;32mI (26) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v0.2[0m
+[0;32mI (34) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (38) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32s3: SPI Flash Size : 8MB[0m
+[0;32mI (48) boot: Enabling RNG early entropy source...[0m
+[0;32mI (53) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (64) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (71) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (79) boot:  2 factory          factory app      00 00 00010000 00300000[0m
+[0;32mI (86) boot:  3 model            Unknown data     01 82 00310000 004f0000[0m
+[0;32mI (94) boot: End of partition table[0m
+[0;32mI (98) esp_image: segment 0: paddr=00010020 vaddr=3c0c0020 size=b84e8h (754920) map[0m
+[0;32mI (242) esp_image: segment 1: paddr=000c8510 vaddr=3fc9c000 size=06ee0h ( 28384) load[0m
+[0;32mI (248) esp_image: segment 2: paddr=000cf3f8 vaddr=40374000 size=00c20h (  3104) load[0m
+[0;32mI (249) esp_image: segment 3: paddr=000d0020 vaddr=42000020 size=bd20ch (774668) map[0m
+[0;32mI (395) esp_image: segment 4: paddr=0018d234 vaddr=40374c20 size=17308h ( 94984) load[0m
+[0;32mI (417) esp_image: segment 5: paddr=001a4544 vaddr=600fe010 size=00004h (     4) load[0m
+[0;32mI (427) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (428) boot: Disabling RNG early entropy source...[0m
+[0;32mI (439) cpu_start: Multicore app[0m
+[0;32mI (440) octal_psram: vendor id    : 0x0d (AP)[0m
+[0;32mI (440) octal_psram: dev id       : 0x02 (generation 3)[0m
+[0;32mI (443) octal_psram: density      : 0x03 (64 Mbit)[0m
+[0;32mI (448) octal_psram: good-die     : 0x01 (Pass)[0m
+[0;32mI (453) octal_psram: Latency      : 0x01 (Fixed)[0m
+[0;32mI (459) octal_psram: VCC          : 0x01 (3V)[0m
+[0;32mI (464) octal_psram: SRF          : 0x01 (Fast Refresh)[0m
+[0;32mI (469) octal_psram: BurstType    : 0x01 (Hybrid Wrap)[0m
+[0;32mI (475) octal_psram: BurstLen     : 0x01 (32 Byte)[0m
+[0;32mI (481) octal_psram: Readlatency  : 0x02 (10 cycles@Fixed)[0m
+[0;32mI (487) octal_psram: DriveStrength: 0x00 (1/1)[0m
+[0;32mI (493) MSPI Timing: PSRAM timing tuning index: 5[0m
+[0;32mI (497) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (502) esp_psram: Speed: 80MHz[0m
+[0;32mI (506) cpu_start: Pro cpu up.[0m
+[0;32mI (510) cpu_start: Starting app cpu, entry point is 0x40375754[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (837) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (847) cpu_start: Pro cpu start user code[0m
+[0;32mI (847) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (847) cpu_start: Application information:[0m
+[0;32mI (850) cpu_start: Project name:     kata_pak_feri_acc[0m
+[0;32mI (856) cpu_start: App version:      f17aa2a-dirty[0m
+[0;32mI (861) cpu_start: Compile time:     Feb 12 2026 23:09:41[0m
+[0;32mI (867) cpu_start: ELF file SHA256:  7ca145a40fb75e96...[0m
+[0;32mI (873) cpu_start: ESP-IDF:          v5.1.6-dirty[0m
+[0;32mI (879) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (883) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (888) cpu_start: Chip rev:         v0.2[0m
+[0;32mI (893) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (900) heap_init: At 3FCA65F0 len 00043120 (268 KiB): DRAM[0m
+[0;32mI (906) heap_init: At 3FCE9710 len 00005724 (21 KiB): STACK/DRAM[0m
+[0;32mI (913) heap_init: At 600FE014 len 00001FD4 (7 KiB): RTCRAM[0m
+[0;32mI (919) esp_psram: Adding pool of 8192K of PSRAM memory to heap allocator[0m
+[0;32mI (927) spi_flash: detected chip: generic[0m
+[0;32mI (931) spi_flash: flash io: dio[0m
+[0;33mW (935) spi_flash: Detected size(16384k) larger than the size in the binary image header(8192k). Using the size in the binary image header.[0m
+[0;33mW (949) i2s(legacy): legacy i2s driver is deprecated, please migrate to use driver/i2s_std.h, driver/i2s_pdm.h or driver/i2s_tdm.h[0m
+[0;32mI (961) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (968) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (975) app_start: Starting scheduler on CPU0[0m
+[0;32mI (980) app_start: Starting scheduler on CPU1[0m
+[0;32mI (980) main_task: Started on CPU0[0m
+[0;32mI (990) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations[0m
+[0;32mI (1000) main_task: Calling app_main()[0m
+[0;32mI (1000) MAIN: ========================================[0m
+[0;32mI (1010) MAIN:  kata_pak_feri_acc v1.0.0[0m
+[0;32mI (1010) MAIN: ========================================[0m
+[0;32mI (1020) MAIN: Platform: ESP32-S3[0m
+[0;32mI (1020) MAIN: Framework: ESP-IDF + ESP-SR[0m
+[0;32mI (1030) MAIN: Display: LCD 16x2 I2C[0m
+[0;32mI (1030) MAIN: Input: Voice + Joystick + Buttons[0m
+[0;32mI (1040) MAIN: [0m
+[0;32mI (1040) MAIN: Modes:[0m
+[0;32mI (1040) MAIN:   [VOICE]  - Voice commands (wake word + command)[0m
+[0;32mI (1050) MAIN:   [REMOTE] - Joystick control[0m
+[0;32mI (1050) MAIN: [0m
+[0;32mI (1060) MAIN: LCD Pins: SDA=GPIO8, SCL=GPIO9[0m
+[0;32mI (1060) MAIN: Buttons: UP=GPIO4, DOWN=GPIO5, OK=GPIO6[0m

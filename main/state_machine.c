@@ -257,7 +257,11 @@ static void state_entry_action(rc_state_t state, const rc_event_msg_t *event) {
   case STATE_MOVING_FWD:
     failsafe_enable_motors();
     failsafe_update_command_time();
-    espnow_send_event(EVT_VOICE_FORWARD);
+    // Voice mode: kirim via state machine (diskrit)
+    // Remote mode: joystick_task kirim langsung (continuous), skip disini
+    if (mode == SYS_MODE_VOICE) {
+      espnow_send_event(EVT_VOICE_FORWARD);
+    }
     if (mode == SYS_MODE_VOICE && event) {
       lcd_show_command("FORWARD", event->confidence);
     } else {
@@ -268,7 +272,9 @@ static void state_entry_action(rc_state_t state, const rc_event_msg_t *event) {
   case STATE_MOVING_BWD:
     failsafe_enable_motors();
     failsafe_update_command_time();
-    espnow_send_event(EVT_VOICE_BACKWARD);
+    if (mode == SYS_MODE_VOICE) {
+      espnow_send_event(EVT_VOICE_BACKWARD);
+    }
     if (mode == SYS_MODE_VOICE && event) {
       lcd_show_command("BACKWARD", event->confidence);
     } else {
@@ -279,7 +285,9 @@ static void state_entry_action(rc_state_t state, const rc_event_msg_t *event) {
   case STATE_TURNING_LEFT:
     failsafe_enable_motors();
     failsafe_update_command_time();
-    espnow_send_event(EVT_VOICE_LEFT);
+    if (mode == SYS_MODE_VOICE) {
+      espnow_send_event(EVT_VOICE_LEFT);
+    }
     if (mode == SYS_MODE_VOICE && event) {
       lcd_show_command("LEFT", event->confidence);
     } else {
@@ -290,7 +298,9 @@ static void state_entry_action(rc_state_t state, const rc_event_msg_t *event) {
   case STATE_TURNING_RIGHT:
     failsafe_enable_motors();
     failsafe_update_command_time();
-    espnow_send_event(EVT_VOICE_RIGHT);
+    if (mode == SYS_MODE_VOICE) {
+      espnow_send_event(EVT_VOICE_RIGHT);
+    }
     if (mode == SYS_MODE_VOICE && event) {
       lcd_show_command("RIGHT", event->confidence);
     } else {
@@ -300,7 +310,11 @@ static void state_entry_action(rc_state_t state, const rc_event_msg_t *event) {
 
   case STATE_STOPPED:
     failsafe_disable_motors();
-    espnow_send_event(EVT_VOICE_STOP);
+    // Voice mode: kirim STOP via state machine
+    // Remote mode: joystick_task sudah kirim STOP continuous
+    if (mode == SYS_MODE_VOICE) {
+      espnow_send_event(EVT_VOICE_STOP);
+    }
     if (mode == SYS_MODE_VOICE) {
       lcd_show_message("STOPPED", "SAY: HI ESP");
     } else {

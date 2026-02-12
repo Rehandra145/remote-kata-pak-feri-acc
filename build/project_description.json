@@ -1,7 +1,7 @@
 {
     "version":            "1.1",
     "project_name":       "kata_pak_feri_acc",
-    "project_version":    "1",
+    "project_version":    "f17aa2a-dirty",
     "project_path":       "C:/Users/infinix/kata_pak_feri_acc",
     "idf_path":           "C:/Espressif/frameworks/esp-idf-v5.1.6",
     "build_dir":          "C:/Users/infinix/kata_pak_feri_acc/build",

@@ -59,12 +59,22 @@ typedef struct __attribute__((packed)) {
 esp_err_t espnow_comm_init(void);
 
 /**
- * @brief Send command to receiver
+ * @brief Send command to receiver (blocking, waits for callback)
+ * Cocok untuk Voice mode (diskrit, jarang kirim)
  * @param cmd Command to send
  * @param speed Motor speed (0-255)
  * @return ESP_OK on success
  */
 esp_err_t espnow_send_command(espnow_cmd_t cmd, uint8_t speed);
+
+/**
+ * @brief Send command to receiver (non-blocking, fire-and-forget)
+ * Cocok untuk Joystick mode (continuous, 20Hz)
+ * @param cmd Command to send
+ * @param speed Motor speed (0-255)
+ * @return ESP_OK if queued successfully
+ */
+esp_err_t espnow_send_command_async(espnow_cmd_t cmd, uint8_t speed);
 
 /**
  * @brief Send command from event type
