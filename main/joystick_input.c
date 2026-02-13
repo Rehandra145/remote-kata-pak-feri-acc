@@ -109,7 +109,7 @@ static void calibrate_joystick(void) {
   lcd_show_message("KALIBRASI", "JANGAN SENTUH!");
 
   // Let joystick settle
-  vTaskDelay(pdMS_TO_TICKS(500));
+  vTaskDelay(pdMS_TO_TICKS(200));
 
   // Take multiple samples
   long sum_x = 0, sum_y = 0;
@@ -136,9 +136,12 @@ static void calibrate_joystick(void) {
            INVERT_JOY_Y ? "true" : "false");
   ESP_LOGI(TAG, "=====================================");
 
-  // Show calibration complete
+  // Show calibration complete briefly, then return to mode menu
   lcd_show_message("KALIBRASI OK!", "CENTER SAVED");
-  vTaskDelay(pdMS_TO_TICKS(500));
+  vTaskDelay(pdMS_TO_TICKS(300));
+
+  // Auto-return to mode selection menu
+  lcd_show_mode_menu(mode_manager_get_selection());
 }
 
 esp_err_t joystick_init(void) {
@@ -184,10 +187,9 @@ esp_err_t joystick_init(void) {
     return ret;
   }
 
-  // Perform auto-calibration
-  calibrate_joystick();
+  // Auto-calibration moved to joystick_task() for fast boot
 
-  ESP_LOGI(TAG, "Joystick initialized successfully");
+  ESP_LOGI(TAG, "Joystick initialized (calibration deferred to task)");
   return ESP_OK;
 }
 
@@ -253,6 +255,9 @@ bool joystick_button_pressed(void) {
 void joystick_task(void *param) {
   ESP_LOGI(TAG, "Joystick task started (CONTINUOUS MODE) on core %d",
            xPortGetCoreID());
+
+  // === Calibration runs here in the task (non-blocking boot) ===
+  calibrate_joystick();
 
   const char *dir_names[] = {"CENTER", "FORWARD", "BACKWARD", "LEFT", "RIGHT"};
 

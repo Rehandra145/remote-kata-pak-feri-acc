@@ -84,6 +84,14 @@ esp_err_t espnow_send_command_async(espnow_cmd_t cmd, uint8_t speed);
 esp_err_t espnow_send_event(rc_event_type_t event_type);
 
 /**
+ * @brief Send event with custom duration for voice mode
+ * @param event_type Event to send
+ * @param duration_ms Duration in ms for receiver to execute
+ */
+esp_err_t espnow_send_event_with_duration(rc_event_type_t event_type,
+                                          uint16_t duration_ms);
+
+/**
  * @brief Send emergency stop
  * @return ESP_OK on success
  */

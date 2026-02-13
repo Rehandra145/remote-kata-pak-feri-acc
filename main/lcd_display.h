@@ -82,6 +82,12 @@ void lcd_show_command(const char *command, float confidence);
 void lcd_show_joystick(const char *direction);
 
 /**
+ * @brief Show settings screen (voice duration)
+ * @param duration_ms Current duration setting in milliseconds
+ */
+void lcd_show_settings(uint16_t duration_ms);
+
+/**
  * @brief LCD display task for FreeRTOS
  * @param param Task parameter (unused)
  */

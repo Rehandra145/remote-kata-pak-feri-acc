@@ -552,12 +552,16 @@ static void audio_detect_task(void *param) {
  */
 void audio_processing_task(void *param) {
   ESP_LOGI(TAG,
-           "Audio processing task started - spawning feed and detect tasks");
+           "Audio processing task started - initializing audio subsystem...");
 
-  // Wait for initialization
-  while (!s_audio_ready) {
-    vTaskDelay(pdMS_TO_TICKS(100));
+  // === AUDIO INIT MOVED HERE from app_main for fast boot ===
+  esp_err_t ret = audio_init();
+  if (ret != ESP_OK) {
+    ESP_LOGW(TAG, "Audio init failed - voice mode disabled, remote mode OK");
+    vTaskDelete(NULL);
+    return;
   }
+  ESP_LOGI(TAG, "Audio initialized in background - voice mode ready!");
 
   // Log chunk sizes for debugging
   int afe_feed_size = s_afe_handle->get_feed_chunksize(s_afe_data);
@@ -571,19 +575,18 @@ void audio_processing_task(void *param) {
            afe_fetch_size / 16.0f);
   ESP_LOGW(TAG, "MultiNet: %d samples", mn_size);
 
-  // Create feed task on Core 1 (needs more stack for I2S buffers)
+  // Create feed task on Core 1
   xTaskCreatePinnedToCore(audio_feed_task, "audio_feed", 8192, NULL,
                           PRIORITY_AUDIO_PROCESSING, &s_feed_task_handle,
                           CORE_AUDIO_PROCESSING);
 
   // Create detect task on Core 1
   xTaskCreatePinnedToCore(audio_detect_task, "audio_detect", 8192, NULL,
-                          PRIORITY_AUDIO_PROCESSING -
-                              1, // Slightly lower priority than feed
-                          &s_detect_task_handle, CORE_AUDIO_PROCESSING);
+                          PRIORITY_AUDIO_PROCESSING - 1, &s_detect_task_handle,
+                          CORE_AUDIO_PROCESSING);
 
   ESP_LOGI(TAG, "Audio tasks created - feed and detect running");
 
-  // This task can now exit or monitor
+  // This task can now exit
   vTaskDelete(NULL);
 }

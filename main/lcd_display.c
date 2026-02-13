@@ -20,7 +20,7 @@ static const char *TAG = "LCD";
 
 // I2C configuration
 #define I2C_MASTER_NUM I2C_NUM_0
-#define I2C_MASTER_FREQ_HZ 100000
+#define I2C_MASTER_FREQ_HZ 100000 // PCF8574 hanya support 100kHz
 #define I2C_TIMEOUT_MS 100
 
 // LCD commands
@@ -52,9 +52,10 @@ static QueueHandle_t s_lcd_queue = NULL;
 typedef struct {
   char line1[17];
   char line2[17];
-  uint8_t msg_type; // 0=message, 1=menu, 2=command
-  uint8_t param;    // For menu: selected index
-  float confidence; // For command
+  uint8_t msg_type;     // 0=message, 1=menu, 2=command, 3=settings
+  uint8_t param;        // For menu: selected index
+  float confidence;     // For command
+  uint16_t duration_ms; // For settings
 } lcd_msg_t;
 
 /*===========================================================================
@@ -329,6 +330,17 @@ void lcd_show_joystick(const char *direction) {
   lcd_show_message("JOYSTICK:", direction);
 }
 
+void lcd_show_settings(uint16_t duration_ms) {
+  if (!s_initialized)
+    return;
+
+  lcd_msg_t msg;
+  msg.msg_type = 3;
+  msg.duration_ms = duration_ms;
+
+  xQueueSend(s_lcd_queue, &msg, pdMS_TO_TICKS(10));
+}
+
 /*===========================================================================
  * LCD Display Task
  *===========================================================================*/
@@ -357,13 +369,31 @@ static void render_message(const lcd_msg_t *msg) {
 static void render_mode_menu(uint8_t selected) {
   lcd_clear();
 
-  // Line 1: Voice mode
-  lcd_set_cursor(0, 0);
-  lcd_print(selected == 0 ? "> MODE VOICE" : "  MODE VOICE");
+  // 3 menu items, LCD has 2 rows -> scrolling window
+  // Items: Voice(0), Remote(1), Settings(2)
+  const char *items[] = {"VOICE", "REMOTE", "SETTINGS"};
+  const int item_count = 3;
 
-  // Line 2: Remote mode
-  lcd_set_cursor(1, 0);
-  lcd_print(selected == 1 ? "> MODE REMOTE" : "  MODE REMOTE");
+  // Calculate which 2 items to show
+  int top_item = 0;
+  if (selected >= 1 && selected < item_count - 1) {
+    top_item = selected - 1; // Keep selected in view
+  } else if (selected >= item_count - 1) {
+    top_item = item_count - 2; // Show last 2
+  }
+
+  // Draw 2 visible rows
+  for (int row = 0; row < 2; row++) {
+    int idx = top_item + row;
+    if (idx >= item_count)
+      break;
+
+    lcd_set_cursor(row, 0);
+    char buf[17];
+    snprintf(buf, sizeof(buf), "%c %s", (idx == selected) ? '>' : ' ',
+             items[idx]);
+    lcd_print(buf);
+  }
 }
 
 static void render_command(const char *cmd, float confidence) {
@@ -392,6 +422,20 @@ static void render_command(const char *cmd, float confidence) {
   lcd_print(buf);
 }
 
+static void render_settings(uint16_t duration_ms) {
+  lcd_clear();
+
+  lcd_set_cursor(0, 0);
+  lcd_print("VOICE DURATION:");
+
+  char buf[17];
+  snprintf(buf, sizeof(buf), "  %d.%ds  [OK]", duration_ms / 1000,
+           (duration_ms % 1000) / 100);
+
+  lcd_set_cursor(1, 0);
+  lcd_print(buf);
+}
+
 void lcd_display_task(void *param) {
   ESP_LOGI(TAG, "LCD display task started on core %d", xPortGetCoreID());
 
@@ -408,6 +452,9 @@ void lcd_display_task(void *param) {
         break;
       case 2: // Command with confidence
         render_command(msg.line1, msg.confidence);
+        break;
+      case 3: // Settings
+        render_settings(msg.duration_ms);
         break;
       }
     }

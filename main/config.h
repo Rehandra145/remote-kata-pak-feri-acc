@@ -45,8 +45,9 @@
 
 // Joystick calibration settings
 #define JOY_DEADZONE 30 // Deadzone untuk menghindari drift (diperbesar)
-#define JOY_CALIBRATION_SAMPLES 20  // Jumlah sample saat kalibrasi
-#define JOY_CALIBRATION_DELAY_MS 50 // Delay antar sample (total 1 detik)
+#define JOY_CALIBRATION_SAMPLES                                                \
+  10 // Jumlah sample saat kalibrasi (cukup akurat)
+#define JOY_CALIBRATION_DELAY_MS 20 // Delay antar sample (total 200ms)
 
 // Invert axes (sesuaikan dengan joystick kamu)
 // Sudah dicoba dan dikoreksi berdasarkan testing

@@ -44,9 +44,10 @@ typedef enum {
   EVT_WAKEWORD_TIMEOUT,  // Wake word listening timed out
 
   // Button events
-  EVT_BTN_UP,   // UP button pressed
-  EVT_BTN_DOWN, // DOWN button pressed
-  EVT_BTN_OK,   // OK button pressed
+  EVT_BTN_UP,        // UP button pressed
+  EVT_BTN_DOWN,      // DOWN button pressed
+  EVT_BTN_OK,        // OK button pressed
+  EVT_BTN_OK_DOUBLE, // OK button double-pressed (return to menu)
 
   // Joystick events (for Remote mode)
   EVT_JOY_FORWARD,  // Joystick pushed forward
@@ -164,18 +165,37 @@ typedef struct {
 
 // State name lookup (for debugging)
 static inline const char *state_name(rc_state_t state) {
-  static const char *names[] = {"IDLE",       "LISTENING",    "MOVING_FWD",
-                                "MOVING_BWD", "TURNING_LEFT", "TURNING_RIGHT",
-                                "STOPPED",    "ERROR"};
+  static const char *names[] = {"MODE_SELECT",   "IDLE",       "LISTENING",
+                                "MOVING_FWD",    "MOVING_BWD", "TURNING_LEFT",
+                                "TURNING_RIGHT", "STOPPED",    "ERROR"};
   return (state < STATE_MAX) ? names[state] : "UNKNOWN";
 }
 
 // Event name lookup (for debugging)
 static inline const char *event_name(rc_event_type_t evt) {
-  static const char *names[] = {
-      "NONE",        "VOICE_FORWARD",  "VOICE_BACKWARD",    "VOICE_LEFT",
-      "VOICE_RIGHT", "VOICE_STOP",     "WAKEWORD_DETECTED", "WAKEWORD_TIMEOUT",
-      "TIMEOUT",     "LOW_CONFIDENCE", "SYSTEM_ERROR",      "WATCHDOG_RESET"};
+  static const char *names[] = {"NONE",
+                                "VOICE_FORWARD",
+                                "VOICE_BACKWARD",
+                                "VOICE_LEFT",
+                                "VOICE_RIGHT",
+                                "VOICE_STOP",
+                                "WAKEWORD_DETECTED",
+                                "WAKEWORD_TIMEOUT",
+                                "BTN_UP",
+                                "BTN_DOWN",
+                                "BTN_OK",
+                                "BTN_OK_DBL",
+                                "JOY_FWD",
+                                "JOY_BWD",
+                                "JOY_LEFT",
+                                "JOY_RIGHT",
+                                "JOY_CENTER",
+                                "MODE_VOICE",
+                                "MODE_REMOTE",
+                                "TIMEOUT",
+                                "LOW_CONFIDENCE",
+                                "SYSTEM_ERROR",
+                                "WATCHDOG_RESET"};
   return (evt < EVT_MAX) ? names[evt] : "UNKNOWN";
 }
 

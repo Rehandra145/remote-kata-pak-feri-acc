@@ -1,6 +1,9 @@
 /**
  * @file button_input.c
- * @brief Push button input handling with debounce
+ * @brief Push button input handling with debounce + double-press detection
+ *
+ * Detects single press and double-press on OK button.
+ * Double-press OK (within 500ms) sends EVT_BTN_OK_DOUBLE to return to menu.
  */
 
 #include "button_input.h"
@@ -15,12 +18,19 @@ static const char *TAG = "BUTTON";
 
 // Button definitions
 #define BTN_COUNT 3
+#define BTN_OK_INDEX 2 // OK button is index 2
+
 static const gpio_num_t s_buttons[BTN_COUNT] = {GPIO_BTN_UP, GPIO_BTN_DOWN,
                                                 GPIO_BTN_OK};
 
 // Debounce state
 static uint32_t s_last_press_time[BTN_COUNT] = {0};
 static bool s_last_state[BTN_COUNT] = {false};
+
+// Double-press detection for OK button
+#define DOUBLE_PRESS_INTERVAL_MS 300 // Snappier OK response
+static uint32_t s_ok_first_press_time = 0;
+static bool s_ok_waiting_second = false;
 
 esp_err_t button_init(void) {
   ESP_LOGI(TAG, "Initializing buttons...");
@@ -68,15 +78,40 @@ void button_task(void *param) {
       // Check for rising edge (press) with debounce
       if (pressed && !s_last_state[i]) {
         if ((now - s_last_press_time[i]) >= BTN_DEBOUNCE_MS) {
-          // Button press detected
-          ESP_LOGI(TAG, "Button %d pressed", i);
 
-          event_post_voice(btn_events[i], 1.0f, 0);
+          if (i == BTN_OK_INDEX) {
+            // === OK BUTTON: Double-press detection ===
+            if (s_ok_waiting_second &&
+                (now - s_ok_first_press_time) < DOUBLE_PRESS_INTERVAL_MS) {
+              // Double-press detected!
+              ESP_LOGI(TAG, "OK DOUBLE-PRESS detected!");
+              event_post_voice(EVT_BTN_OK_DOUBLE, 1.0f, 0);
+              s_ok_waiting_second = false;
+            } else {
+              // First press — start waiting for second
+              s_ok_first_press_time = now;
+              s_ok_waiting_second = true;
+            }
+          } else {
+            // UP/DOWN buttons: immediate single press
+            ESP_LOGI(TAG, "Button %d pressed", i);
+            event_post_voice(btn_events[i], 1.0f, 0);
+          }
+
           s_last_press_time[i] = now;
         }
       }
 
       s_last_state[i] = pressed;
+    }
+
+    // Check if OK single-press timer expired (no second press came)
+    if (s_ok_waiting_second &&
+        (now - s_ok_first_press_time) >= DOUBLE_PRESS_INTERVAL_MS) {
+      // Single press confirmed — send normal OK event
+      ESP_LOGI(TAG, "OK single press confirmed");
+      event_post_voice(EVT_BTN_OK, 1.0f, 0);
+      s_ok_waiting_second = false;
     }
 
     vTaskDelay(pdMS_TO_TICKS(20)); // Poll at 50Hz

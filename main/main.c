@@ -230,14 +230,24 @@ void app_main(void) {
   ret = state_machine_init();
   ESP_ERROR_CHECK(ret);
 
-  // Initialize mode manager (shows mode selection menu)
+  // === FAST BOOT: Create LCD task FIRST so it can render during init ===
+  ESP_LOGI(TAG, "Creating tasks...");
+
+  // LCD Display Task - CREATED FIRST for visual feedback during boot
+  xTaskCreatePinnedToCore(lcd_display_task, "lcd_display", STACK_SIZE_OLED,
+                          NULL, PRIORITY_STATUS_LED + 1, &s_lcd_task_handle,
+                          CORE_SAFETY_CRITICAL);
+
+  // Small delay to let LCD task start and render startup message
+  vTaskDelay(pdMS_TO_TICKS(100));
+
+  // Initialize mode manager (shows mode selection menu IMMEDIATELY)
   ret = mode_manager_init();
   ESP_ERROR_CHECK(ret);
 
-  // 4. Initialize audio (ESP-SR)
-  ESP_LOGI(TAG, "Initializing audio/speech recognition...");
-  ret = audio_init();
-  ESP_ERROR_CHECK(ret);
+  // === HEAVY INIT: Audio moved to its own task (non-blocking) ===
+  // audio_init() is now called inside audio_processing_task
+  // This saves ~3-4 seconds of blocking boot time
 
   // 5. Initialize watchdog
   ret = init_watchdog();
@@ -245,41 +255,33 @@ void app_main(void) {
     ESP_LOGW(TAG, "Watchdog init warning (continuing)");
   }
 
-  // 6. Create tasks
-  ESP_LOGI(TAG, "Creating tasks...");
-
-  // LCD Display Task - High priority, Core 0
-  xTaskCreatePinnedToCore(lcd_display_task, "lcd_display", STACK_SIZE_OLED,
-                          NULL, PRIORITY_STATUS_LED + 1, &s_lcd_task_handle,
-                          CORE_SAFETY_CRITICAL);
-
-  // Button Task - Medium priority, Core 0
+  // 6. Create remaining tasks
+  // Button Task
   xTaskCreatePinnedToCore(button_task, "button_input", 2048, NULL,
                           PRIORITY_STATUS_LED + 1, &s_button_task_handle,
                           CORE_SAFETY_CRITICAL);
 
-  // Joystick Task - Medium priority, Core 0
-  // Stack 4096: needs more because it calls espnow_send_command_async directly
+  // Joystick Task (calibration happens inside the task now)
   xTaskCreatePinnedToCore(joystick_task, "joystick_input", 4096, NULL,
                           PRIORITY_STATUS_LED + 1, &s_joystick_task_handle,
                           CORE_SAFETY_CRITICAL);
 
-  // State Machine Task - High priority, Core 0
+  // State Machine Task
   xTaskCreatePinnedToCore(
       state_machine_task, "state_machine", STACK_SIZE_STATE_MACHINE, NULL,
       PRIORITY_STATE_MACHINE, &s_state_machine_handle, CORE_SAFETY_CRITICAL);
 
-  // Audio Processing Task - Medium-high priority, Core 1
+  // Audio Processing Task (will call audio_init internally)
   xTaskCreatePinnedToCore(
       audio_processing_task, "audio_proc", STACK_SIZE_AUDIO_TASK, NULL,
       PRIORITY_AUDIO_PROCESSING, &s_audio_task_handle, CORE_AUDIO_PROCESSING);
 
-  // Watchdog Feeder Task - Medium priority, Core 0
+  // Watchdog Feeder Task
   xTaskCreatePinnedToCore(watchdog_feeder_task, "wdt_feed", STACK_SIZE_WATCHDOG,
                           NULL, PRIORITY_WATCHDOG_FEEDER, &s_watchdog_handle,
                           CORE_SAFETY_CRITICAL);
 
-  // Status LED Task - Low priority, Core 0
+  // Status LED Task
   xTaskCreatePinnedToCore(status_led_task, "status_led", STACK_SIZE_STATUS_LED,
                           NULL, PRIORITY_STATUS_LED, &s_status_led_handle,
                           CORE_SAFETY_CRITICAL);

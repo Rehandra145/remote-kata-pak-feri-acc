@@ -85,7 +85,17 @@ rc_state_t state_machine_process_event(const rc_event_msg_t *event) {
   ESP_LOGI(TAG, "Event: %s | State: %s | Mode: %d", event_name(event->type),
            state_name(s_current_state), mode_manager_get_mode());
 
-  // Handle button events for mode selection first
+  // Handle double-press OK: ALWAYS return to menu, from ANY mode
+  if (event->type == EVT_BTN_OK_DOUBLE) {
+    ESP_LOGI(TAG, "Double-press OK -> returning to menu");
+    mode_manager_return_to_menu();
+    s_current_state = STATE_MODE_SELECT;
+    failsafe_disable_motors();
+    espnow_send_event(EVT_VOICE_STOP); // Safety: stop motors
+    return s_current_state;
+  }
+
+  // Handle button events for mode selection
   if (event->type == EVT_BTN_UP || event->type == EVT_BTN_DOWN ||
       event->type == EVT_BTN_OK) {
     if (mode_manager_handle_button(event->type)) {
@@ -260,7 +270,8 @@ static void state_entry_action(rc_state_t state, const rc_event_msg_t *event) {
     // Voice mode: kirim via state machine (diskrit)
     // Remote mode: joystick_task kirim langsung (continuous), skip disini
     if (mode == SYS_MODE_VOICE) {
-      espnow_send_event(EVT_VOICE_FORWARD);
+      espnow_send_event_with_duration(EVT_VOICE_FORWARD,
+                                      mode_manager_get_voice_duration());
     }
     if (mode == SYS_MODE_VOICE && event) {
       lcd_show_command("FORWARD", event->confidence);
@@ -273,7 +284,8 @@ static void state_entry_action(rc_state_t state, const rc_event_msg_t *event) {
     failsafe_enable_motors();
     failsafe_update_command_time();
     if (mode == SYS_MODE_VOICE) {
-      espnow_send_event(EVT_VOICE_BACKWARD);
+      espnow_send_event_with_duration(EVT_VOICE_BACKWARD,
+                                      mode_manager_get_voice_duration());
     }
     if (mode == SYS_MODE_VOICE && event) {
       lcd_show_command("BACKWARD", event->confidence);
@@ -286,7 +298,8 @@ static void state_entry_action(rc_state_t state, const rc_event_msg_t *event) {
     failsafe_enable_motors();
     failsafe_update_command_time();
     if (mode == SYS_MODE_VOICE) {
-      espnow_send_event(EVT_VOICE_LEFT);
+      espnow_send_event_with_duration(EVT_VOICE_LEFT,
+                                      mode_manager_get_voice_duration());
     }
     if (mode == SYS_MODE_VOICE && event) {
       lcd_show_command("LEFT", event->confidence);
@@ -299,7 +312,8 @@ static void state_entry_action(rc_state_t state, const rc_event_msg_t *event) {
     failsafe_enable_motors();
     failsafe_update_command_time();
     if (mode == SYS_MODE_VOICE) {
-      espnow_send_event(EVT_VOICE_RIGHT);
+      espnow_send_event_with_duration(EVT_VOICE_RIGHT,
+                                      mode_manager_get_voice_duration());
     }
     if (mode == SYS_MODE_VOICE && event) {
       lcd_show_command("RIGHT", event->confidence);

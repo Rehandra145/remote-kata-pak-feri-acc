@@ -160,12 +160,13 @@ esp_err_t espnow_send_command(espnow_cmd_t cmd, uint8_t speed) {
   }
 
   // Build packet
-  espnow_packet_t packet = {.header = PACKET_HEADER,
-                            .msg_type = MSG_TYPE_COMMAND,
-                            .command = cmd,
-                            .speed = speed,
-                            .duration_ms = 0, // Continuous
-                            .checksum = 0};
+  espnow_packet_t packet = {
+      .header = PACKET_HEADER,
+      .msg_type = MSG_TYPE_COMMAND,
+      .command = cmd,
+      .speed = speed,
+      .duration_ms = 0, // Set by caller via espnow_send_event_with_duration
+      .checksum = 0};
   packet.checksum = calculate_checksum(&packet);
 
   // Log command
@@ -217,6 +218,38 @@ esp_err_t espnow_send_command_async(espnow_cmd_t cmd, uint8_t speed) {
 esp_err_t espnow_send_event(rc_event_type_t event_type) {
   espnow_cmd_t cmd = event_to_command(event_type);
   return espnow_send_command(cmd, DEFAULT_SPEED);
+}
+
+esp_err_t espnow_send_event_with_duration(rc_event_type_t event_type,
+                                          uint16_t duration_ms) {
+  if (!s_espnow_initialized) {
+    return ESP_ERR_INVALID_STATE;
+  }
+
+  espnow_cmd_t cmd = event_to_command(event_type);
+
+  // Build packet with duration
+  espnow_packet_t packet = {.header = PACKET_HEADER,
+                            .msg_type = MSG_TYPE_COMMAND,
+                            .command = cmd,
+                            .speed = DEFAULT_SPEED,
+                            .duration_ms = duration_ms,
+                            .checksum = 0};
+  packet.checksum = calculate_checksum(&packet);
+
+  ESP_LOGI(TAG, "Sending: cmd=%d speed=%d dur=%dms", cmd, DEFAULT_SPEED,
+           duration_ms);
+
+  esp_err_t ret =
+      esp_now_send(s_receiver_mac, (uint8_t *)&packet, sizeof(packet));
+  if (ret != ESP_OK) {
+    return ret;
+  }
+
+  if (xSemaphoreTake(s_tx_semaphore, pdMS_TO_TICKS(100)) != pdTRUE) {
+    return ESP_ERR_TIMEOUT;
+  }
+  return s_last_tx_success ? ESP_OK : ESP_FAIL;
 }
 
 esp_err_t espnow_send_emergency_stop(void) {
